@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@tslb/ui";
+import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 import { Mail, Trash } from "feather-icons-react";
 
@@ -26,16 +27,14 @@ export default function ButtonPage() {
               <Button variant="link">Link Button</Button>
             </div>
           </div>
-          <div className={styles.code}>
-            <pre>
-              <code>{`import { Button } from '@tslb/ui'
+          <CodeBlock language="tsx">
+            {`import { Button } from '@tslb/ui'
 
 <Button variant="primary">Primary Button</Button>
 <Button variant="secondary">Secondary Button</Button>
 <Button variant="outline">Outline Button</Button>
-<Button variant="link">Link Button</Button>`}</code>
-            </pre>
-          </div>
+<Button variant="link">Link Button</Button>`}
+          </CodeBlock>
         </section>
 
         <section className={styles.section}>
@@ -48,14 +47,12 @@ export default function ButtonPage() {
               <Button size="lg">Large</Button>
             </div>
           </div>
-          <div className={styles.code}>
-            <pre>
-              <code>{`<Button size="xs">Extra Small</Button>
+          <CodeBlock language="tsx">
+            {`<Button size="xs">Extra Small</Button>
 <Button size="sm">Small</Button>
 <Button size="md">Medium</Button>
-<Button size="lg">Large</Button>`}</code>
-            </pre>
-          </div>
+<Button size="lg">Large</Button>`}
+          </CodeBlock>
         </section>
 
         <section className={styles.section}>
@@ -70,16 +67,14 @@ export default function ButtonPage() {
               <Button colorScheme="gray">Gray</Button>
             </div>
           </div>
-          <div className={styles.code}>
-            <pre>
-              <code>{`<Button colorScheme="blue">Blue</Button>
+          <CodeBlock language="tsx">
+            {`<Button colorScheme="blue">Blue</Button>
 <Button colorScheme="green">Green</Button>
 <Button colorScheme="red">Red</Button>
 <Button colorScheme="yellow">Yellow</Button>
 <Button colorScheme="purple">Purple</Button>
-<Button colorScheme="gray">Gray</Button>`}</code>
-            </pre>
-          </div>
+<Button colorScheme="gray">Gray</Button>`}
+          </CodeBlock>
         </section>
 
         <section className={styles.section}>
@@ -101,9 +96,10 @@ export default function ButtonPage() {
               </Button>
             </div>
           </div>
-          <div className={styles.code}>
-            <pre>
-              <code>{`<Button 
+          <CodeBlock language="tsx">
+            {`import { Mail } from 'feather-icons-react'
+
+<Button 
   leftIcon={<Mail size={16} />}
   variant="primary"
 >
@@ -123,9 +119,8 @@ export default function ButtonPage() {
   variant="secondary"
 >
   Star
-</Button>`}</code>
-            </pre>
-          </div>
+</Button>`}
+          </CodeBlock>
         </section>
 
         <section className={styles.section}>
@@ -141,13 +136,11 @@ export default function ButtonPage() {
               </Button>
             </div>
           </div>
-          <div className={styles.code}>
-            <pre>
-              <code>{`<Button loading>Loading...</Button>
+          <CodeBlock language="tsx">
+            {`<Button loading>Loading...</Button>
 <Button loading variant="outline" size="sm">Loading</Button>
-<Button loading variant="link">Loading Link</Button>`}</code>
-            </pre>
-          </div>
+<Button loading variant="link">Loading Link</Button>`}
+          </CodeBlock>
         </section>
 
         <section className={styles.section}>
@@ -161,15 +154,13 @@ export default function ButtonPage() {
               </Button>
             </div>
           </div>
-          <div className={styles.code}>
-            <pre>
-              <code>{`<Button>Normal</Button>
+          <CodeBlock language="tsx">
+            {`<Button>Normal</Button>
 <Button disabled>Disabled</Button>
 <Button onClick={() => alert('Button clicked!')}>
   Clickable
-</Button>`}</code>
-            </pre>
-          </div>
+</Button>`}
+          </CodeBlock>
         </section>
 
         <section className={styles.section}>
@@ -201,9 +192,10 @@ export default function ButtonPage() {
               </Button>
             </div>
           </div>
-          <div className={styles.code}>
-            <pre>
-              <code>{`<Button 
+          <CodeBlock language="tsx">
+            {`import { Trash } from 'feather-icons-react'
+
+<Button 
   variant="primary" 
   colorScheme="green" 
   size="lg"
@@ -227,9 +219,8 @@ export default function ButtonPage() {
   leftIcon={<span>🔗</span>}
 >
   External Link
-</Button>`}</code>
-            </pre>
-          </div>
+</Button>`}
+          </CodeBlock>
         </section>
 
         <section className={styles.section}>

@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@tslb/ui": "file:../../packages/ui",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "feather-icons-react": "^0.9.0",
     "next": "14.0.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-syntax-highlighter": "^15.6.3"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
