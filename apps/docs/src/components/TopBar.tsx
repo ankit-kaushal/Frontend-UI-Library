@@ -1,17 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Search, Moon, Github, Settings } from "feather-icons-react";
+import { useSearch } from "@/contexts/SearchContext";
 import styles from "./TopBar.module.scss";
 
 const TopBar = () => {
+  const { openSearch } = useSearch();
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement search functionality
-    console.log("Searching for:", searchQuery);
+    if (searchQuery.trim()) {
+      openSearch();
+    }
   };
+
+  // Keyboard shortcut for search (Cmd/Ctrl + K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        openSearch();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [openSearch]);
 
   return (
     <header className={styles.topBar}>
@@ -25,10 +41,12 @@ const TopBar = () => {
             <div className={styles.searchWrapper}>
               <input
                 type="text"
-                placeholder="Search components..."
+                placeholder="Search components... (⌘K)"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className={styles.searchInput}
+                onClick={openSearch}
+                readOnly
               />
               <button type="submit" className={styles.searchButton}>
                 <Search size={18} />
