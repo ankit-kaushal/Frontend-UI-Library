@@ -1,0 +1,208 @@
+/* Radio Component Styles */
+.ui-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.ui-radio--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.ui-radio__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ui-radio__checkmark {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  background-color: white;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  margin-top: 1px;
+}
+
+.ui-radio__checkmark::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.2s ease;
+}
+
+/* Hover state */
+.ui-radio:hover .ui-radio__checkmark {
+  border-color: #9ca3af;
+}
+
+/* Checked state */
+.ui-radio__input:checked + .ui-radio__checkmark {
+  border-color: #3b82f6;
+  background-color: #3b82f6;
+}
+
+.ui-radio__input:checked + .ui-radio__checkmark::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Focus state */
+.ui-radio__input:focus + .ui-radio__checkmark {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Disabled state */
+.ui-radio--disabled .ui-radio__checkmark {
+  border-color: #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.ui-radio--disabled .ui-radio__input:checked + .ui-radio__checkmark {
+  border-color: #d1d5db;
+  background-color: #d1d5db;
+}
+
+/* Content styling */
+.ui-radio__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+}
+
+.ui-radio__label {
+  font-weight: 500;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.ui-radio__description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Size variants */
+.ui-radio--sm .ui-radio__checkmark {
+  width: 14px;
+  height: 14px;
+  border-width: 1.5px;
+}
+
+.ui-radio--sm .ui-radio__checkmark::after {
+  width: 5px;
+  height: 5px;
+}
+
+.ui-radio--sm .ui-radio__label {
+  font-size: 0.875rem;
+}
+
+.ui-radio--sm .ui-radio__description {
+  font-size: 0.75rem;
+}
+
+.ui-radio--lg .ui-radio__checkmark {
+  width: 20px;
+  height: 20px;
+  border-width: 2.5px;
+}
+
+.ui-radio--lg .ui-radio__checkmark::after {
+  width: 8px;
+  height: 8px;
+}
+
+.ui-radio--lg .ui-radio__label {
+  font-size: 1.125rem;
+}
+
+.ui-radio--lg .ui-radio__description {
+  font-size: 1rem;
+}
+
+/* Color schemes */
+.ui-radio--blue .ui-radio__input:checked + .ui-radio__checkmark {
+  border-color: #3b82f6;
+  background-color: #3b82f6;
+}
+
+.ui-radio--blue .ui-radio__input:focus + .ui-radio__checkmark {
+  outline-color: #3b82f6;
+}
+
+.ui-radio--green .ui-radio__input:checked + .ui-radio__checkmark {
+  border-color: #10b981;
+  background-color: #10b981;
+}
+
+.ui-radio--green .ui-radio__input:focus + .ui-radio__checkmark {
+  outline-color: #10b981;
+}
+
+.ui-radio--red .ui-radio__input:checked + .ui-radio__checkmark {
+  border-color: #ef4444;
+  background-color: #ef4444;
+}
+
+.ui-radio--red .ui-radio__input:focus + .ui-radio__checkmark {
+  outline-color: #ef4444;
+}
+
+.ui-radio--yellow .ui-radio__input:checked + .ui-radio__checkmark {
+  border-color: #f59e0b;
+  background-color: #f59e0b;
+}
+
+.ui-radio--yellow .ui-radio__input:focus + .ui-radio__checkmark {
+  outline-color: #f59e0b;
+}
+
+.ui-radio--purple .ui-radio__input:checked + .ui-radio__checkmark {
+  border-color: #8b5cf6;
+  background-color: #8b5cf6;
+}
+
+.ui-radio--purple .ui-radio__input:focus + .ui-radio__checkmark {
+  outline-color: #8b5cf6;
+}
+
+.ui-radio--gray .ui-radio__input:checked + .ui-radio__checkmark {
+  border-color: #6b7280;
+  background-color: #6b7280;
+}
+
+.ui-radio--gray .ui-radio__input:focus + .ui-radio__checkmark {
+  outline-color: #6b7280;
+}
+
+/* Radio Group Styles */
+.ui-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-radio-group--horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
