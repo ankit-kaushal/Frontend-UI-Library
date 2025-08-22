@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { Button, Loader, Radio, RadioGroup } from "@tslb/ui";
 import styles from "./page.module.scss";
 
 export default function Home() {
@@ -8,6 +11,20 @@ export default function Home() {
       description:
         "A versatile button component with multiple variants and sizes",
       href: "/components/button",
+      status: "ready",
+    },
+    {
+      name: "Loader",
+      description:
+        "A versatile loading component with multiple variants and sizes",
+      href: "/components/loader",
+      status: "ready",
+    },
+    {
+      name: "Radio",
+      description:
+        "A flexible radio button component with support for individual radios and radio groups",
+      href: "/components/radio",
       status: "ready",
     },
     {
@@ -104,6 +121,54 @@ export default function Home() {
                 </p>
               </Link>
             ))}
+          </div>
+        </section>
+
+        <section className={styles.examples}>
+          <h2 className={styles.sectionTitle}>Interactive Examples</h2>
+          <div className={styles.exampleGrid}>
+            <div className={styles.exampleCard}>
+              <h3>Button Variants</h3>
+              <div className={styles.exampleContent}>
+                <Button variant="primary" size="sm">
+                  Primary
+                </Button>
+                <Button variant="secondary" size="sm">
+                  Secondary
+                </Button>
+                <Button variant="outline" size="sm">
+                  Outline
+                </Button>
+                <Button variant="link" size="sm">
+                  Link
+                </Button>
+              </div>
+            </div>
+
+            <div className={styles.exampleCard}>
+              <h3>Loader Variants</h3>
+              <div className={styles.exampleContent}>
+                <Loader variant="spinner" size="sm" />
+                <Loader variant="dots" size="sm" />
+                <Loader variant="pulse" size="sm" />
+              </div>
+            </div>
+
+            <div className={styles.exampleCard}>
+              <h3>Radio Options</h3>
+              <div className={styles.exampleContent}>
+                <RadioGroup
+                  name="overview-example"
+                  value="option1"
+                  options={[
+                    { value: "option1", label: "Option 1" },
+                    { value: "option2", label: "Option 2" },
+                    { value: "option3", label: "Option 3" },
+                  ]}
+                  size="sm"
+                />
+              </div>
+            </div>
           </div>
         </section>
       </div>
