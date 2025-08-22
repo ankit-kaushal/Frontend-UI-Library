@@ -1,0 +1,154 @@
+/* Base Loader Styles */
+.ui-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fbbf24; /* Vibrant yellow color */
+}
+
+/* Enhanced neon yellow for better visibility */
+.ui-loader--spinner .ui-loader__spinner {
+  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.6));
+}
+
+.ui-loader--centered {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
+
+/* Size Variants */
+.ui-loader--xs {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.ui-loader--sm {
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.ui-loader--md {
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.ui-loader--lg {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Spinner Variant */
+.ui-loader--spinner .ui-loader__spinner {
+  animation: ui-loader-rotation 1s linear infinite;
+  stroke: #fbbf24; /* Vibrant yellow color */
+  stroke-width: 3;
+  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.6));
+}
+
+@keyframes ui-loader-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dots Variant */
+.ui-loader--dots .ui-loader__dots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.ui-loader--dots .ui-loader__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fbbf24; /* Vibrant yellow color */
+  animation: ui-loader-dots 1.4s ease-in-out infinite both;
+  filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0.6));
+}
+
+.ui-loader--dots .ui-loader__dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.ui-loader--dots .ui-loader__dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.ui-loader--dots .ui-loader__dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes ui-loader-dots {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Pulse Variant */
+.ui-loader--pulse .ui-loader__pulse {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fbbf24; /* Vibrant yellow color */
+  animation: ui-loader-pulse 1.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.6));
+}
+
+@keyframes ui-loader-pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+/* Size-specific adjustments for dots */
+.ui-loader--xs .ui-loader__dot {
+  width: 4px;
+  height: 4px;
+}
+
+.ui-loader--sm .ui-loader__dot {
+  width: 6px;
+  height: 6px;
+}
+
+.ui-loader--md .ui-loader__dot {
+  width: 8px;
+  height: 8px;
+}
+
+.ui-loader--lg .ui-loader__dot {
+  width: 10px;
+  height: 10px;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .ui-loader--centered {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
