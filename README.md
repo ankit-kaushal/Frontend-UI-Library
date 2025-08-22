@@ -135,9 +135,6 @@ The UI package contains React components built with TypeScript and bundled using
 - `npm run clean` - Clean build artifacts
 - `npm run type-check` - Type checking
 
-**Current Components:**
-- `Button` - A versatile button component with multiple variants and sizes
-
 ### Adding New Components
 
 1. Create component folder: `packages/ui/src/ComponentName/`
