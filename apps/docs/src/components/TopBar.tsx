@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Search, Moon, Github, Settings } from "feather-icons-react";
+import { Search, Github, Settings } from "feather-icons-react";
 import { useSearch } from "@/contexts/SearchContext";
+import ThemeToggle from "./ThemeToggle";
 import styles from "./TopBar.module.scss";
 
 const TopBar = () => {
@@ -56,9 +57,7 @@ const TopBar = () => {
         </div>
 
         <div className={styles.right}>
-          <button className={styles.iconButton} title="Theme">
-            <Moon size={20} />
-          </button>
+          <ThemeToggle />
           <button className={styles.iconButton} title="GitHub">
             <Github size={20} />
           </button>

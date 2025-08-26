@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  background-color: #f9fafb;
+  background-color: var(--bg-secondary, #f9fafb);
   padding: 2rem;
   width: 100%;
 }
@@ -17,13 +17,13 @@
 .title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--text-primary, #111827);
   margin-bottom: 1rem;
 }
 
 .description {
   font-size: 1.125rem;
-  color: #6b7280;
+  color: var(--text-secondary, #6b7280);
   max-width: 600px;
 }
 
@@ -38,14 +38,14 @@
 .sectionTitle {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-primary, #111827);
   margin-bottom: 1.5rem;
 }
 
 .demo {
-  background-color: white;
+  background-color: var(--bg-primary, white);
   border-radius: 0.5rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-primary, #e5e7eb);
   padding: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -58,9 +58,9 @@
 }
 
 .apiTable {
-  background-color: white;
+  background-color: var(--bg-primary, white);
   border-radius: 0.5rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-primary, #e5e7eb);
   overflow: hidden;
 
   table {
@@ -71,21 +71,21 @@
     td {
       padding: 1rem;
       text-align: left;
-      border-bottom: 1px solid #e5e7eb;
+      border-bottom: 1px solid var(--border-primary, #e5e7eb);
     }
 
     th {
-      background-color: #f9fafb;
+      background-color: var(--bg-secondary, #f9fafb);
       font-weight: 600;
-      color: #111827;
+      color: var(--text-primary, #111827);
     }
 
     td {
-      color: #374151;
+      color: var(--text-secondary, #374151);
 
       &:first-child {
         font-weight: 500;
-        color: #111827;
+        color: var(--text-primary, #111827);
       }
     }
 

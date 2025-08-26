@@ -5,7 +5,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: #fbbf24; /* Vibrant yellow color */
+  color: var(--accent-primary, #fbbf24); /* Vibrant yellow color */
 }
 
 /* Enhanced neon yellow for better visibility */
@@ -47,7 +47,7 @@
 /* Spinner Variant */
 .ui-loader--spinner .ui-loader__spinner {
   animation: ui-loader-rotation 1s linear infinite;
-  stroke: #fbbf24; /* Vibrant yellow color */
+  stroke: var(--accent-primary, #fbbf24); /* Vibrant yellow color */
   stroke-width: 3;
   filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.6));
 }
@@ -72,7 +72,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #fbbf24; /* Vibrant yellow color */
+  background-color: var(--accent-primary, #fbbf24); /* Vibrant yellow color */
   animation: ui-loader-dots 1.4s ease-in-out infinite both;
   filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0.6));
 }
@@ -105,7 +105,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #fbbf24; /* Vibrant yellow color */
+  background-color: var(--accent-primary, #fbbf24); /* Vibrant yellow color */
   animation: ui-loader-pulse 1.2s ease-in-out infinite;
   filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.6));
 }
@@ -151,4 +151,13 @@
   .ui-loader--centered {
     background-color: rgba(0, 0, 0, 0.8);
   }
+}
+
+/* Theme-aware background for centered loader */
+[data-theme="dark"] .ui-loader--centered {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="light"] .ui-loader--centered {
+  background-color: rgba(255, 255, 255, 0.8);
 }

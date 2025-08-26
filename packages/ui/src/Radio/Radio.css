@@ -26,9 +26,9 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  border: 2px solid #d1d5db;
+  border: 2px solid var(--border-secondary, #d1d5db);
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--bg-primary, white);
   flex-shrink: 0;
   transition: all 0.2s ease;
   margin-top: 1px;
@@ -49,13 +49,13 @@
 
 /* Hover state */
 .ui-radio:hover .ui-radio__checkmark {
-  border-color: #9ca3af;
+  border-color: var(--text-tertiary, #9ca3af);
 }
 
 /* Checked state */
 .ui-radio__input:checked + .ui-radio__checkmark {
-  border-color: #3b82f6;
-  background-color: #3b82f6;
+  border-color: var(--accent-primary, #3b82f6);
+  background-color: var(--accent-primary, #3b82f6);
 }
 
 .ui-radio__input:checked + .ui-radio__checkmark::after {
@@ -64,19 +64,19 @@
 
 /* Focus state */
 .ui-radio__input:focus + .ui-radio__checkmark {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid var(--accent-primary, #3b82f6);
   outline-offset: 2px;
 }
 
 /* Disabled state */
 .ui-radio--disabled .ui-radio__checkmark {
-  border-color: #e5e7eb;
-  background-color: #f9fafb;
+  border-color: var(--border-primary, #e5e7eb);
+  background-color: var(--bg-secondary, #f9fafb);
 }
 
 .ui-radio--disabled .ui-radio__input:checked + .ui-radio__checkmark {
-  border-color: #d1d5db;
-  background-color: #d1d5db;
+  border-color: var(--border-secondary, #d1d5db);
+  background-color: var(--border-secondary, #d1d5db);
 }
 
 /* Content styling */
@@ -89,13 +89,13 @@
 
 .ui-radio__label {
   font-weight: 500;
-  color: #111827;
+  color: var(--text-primary, #111827);
   line-height: 1.4;
 }
 
 .ui-radio__description {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--text-secondary, #6b7280);
   line-height: 1.4;
 }
 
