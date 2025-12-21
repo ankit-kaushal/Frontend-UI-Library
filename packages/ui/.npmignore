@@ -1,0 +1,41 @@
+# Source files
+src/
+tsconfig.json
+tsup.config.ts
+
+# Development files
+node_modules/
+*.log
+*.tsbuildinfo
+
+# Documentation (keep README.md and LICENSE)
+THEME_EXAMPLE.md
+THEME_GUIDE.md
+
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+__tests__/
+coverage/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts (keep dist)
+*.map
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+

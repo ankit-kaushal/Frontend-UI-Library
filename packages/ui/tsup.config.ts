@@ -15,5 +15,6 @@ export default defineConfig({
     '.css': 'copy',
     '.scss': 'copy'
   },
+  publicDir: false,
   onSuccess: 'echo "UI package built successfully!"'
 })
