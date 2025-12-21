@@ -161,6 +161,7 @@ A Next.js 14 application that showcases the UI components.
 - API reference tables
 - Responsive design
 - TypeScript path aliases for UI package imports
+- Dark/Light theme toggle with system preference support
 
 ## Building for Production
 
@@ -172,6 +173,54 @@ npm run build
 npm run build --workspace=@tslb/ui
 ```
 
+## Theme System
+
+The documentation site and UI components include a comprehensive theme system with:
+
+- **Light Theme**: Clean, bright interface for daytime use
+- **Dark Theme**: Easy on the eyes for low-light environments  
+- **System Theme**: Automatically follows your OS preference (default)
+- **Persistent Storage**: Remembers your theme choice
+- **Smooth Transitions**: Elegant theme switching animations
+- **Component-Level Theming**: All UI components automatically adapt to the current theme
+
+### Theme Features
+
+**Documentation Site:**
+- Theme toggle in the top navigation bar
+- Dropdown with Light, Dark, and System options
+- Real-time theme switching
+- Responsive design that works in all themes
+
+**UI Components:**
+- Button, Radio, and Loader components support theming
+- CSS variables ensure consistent theming across all components
+- Fallback colors for environments without theme variables
+- Automatic adaptation to light/dark themes
+
+### For Library Consumers
+
+The theme system is available for consumers of the library. See the [Theme Guide](packages/ui/THEME_GUIDE.md) for detailed implementation instructions.
+
+**Quick Start:**
+```tsx
+import { ThemeProvider, ThemeToggle } from '@tslb/ui';
+import '@tslb/ui/dist/theme.css';
+
+function App() {
+  return (
+    <ThemeProvider>
+      <div>
+        <ThemeToggle />
+        {/* Your app content */}
+      </div>
+    </ThemeProvider>
+  );
+}
+```
+
+The theme toggle is located in the top navigation bar and provides a dropdown with all three options.
+
 ## Technologies Used
 
 - **UI Package**: TypeScript, React, tsup, plain CSS
@@ -179,3 +228,4 @@ npm run build --workspace=@tslb/ui
 - **Monorepo**: npm workspaces
 - **Development**: concurrently, fswatch
 - **Styling**: Plain CSS with component-level imports
+- **Theme System**: CSS variables with React context
