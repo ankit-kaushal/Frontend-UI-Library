@@ -5,6 +5,7 @@ import './Radio/Radio.css'
 import './Text/Text.css'
 import './Box/Box.css'
 import './Flex/Flex.css'
+import './Modal/Modal.css'
 import './Theme/theme.css'
 
 export { Button } from './Button'
@@ -15,6 +16,24 @@ export { Radio, RadioGroup } from './Radio'
 export type { RadioProps, RadioGroupProps } from './Radio'
 export { Text } from './Text'
 export type { TextProps, TextSize, TextWeight, TextColor, TextAlign } from './Text'
+export {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  ModalCloseButton,
+} from './Modal'
+export type {
+  ModalProps,
+  ModalOverlayProps,
+  ModalContentProps,
+  ModalHeaderProps,
+  ModalBodyProps,
+  ModalFooterProps,
+  ModalCloseButtonProps,
+} from './Modal'
 export { Box } from './Box'
 export type { BoxProps } from './Box'
 export { Flex } from './Flex'

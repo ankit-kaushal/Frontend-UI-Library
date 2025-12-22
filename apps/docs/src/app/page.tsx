@@ -52,7 +52,7 @@ export default function Home() {
       name: "Modal",
       description: "A modal dialog component for overlays and popups",
       href: "/components/modal",
-      status: "planned",
+      status: "ready",
     },
     {
       name: "Input",
