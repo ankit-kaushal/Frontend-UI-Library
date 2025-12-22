@@ -257,6 +257,70 @@ export default function FlexPage() {
         </section>
 
         <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>With Layout Props</h2>
+          <div className={styles.demo}>
+            <Flex
+              direction="column"
+              gap={16}
+              padding={20}
+              backgroundColor="var(--bg-secondary)"
+              borderRadius={8}
+            >
+              <Flex
+                justify="between"
+                align="center"
+                padding={12}
+                backgroundColor="var(--bg-primary)"
+                borderRadius={4}
+              >
+                <Box className={styles.demoBox}>Left Content</Box>
+                <Box className={styles.demoBox}>Right Content</Box>
+              </Flex>
+              <Flex
+                position="relative"
+                width="100%"
+                height={100}
+                padding={16}
+                backgroundColor="var(--accent-primary)"
+                color="white"
+                borderRadius={4}
+                alignItems="center"
+                justifyContent="center"
+              >
+                Centered with position and size
+              </Flex>
+            </Flex>
+          </div>
+          <CodeBlock language="tsx">
+            {`<Flex
+  direction="column"
+  gap={16}
+  padding={20}
+  backgroundColor="var(--bg-secondary)"
+  borderRadius={8}
+>
+  <Flex
+    justify="between"
+    align="center"
+    padding={12}
+  >
+    Content
+  </Flex>
+  <Flex
+    position="relative"
+    width="100%"
+    height={100}
+    padding={16}
+    alignItems="center"
+    justifyContent="center"
+  >
+    Centered
+  </Flex>
+</Flex>`}
+          </CodeBlock>
+        </section>
+
+        <section className={styles.section}>
           <h2 className={styles.sectionTitle}>API Reference</h2>
           <div className={styles.apiTable}>
             <table>
@@ -285,15 +349,25 @@ export default function FlexPage() {
                   <td>align</td>
                   <td>"start" | "end" | "center" | "stretch" | "baseline"</td>
                   <td>"stretch"</td>
-                  <td>Alignment of items along the cross axis</td>
+                  <td>Alignment of items (shorthand for alignItems)</td>
+                </tr>
+                <tr>
+                  <td>alignItems</td>
+                  <td>"flex-start" | "flex-end" | "center" | "stretch" | "baseline"</td>
+                  <td>-</td>
+                  <td>CSS alignItems property</td>
                 </tr>
                 <tr>
                   <td>justify</td>
-                  <td>
-                    "start" | "end" | "center" | "between" | "around" | "evenly"
-                  </td>
+                  <td>"start" | "end" | "center" | "between" | "around" | "evenly"</td>
                   <td>"start"</td>
-                  <td>Justification of items along the main axis</td>
+                  <td>Justification (shorthand for justifyContent)</td>
+                </tr>
+                <tr>
+                  <td>justifyContent</td>
+                  <td>"flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly"</td>
+                  <td>-</td>
+                  <td>CSS justifyContent property</td>
                 </tr>
                 <tr>
                   <td>wrap</td>
@@ -308,6 +382,48 @@ export default function FlexPage() {
                   <td>Gap between items (number in px or string)</td>
                 </tr>
                 <tr>
+                  <td>position</td>
+                  <td>"static" | "relative" | "absolute" | "fixed" | "sticky"</td>
+                  <td>-</td>
+                  <td>CSS position property</td>
+                </tr>
+                <tr>
+                  <td>top, right, bottom, left</td>
+                  <td>number | string</td>
+                  <td>-</td>
+                  <td>Position offsets (number in px or string)</td>
+                </tr>
+                <tr>
+                  <td>width, height</td>
+                  <td>number | string</td>
+                  <td>-</td>
+                  <td>Width and height (number in px or string)</td>
+                </tr>
+                <tr>
+                  <td>padding, margin</td>
+                  <td>number | string</td>
+                  <td>-</td>
+                  <td>Spacing (number in px or string)</td>
+                </tr>
+                <tr>
+                  <td>paddingTop, paddingRight, etc.</td>
+                  <td>number | string</td>
+                  <td>-</td>
+                  <td>Individual spacing properties</td>
+                </tr>
+                <tr>
+                  <td>backgroundColor, bg</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Background color (bg is alias)</td>
+                </tr>
+                <tr>
+                  <td>borderRadius</td>
+                  <td>number | string</td>
+                  <td>-</td>
+                  <td>Border radius</td>
+                </tr>
+                <tr>
                   <td>className</td>
                   <td>string</td>
                   <td>""</td>
@@ -317,7 +433,7 @@ export default function FlexPage() {
                   <td>style</td>
                   <td>React.CSSProperties</td>
                   <td>-</td>
-                  <td>Inline styles</td>
+                  <td>Inline styles (merged with computed styles)</td>
                 </tr>
               </tbody>
             </table>
