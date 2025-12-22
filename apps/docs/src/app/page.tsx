@@ -28,6 +28,20 @@ export default function Home() {
       status: "ready",
     },
     {
+      name: "Flex",
+      description:
+        "A flexible layout component built on CSS Flexbox for creating responsive layouts",
+      href: "/components/flex",
+      status: "ready",
+    },
+    {
+      name: "Box",
+      description:
+        "A versatile container component that serves as a building block for layouts",
+      href: "/components/box",
+      status: "ready",
+    },
+    {
       name: "Modal",
       description: "A modal dialog component for overlays and popups",
       href: "/components/modal",

@@ -20,6 +20,8 @@ import {
   ChevronRight,
   Loader,
   Circle,
+  Layout,
+  Package,
 } from "feather-icons-react";
 import styles from "./Sidebar.module.scss";
 
@@ -39,6 +41,8 @@ const Sidebar = () => {
     { href: "/components/button", label: "Button", icon: Square },
     { href: "/components/loader", label: "Loader", icon: Loader },
     { href: "/components/radio", label: "Radio", icon: Circle },
+    { href: "/components/flex", label: "Flex", icon: Layout },
+    { href: "/components/box", label: "Box", icon: Package },
     { href: "/components/modal", label: "Modal", icon: Maximize2 },
     { href: "/components/input", label: "Input", icon: Type },
     { href: "/components/card", label: "Card", icon: CreditCard },

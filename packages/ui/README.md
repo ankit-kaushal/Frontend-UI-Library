@@ -22,9 +22,12 @@ npm install react react-dom
 
 ## Quick Start
 
+**With Modern Bundlers (Vite, Webpack 5, Next.js, etc.):**
+
+CSS is automatically included when you import components! Just import and use:
+
 ```tsx
-import { Button, Loader, Radio, RadioGroup, ThemeProvider } from '@tslb/ui';
-import '@tslb/ui/theme.css';
+import { Button, Loader, Radio, RadioGroup, ThemeProvider } from '@thesilverlabs/ui';
 
 function App() {
   return (
@@ -35,6 +38,13 @@ function App() {
     </ThemeProvider>
   );
 }
+```
+
+**If CSS is not automatically loaded**, import it manually:
+
+```tsx
+import { Button } from '@thesilverlabs/ui';
+import '@thesilverlabs/ui/styles.css'; // Only needed if bundler doesn't auto-include
 ```
 
 ## Components
@@ -171,13 +181,21 @@ import { ThemeToggle } from '@tslb/ui';
 
 ## Styling
 
-The library uses CSS variables for theming. Import the theme CSS file to get started:
+**CSS is automatically included** when you import components (with modern bundlers like Vite, Webpack 5, Next.js, etc.). The library uses CSS variables for theming.
 
-```tsx
-import '@tslb/ui/theme.css';
-```
+The bundled CSS includes:
+- Theme CSS variables (light/dark mode support)
+- Button styles
+- Loader styles  
+- Radio styles
 
 All components automatically adapt to the current theme (light/dark) based on CSS variables.
+
+**If you need to import CSS manually** (for older bundlers or specific setups):
+
+```tsx
+import '@thesilverlabs/ui/styles.css';
+```
 
 ## TypeScript Support
 

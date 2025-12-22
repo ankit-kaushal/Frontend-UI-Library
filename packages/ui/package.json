@@ -1,20 +1,18 @@
 {
   "name": "@thesilverlabs/ui",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A modern React component library with TypeScript support, featuring Button, Loader, Radio components and a comprehensive theme system",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
-    "./theme.css": "./dist/theme.css",
-    "./Button.css": "./dist/Button.css",
-    "./Loader.css": "./dist/Loader.css",
-    "./Radio.css": "./dist/Radio.css"
+    "./styles.css": "./dist/index.css",
+    "./index.css": "./dist/index.css"
   },
   "files": [
     "dist",
@@ -22,8 +20,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "rm -rf dist && rollup -c",
+    "dev": "rollup -c --watch",
     "clean": "rm -rf dist",
     "type-check": "tsc --noEmit",
     "lint": "eslint src --ext .ts,.tsx",
@@ -58,11 +56,17 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "tsup": "^8.0.0",
-    "typescript": "^5.0.0"
+    "rollup": "^4.54.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3"
   }
 }

@@ -1,0 +1,81 @@
+.ui-flex {
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* Direction */
+.ui-flex--row {
+  flex-direction: row;
+}
+
+.ui-flex--column {
+  flex-direction: column;
+}
+
+.ui-flex--row-reverse {
+  flex-direction: row-reverse;
+}
+
+.ui-flex--column-reverse {
+  flex-direction: column-reverse;
+}
+
+/* Alignment */
+.ui-flex--align-start {
+  align-items: flex-start;
+}
+
+.ui-flex--align-end {
+  align-items: flex-end;
+}
+
+.ui-flex--align-center {
+  align-items: center;
+}
+
+.ui-flex--align-stretch {
+  align-items: stretch;
+}
+
+.ui-flex--align-baseline {
+  align-items: baseline;
+}
+
+/* Justify */
+.ui-flex--justify-start {
+  justify-content: flex-start;
+}
+
+.ui-flex--justify-end {
+  justify-content: flex-end;
+}
+
+.ui-flex--justify-center {
+  justify-content: center;
+}
+
+.ui-flex--justify-between {
+  justify-content: space-between;
+}
+
+.ui-flex--justify-around {
+  justify-content: space-around;
+}
+
+.ui-flex--justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* Wrap */
+.ui-flex--wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.ui-flex--wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.ui-flex--wrap-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
