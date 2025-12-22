@@ -1,7 +1,8 @@
 import React from "react";
 import "./Button.css";
 
-export interface ButtonProps {
+export interface ButtonProps
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "style"> {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "outline" | "link";
   size?: "xs" | "sm" | "md" | "lg";
@@ -12,6 +13,7 @@ export interface ButtonProps {
   rightIcon?: React.ReactNode;
   onClick?: () => void;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -25,6 +27,8 @@ export const Button: React.FC<ButtonProps> = ({
   rightIcon,
   onClick,
   className = "",
+  style,
+  ...props
 }) => {
   const buttonClasses = [
     "ui-button",
@@ -40,7 +44,13 @@ export const Button: React.FC<ButtonProps> = ({
   const isDisabled = disabled || loading;
 
   return (
-    <button className={buttonClasses} disabled={isDisabled} onClick={onClick}>
+    <button
+      className={buttonClasses}
+      disabled={isDisabled}
+      onClick={onClick}
+      style={style}
+      {...props}
+    >
       {loading && (
         <svg className="ui-button__spinner" viewBox="0 0 24 24">
           <circle

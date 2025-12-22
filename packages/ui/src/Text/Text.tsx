@@ -12,13 +12,15 @@ export type TextColor =
   | "warning";
 export type TextAlign = "left" | "center" | "right";
 
-export interface TextProps extends React.HTMLAttributes<HTMLElement> {
+export interface TextProps
+  extends Omit<React.HTMLAttributes<HTMLElement>, "style"> {
   as?: keyof JSX.IntrinsicElements;
   size?: TextSize;
   weight?: TextWeight;
   color?: TextColor;
   align?: TextAlign;
   children: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
 export const Text: React.FC<TextProps> = ({
@@ -29,6 +31,7 @@ export const Text: React.FC<TextProps> = ({
   align = "left",
   className = "",
   children,
+  style,
   ...props
 }) => {
   const Component = as as any;
@@ -45,7 +48,7 @@ export const Text: React.FC<TextProps> = ({
     .join(" ");
 
   return (
-    <Component className={classes} {...props}>
+    <Component className={classes} style={style} {...props}>
       {children}
     </Component>
   );
