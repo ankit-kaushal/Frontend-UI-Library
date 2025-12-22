@@ -28,6 +28,13 @@ export default function Home() {
       status: "ready",
     },
     {
+      name: "Text",
+      description:
+        "Typography component with sizes, weights, colors, alignment, and semantic elements",
+      href: "/components/text",
+      status: "ready",
+    },
+    {
       name: "Flex",
       description:
         "A flexible layout component built on CSS Flexbox for creating responsive layouts",
