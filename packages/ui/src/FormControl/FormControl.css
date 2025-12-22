@@ -1,0 +1,26 @@
+.ui-form-control {
+  width: 100%;
+  position: relative;
+}
+
+.ui-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary, #111827);
+  margin-bottom: 0.5rem;
+}
+
+.ui-form-label__required {
+  color: var(--danger, #dc2626);
+  margin-left: 0.25rem;
+}
+
+.ui-form-error-message {
+  display: flex;
+  align-items: center;
+  color: var(--danger, #dc2626);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+

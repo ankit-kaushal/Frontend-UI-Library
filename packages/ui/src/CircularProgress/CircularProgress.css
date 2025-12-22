@@ -1,0 +1,51 @@
+.ui-circular-progress {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-circular-progress__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ui-circular-progress__track {
+  opacity: 0.2;
+}
+
+.ui-circular-progress__indicator {
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.ui-circular-progress__indicator--indeterminate {
+  animation: circular-progress-spin 1.4s linear infinite;
+  stroke-dasharray: 80px, 200px;
+  stroke-dashoffset: 0;
+}
+
+.ui-circular-progress__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary, #111827);
+}
+
+.ui-circular-progress-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary, #111827);
+}
+
+@keyframes circular-progress-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
