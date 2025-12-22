@@ -48,13 +48,10 @@
   border: 1px solid var(--border-primary, #e5e7eb);
   padding: 2rem;
   margin-bottom: 1.5rem;
-}
-
-.inputGroup {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
-  max-width: 400px;
+  align-items: center;
 }
 
 .apiTable {
@@ -94,3 +91,4 @@
     }
   }
 }
+

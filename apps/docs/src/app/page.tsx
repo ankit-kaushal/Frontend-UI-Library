@@ -58,7 +58,31 @@ export default function Home() {
       name: "Input",
       description: "Form input components with validation support",
       href: "/components/input",
-      status: "planned",
+      status: "ready",
+    },
+    {
+      name: "Grid",
+      description: "CSS Grid layout component for two-dimensional layouts",
+      href: "/components/grid",
+      status: "ready",
+    },
+    {
+      name: "Link",
+      description: "Link component with multiple variants and color schemes",
+      href: "/components/link",
+      status: "ready",
+    },
+    {
+      name: "IconButton",
+      description: "Button component specifically designed for icons",
+      href: "/components/iconbutton",
+      status: "ready",
+    },
+    {
+      name: "CircularProgress",
+      description: "Circular progress indicator for loading states and progress values",
+      href: "/components/circularprogress",
+      status: "ready",
     },
     {
       name: "Card",
@@ -88,7 +112,7 @@ export default function Home() {
       name: "Tooltip",
       description: "Contextual information on hover",
       href: "/components/tooltip",
-      status: "planned",
+      status: "ready",
     },
     {
       name: "Dropdown",
