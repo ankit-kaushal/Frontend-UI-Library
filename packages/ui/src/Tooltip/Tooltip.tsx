@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useOutsideClick } from "../hooks/useOutsideClick";
 import "./Tooltip.css";
 
@@ -81,4 +81,3 @@ export const Tooltip: React.FC<TooltipProps> = ({
     </div>
   );
 };
-
