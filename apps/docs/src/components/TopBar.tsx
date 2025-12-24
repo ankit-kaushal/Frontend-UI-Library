@@ -34,7 +34,7 @@ const TopBar = () => {
     <header className={styles.topBar}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <h1 className={styles.title}>TSLB UI Library</h1>
+          <h1 className={styles.title}>Uilab</h1>
         </div>
 
         <div className={styles.center}>

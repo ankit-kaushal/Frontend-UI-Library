@@ -80,7 +80,8 @@ export default function Home() {
     },
     {
       name: "CircularProgress",
-      description: "Circular progress indicator for loading states and progress values",
+      description:
+        "Circular progress indicator for loading states and progress values",
       href: "/components/circularprogress",
       status: "ready",
     },
@@ -138,7 +139,7 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.content}>
         <header className={styles.header}>
-          <h1 className={styles.title}>TSLB UI Library</h1>
+          <h1 className={styles.title}>Uilab</h1>
           <p className={styles.subtitle}>
             A collection of reusable React components built with TypeScript
           </p>

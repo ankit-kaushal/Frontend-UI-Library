@@ -18,7 +18,7 @@ const Navigation = () => {
     <nav className={styles.navigation}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          TSLB UI Library
+          Uilab
         </Link>
 
         <ul className={styles.navList}>

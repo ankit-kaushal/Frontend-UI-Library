@@ -16,7 +16,6 @@
 }
 
 .header {
-  padding: 1rem;
   border-bottom: 1px solid var(--border-primary);
   display: flex;
   align-items: center;
@@ -29,13 +28,30 @@
   font-weight: 700;
   color: var(--text-primary);
   text-decoration: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   white-space: nowrap;
   overflow: hidden;
+  width: 100%;
+  padding: 0.5rem 0;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
   &:hover {
-    color: var(--text-secondary);
+    opacity: 0.8;
   }
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: color 0.2s ease-in-out;
+  flex-shrink: 0;
 }
 
 .toggleButton {

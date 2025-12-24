@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "@/contexts/SidebarContext";
 import {
@@ -53,7 +54,11 @@ const Sidebar = () => {
     { href: "/components/input", label: "Input", icon: Type },
     { href: "/components/link", label: "Link", icon: LinkIcon },
     { href: "/components/iconbutton", label: "IconButton", icon: MousePointer },
-    { href: "/components/circularprogress", label: "CircularProgress", icon: RefreshCw },
+    {
+      href: "/components/circularprogress",
+      label: "CircularProgress",
+      icon: RefreshCw,
+    },
     { href: "/components/tooltip", label: "Tooltip", icon: HelpCircle },
     { href: "/components/card", label: "Card", icon: CreditCard },
     { href: "/components/avatar", label: "Avatar", icon: User },
@@ -70,9 +75,24 @@ const Sidebar = () => {
         shouldShowCollapsed ? styles.collapsed : ""
       }`}
     >
-      <div className={styles.header}>
+      <div
+        className={styles.header}
+        style={{ padding: shouldShowCollapsed ? "1rem" : "0.1rem 1rem" }}
+      >
         <Link href="/" className={styles.logo}>
-          {!shouldShowCollapsed && "TSLB UI Library"}
+          {!shouldShowCollapsed && (
+            <>
+              <Image
+                src="/uilab-logo.png"
+                alt="Uilab"
+                width={40}
+                height={40}
+                style={{ objectFit: "contain" }}
+                priority
+              />
+              <span className={styles.logoText}>Uilab</span>
+            </>
+          )}
         </Link>
         <button
           onClick={toggleSidebar}

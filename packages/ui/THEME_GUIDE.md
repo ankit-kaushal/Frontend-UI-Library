@@ -1,6 +1,6 @@
-# TSLB UI Library - Theme System Guide
+# Uilab - Theme System Guide
 
-This guide explains how to implement theme switching in your application using the TSLB UI Library theme system.
+This guide explains how to implement theme switching in your application using the Uilab theme system.
 
 ## Quick Start
 

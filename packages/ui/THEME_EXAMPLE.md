@@ -256,4 +256,4 @@ function ThemeController() {
 }
 ```
 
-This example shows how easy it is to implement theme switching in your application using the TSLB UI Library theme system!
+This example shows how easy it is to implement theme switching in your application using the Uilab theme system!

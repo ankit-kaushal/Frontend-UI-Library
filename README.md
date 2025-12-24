@@ -1,4 +1,4 @@
-# TSLB UI Library - React Component Library Monorepo
+# Uilab - React Component Library Monorepo
 
 A monorepo containing a React component library built with TypeScript and a Next.js documentation site with a scalable development workflow.
 

@@ -37,7 +37,7 @@ const searchData: SearchResult[] = [
   {
     id: "overview",
     title: "Overview",
-    description: "Get started with TSLB UI Library",
+    description: "Get started with Uilab",
     href: "/",
     category: "Getting Started",
     tags: ["overview", "getting started", "introduction"],
