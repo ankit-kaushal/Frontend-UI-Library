@@ -116,6 +116,12 @@ export default function Home() {
       status: "ready",
     },
     {
+      name: "Toast",
+      description: "Toast notifications for displaying temporary messages",
+      href: "/components/toast",
+      status: "ready",
+    },
+    {
       name: "Dropdown",
       description: "Collapsible menu components",
       href: "/components/dropdown",

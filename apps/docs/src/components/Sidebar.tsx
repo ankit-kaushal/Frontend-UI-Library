@@ -27,6 +27,7 @@ import {
   Link as LinkIcon,
   MousePointer,
   RefreshCw,
+  Bell,
 } from "feather-icons-react";
 import styles from "./Sidebar.module.scss";
 
@@ -60,6 +61,7 @@ const Sidebar = () => {
       icon: RefreshCw,
     },
     { href: "/components/tooltip", label: "Tooltip", icon: HelpCircle },
+    { href: "/components/toast", label: "Toast", icon: Bell },
     { href: "/components/card", label: "Card", icon: CreditCard },
     { href: "/components/avatar", label: "Avatar", icon: User },
     { href: "/components/badge", label: "Badge", icon: Tag },

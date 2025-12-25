@@ -8,6 +8,7 @@ import { SidebarProvider } from "@/contexts/SidebarContext";
 import { SearchProvider } from "@/contexts/SearchContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import MainContent from "@/components/MainContent";
+import { ToastContainerGlobal } from "@uilab/ui";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
             </SearchProvider>
           </SidebarProvider>
         </ThemeProvider>
+        <ToastContainerGlobal />
       </body>
     </html>
   );
