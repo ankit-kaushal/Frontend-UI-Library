@@ -1,5 +1,5 @@
 {
-  "name": "@tslb/ui",
+  "name": "@uilab/ui",
   "version": "1.0.0",
   "private": true,
   "description": "Monorepo for React component library",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev:ui\" \"npm run dev:docs\"",
-    "dev:ui": "npm run dev --workspace=@tslb/ui",
+    "dev:ui": "npm run dev --workspace=@uilab/ui",
     "dev:docs": "npm run dev --workspace=docs",
     "build": "npm run build --workspaces",
     "clean": "npm run clean --workspaces",

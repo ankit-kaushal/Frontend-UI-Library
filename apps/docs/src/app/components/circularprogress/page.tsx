@@ -1,11 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  CircularProgress,
-  CircularProgressLabel,
-  Button,
-} from "@tslb/ui";
+import { CircularProgress, CircularProgressLabel, Button } from "@uilab/ui";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -25,8 +21,9 @@ export default function CircularProgressPage() {
         <header className={styles.header}>
           <h1 className={styles.title}>CircularProgress</h1>
           <p className={styles.description}>
-            A circular progress indicator component for displaying loading states
-            or progress values. Supports both determinate and indeterminate modes.
+            A circular progress indicator component for displaying loading
+            states or progress values. Supports both determinate and
+            indeterminate modes.
           </p>
         </header>
 
@@ -38,7 +35,7 @@ export default function CircularProgressPage() {
             <CircularProgress value={25} />
           </div>
           <CodeBlock language="tsx">
-            {`import { CircularProgress } from '@tslb/ui';
+            {`import { CircularProgress } from '@uilab/ui';
 
 <CircularProgress value={75} />
 <CircularProgress value={50} />
@@ -60,7 +57,7 @@ export default function CircularProgressPage() {
             </CircularProgress>
           </div>
           <CodeBlock language="tsx">
-            {`import { CircularProgress, CircularProgressLabel } from '@tslb/ui';
+            {`import { CircularProgress, CircularProgressLabel } from '@uilab/ui';
 
 <CircularProgress value={75}>
   <CircularProgressLabel>75%</CircularProgressLabel>
@@ -101,21 +98,9 @@ export default function CircularProgressPage() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Custom Colors</h2>
           <div className={styles.demo}>
-            <CircularProgress
-              value={75}
-              color="#2563eb"
-              trackColor="#e0e7ff"
-            />
-            <CircularProgress
-              value={75}
-              color="#059669"
-              trackColor="#d1fae5"
-            />
-            <CircularProgress
-              value={75}
-              color="#dc2626"
-              trackColor="#fee2e2"
-            />
+            <CircularProgress value={75} color="#2563eb" trackColor="#e0e7ff" />
+            <CircularProgress value={75} color="#059669" trackColor="#d1fae5" />
+            <CircularProgress value={75} color="#dc2626" trackColor="#fee2e2" />
           </div>
           <CodeBlock language="tsx">
             {`<CircularProgress
@@ -218,4 +203,3 @@ export default function CircularProgressPage() {
     </div>
   );
 }
-

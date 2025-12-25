@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { IconButton } from "@tslb/ui";
+import { IconButton } from "@uilab/ui";
 import { Mail, Trash, Edit, Heart } from "feather-icons-react";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
@@ -13,8 +13,8 @@ export default function IconButtonPage() {
         <header className={styles.header}>
           <h1 className={styles.title}>IconButton</h1>
           <p className={styles.description}>
-            A button component specifically designed for icons. Supports multiple
-            sizes, variants, and color schemes.
+            A button component specifically designed for icons. Supports
+            multiple sizes, variants, and color schemes.
           </p>
         </header>
 
@@ -26,7 +26,7 @@ export default function IconButtonPage() {
             <IconButton aria-label="Delete" icon={<Trash size={18} />} />
           </div>
           <CodeBlock language="tsx">
-            {`import { IconButton } from '@tslb/ui';
+            {`import { IconButton } from '@uilab/ui';
 import { Mail } from 'feather-icons-react';
 
 <IconButton aria-label="Mail" icon={<Mail size={18} />} />`}
@@ -126,10 +126,7 @@ import { Mail } from 'feather-icons-react';
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>States</h2>
           <div className={styles.demo}>
-            <IconButton
-              aria-label="Normal"
-              icon={<Mail size={18} />}
-            />
+            <IconButton aria-label="Normal" icon={<Mail size={18} />} />
             <IconButton
               aria-label="Disabled"
               icon={<Mail size={18} />}
@@ -181,7 +178,9 @@ import { Mail } from 'feather-icons-react';
                 </tr>
                 <tr>
                   <td>colorScheme</td>
-                  <td>"blue" | "green" | "red" | "yellow" | "purple" | "gray"</td>
+                  <td>
+                    "blue" | "green" | "red" | "yellow" | "purple" | "gray"
+                  </td>
                   <td>-</td>
                   <td>Color scheme (for solid variant)</td>
                 </tr>
@@ -217,4 +216,3 @@ import { Mail } from 'feather-icons-react';
     </div>
   );
 }
-

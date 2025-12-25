@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Grid, Box } from "@tslb/ui";
+import { Grid, Box } from "@uilab/ui";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -27,7 +27,7 @@ export default function GridPage() {
             </Grid>
           </div>
           <CodeBlock language="tsx">
-            {`import { Grid, Box } from '@tslb/ui';
+            {`import { Grid, Box } from '@uilab/ui';
 
 <Grid templateColumns="repeat(3, 1fr)" gap={16}>
   <Box>Item 1</Box>
@@ -40,7 +40,11 @@ export default function GridPage() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Grid Templates</h2>
           <div className={styles.demo}>
-            <Grid templateColumns="1fr 2fr 1fr" gap={12} style={{ marginBottom: "1rem" }}>
+            <Grid
+              templateColumns="1fr 2fr 1fr"
+              gap={12}
+              style={{ marginBottom: "1rem" }}
+            >
               <Box className={styles.gridItem}>1fr</Box>
               <Box className={styles.gridItem}>2fr</Box>
               <Box className={styles.gridItem}>1fr</Box>
@@ -69,7 +73,11 @@ export default function GridPage() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Gap</h2>
           <div className={styles.demo}>
-            <Grid templateColumns="repeat(3, 1fr)" gap={8} style={{ marginBottom: "1rem" }}>
+            <Grid
+              templateColumns="repeat(3, 1fr)"
+              gap={8}
+              style={{ marginBottom: "1rem" }}
+            >
               <Box className={styles.gridItem}>Gap 8px</Box>
               <Box className={styles.gridItem}>Item 2</Box>
               <Box className={styles.gridItem}>Item 3</Box>
@@ -161,7 +169,9 @@ export default function GridPage() {
                 </tr>
                 <tr>
                   <td>autoFlow</td>
-                  <td>"row" | "column" | "dense" | "row dense" | "column dense"</td>
+                  <td>
+                    "row" | "column" | "dense" | "row dense" | "column dense"
+                  </td>
                   <td>-</td>
                   <td>CSS grid-auto-flow value</td>
                 </tr>
@@ -191,4 +201,3 @@ export default function GridPage() {
     </div>
   );
 }
-

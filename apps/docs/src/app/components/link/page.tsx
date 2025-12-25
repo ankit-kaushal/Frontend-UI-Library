@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Link } from "@tslb/ui";
+import { Link } from "@uilab/ui";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -26,7 +26,7 @@ export default function LinkPage() {
             </Link>
           </div>
           <CodeBlock language="tsx">
-            {`import { Link } from '@tslb/ui';
+            {`import { Link } from '@uilab/ui';
 
 <Link href="#basic">Basic Link</Link>
 <Link href="https://example.com" isExternal>
@@ -138,4 +138,3 @@ export default function LinkPage() {
     </div>
   );
 }
-

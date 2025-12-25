@@ -9,19 +9,19 @@ This guide explains how to implement theme switching in your application using t
 First, import the theme CSS variables in your main CSS file or component:
 
 ```css
-@import '@tslb/ui/dist/theme.css';
+@import '@uilab/ui/dist/theme.css';
 ```
 
 Or if you're using a bundler that supports CSS imports:
 
 ```javascript
-import '@tslb/ui/dist/theme.css';
+import '@uilab/ui/dist/theme.css';
 ```
 
 ### 2. Wrap Your App with ThemeProvider
 
 ```tsx
-import { ThemeProvider } from '@tslb/ui';
+import { ThemeProvider } from '@uilab/ui';
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
 ### 3. Add Theme Toggle
 
 ```tsx
-import { ThemeToggle } from '@tslb/ui';
+import { ThemeToggle } from '@uilab/ui';
 
 function Header() {
   return (
@@ -52,7 +52,7 @@ function Header() {
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | `defaultTheme` | `"light" \| "dark" \| "system"` | `"system"` | Initial theme |
-| `storageKey` | `string` | `"tslb-theme"` | localStorage key for theme persistence |
+| `storageKey` | `string` | `"uilab-theme"` | localStorage key for theme persistence |
 | `children` | `ReactNode` | - | Your app content |
 
 ## ThemeToggle Props
@@ -69,8 +69,8 @@ function Header() {
 ### Basic Implementation
 
 ```tsx
-import { ThemeProvider, ThemeToggle } from '@tslb/ui';
-import '@tslb/ui/dist/theme.css';
+import { ThemeProvider, ThemeToggle } from '@uilab/ui';
+import '@uilab/ui/dist/theme.css';
 
 function App() {
   return (
@@ -94,7 +94,7 @@ function App() {
 ### Custom Theme Toggle
 
 ```tsx
-import { useTheme, ThemeToggle } from '@tslb/ui';
+import { useTheme, ThemeToggle } from '@uilab/ui';
 
 function CustomHeader() {
   const { theme, setTheme } = useTheme();
@@ -143,7 +143,7 @@ function CustomHeader() {
 ### Programmatic Theme Control
 
 ```tsx
-import { useTheme } from '@tslb/ui';
+import { useTheme } from '@uilab/ui';
 
 function ThemeControls() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -286,7 +286,7 @@ For SSR applications, you might want to prevent hydration mismatches:
 
 ```tsx
 import { useEffect, useState } from 'react';
-import { ThemeProvider } from '@tslb/ui';
+import { ThemeProvider } from '@uilab/ui';
 
 function App() {
   const [mounted, setMounted] = useState(false);
@@ -319,7 +319,7 @@ function App() {
 - Ensure the initial theme matches between server and client
 
 ### Components Not Theming
-- TSLB UI components automatically use theme variables
+- uilab UI components automatically use theme variables
 - For custom components, use the CSS variables listed above
 - Check that your CSS selectors are correct
 

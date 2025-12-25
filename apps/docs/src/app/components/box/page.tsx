@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Box, Flex } from "@tslb/ui";
+import { Box, Flex } from "@uilab/ui";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -34,7 +34,7 @@ export default function BoxPage() {
             </Box>
           </div>
           <CodeBlock language="tsx">
-            {`import { Box } from '@tslb/ui';
+            {`import { Box } from '@uilab/ui';
 
 <Box
   style={{

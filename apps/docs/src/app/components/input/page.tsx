@@ -7,7 +7,7 @@ import {
   FormLabel,
   FormErrorMessage,
   Textarea,
-} from "@tslb/ui";
+} from "@uilab/ui";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -23,7 +23,8 @@ export default function InputPage() {
           <h1 className={styles.title}>Input</h1>
           <p className={styles.description}>
             Form input components with validation support, multiple sizes, and
-            variants. Works seamlessly with FormControl for form state management.
+            variants. Works seamlessly with FormControl for form state
+            management.
           </p>
         </header>
 
@@ -37,7 +38,7 @@ export default function InputPage() {
             </div>
           </div>
           <CodeBlock language="tsx">
-            {`import { Input } from '@tslb/ui';
+            {`import { Input } from '@uilab/ui';
 
 <Input placeholder="Enter your name" />
 <Input type="email" placeholder="Enter your email" />
@@ -99,7 +100,7 @@ export default function InputPage() {
             </div>
           </div>
           <CodeBlock language="tsx">
-            {`import { Input, FormControl, FormLabel, FormErrorMessage } from '@tslb/ui';
+            {`import { Input, FormControl, FormLabel, FormErrorMessage } from '@uilab/ui';
 
 <FormControl isInvalid={hasError} isRequired id="email-field">
   <FormLabel>Email Address</FormLabel>
@@ -120,7 +121,11 @@ export default function InputPage() {
             <div className={styles.inputGroup}>
               <Input placeholder="Normal input" />
               <Input isDisabled placeholder="Disabled input" />
-              <Input isReadOnly placeholder="Read only input" value="Read only value" />
+              <Input
+                isReadOnly
+                placeholder="Read only input"
+                value="Read only value"
+              />
               <Input isInvalid placeholder="Invalid input" />
             </div>
           </div>
@@ -137,11 +142,7 @@ export default function InputPage() {
           <div className={styles.demo}>
             <div className={styles.inputGroup}>
               <Textarea placeholder="Enter your message" rows={4} />
-              <Textarea
-                size="sm"
-                placeholder="Small textarea"
-                rows={3}
-              />
+              <Textarea size="sm" placeholder="Small textarea" rows={3} />
               <Textarea
                 variant="filled"
                 placeholder="Filled textarea"
@@ -150,7 +151,7 @@ export default function InputPage() {
             </div>
           </div>
           <CodeBlock language="tsx">
-            {`import { Textarea } from '@tslb/ui';
+            {`import { Textarea } from '@uilab/ui';
 
 <Textarea placeholder="Enter your message" rows={4} />
 <Textarea size="sm" placeholder="Small textarea" rows={3} />
@@ -221,7 +222,7 @@ export default function InputPage() {
                 </tr>
               </tbody>
             </table>
-        </div>
+          </div>
         </section>
       </div>
     </div>

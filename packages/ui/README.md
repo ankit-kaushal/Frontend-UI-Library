@@ -1,15 +1,15 @@
-# @tslb/ui
+# @uilab/ui
 
 A modern React component library built with TypeScript, featuring beautiful, accessible, and customizable UI components.
 
 ## Installation
 
 ```bash
-npm install @tslb/ui
+npm install @uilab/ui
 # or
-yarn add @tslb/ui
+yarn add @uilab/ui
 # or
-pnpm add @tslb/ui
+pnpm add @uilab/ui
 ```
 
 ## Peer Dependencies
@@ -54,7 +54,7 @@ import '@thesilverlabs/ui/styles.css'; // Only needed if bundler doesn't auto-in
 A versatile button component with multiple variants, sizes, and color schemes.
 
 ```tsx
-import { Button } from '@tslb/ui';
+import { Button } from '@uilab/ui';
 
 <Button variant="primary" size="md" colorScheme="blue">
   Primary Button
@@ -79,7 +79,7 @@ import { Button } from '@tslb/ui';
 A flexible loading indicator with multiple variants.
 
 ```tsx
-import { Loader } from '@tslb/ui';
+import { Loader } from '@uilab/ui';
 
 <Loader variant="spinner" size="md" />
 <Loader variant="dots" size="lg" />
@@ -98,7 +98,7 @@ import { Loader } from '@tslb/ui';
 Radio button components with support for groups and custom styling.
 
 ```tsx
-import { Radio, RadioGroup } from '@tslb/ui';
+import { Radio, RadioGroup } from '@uilab/ui';
 
 <RadioGroup
   name="option"
@@ -136,8 +136,8 @@ The library includes a comprehensive theme system with light, dark, and system p
 Wrap your app with `ThemeProvider` to enable theme functionality:
 
 ```tsx
-import { ThemeProvider, useTheme } from '@tslb/ui';
-import '@tslb/ui/theme.css';
+import { ThemeProvider, useTheme } from '@uilab/ui';
+import '@uilab/ui/theme.css';
 
 function App() {
   return (
@@ -153,7 +153,7 @@ function App() {
 Access and control the theme in your components:
 
 ```tsx
-import { useTheme } from '@tslb/ui';
+import { useTheme } from '@uilab/ui';
 
 function MyComponent() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -174,7 +174,7 @@ function MyComponent() {
 A ready-to-use theme toggle component:
 
 ```tsx
-import { ThemeToggle } from '@tslb/ui';
+import { ThemeToggle } from '@uilab/ui';
 
 <ThemeToggle />
 ```

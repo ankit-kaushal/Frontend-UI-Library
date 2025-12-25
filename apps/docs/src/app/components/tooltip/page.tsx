@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Tooltip, Button } from "@tslb/ui";
+import { Tooltip, Button } from "@uilab/ui";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -13,7 +13,8 @@ export default function TooltipPage() {
           <h1 className={styles.title}>Tooltip</h1>
           <p className={styles.description}>
             A tooltip component that displays contextual information on hover or
-            click. Supports multiple placements and controlled/uncontrolled modes.
+            click. Supports multiple placements and controlled/uncontrolled
+            modes.
           </p>
         </header>
 
@@ -25,7 +26,7 @@ export default function TooltipPage() {
             </Tooltip>
           </div>
           <CodeBlock language="tsx">
-            {`import { Tooltip, Button } from '@tslb/ui';
+            {`import { Tooltip, Button } from '@uilab/ui';
 
 <Tooltip label="This is a tooltip">
   <Button>Hover me</Button>
@@ -150,4 +151,3 @@ export default function TooltipPage() {
     </div>
   );
 }
-

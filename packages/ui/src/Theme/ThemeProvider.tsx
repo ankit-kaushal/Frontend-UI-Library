@@ -24,7 +24,7 @@ export const ThemeProvider: React.FC<{
   children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
-}> = ({ children, defaultTheme = "system", storageKey = "tslb-theme" }) => {
+}> = ({ children, defaultTheme = "system", storageKey = "uilab-theme" }) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
   const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("light");
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Flex, Box } from "@tslb/ui";
+import { Flex, Box } from "@uilab/ui";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -28,7 +28,7 @@ export default function FlexPage() {
             </Flex>
           </div>
           <CodeBlock language="tsx">
-            {`import { Flex, Box } from '@tslb/ui';
+            {`import { Flex, Box } from '@uilab/ui';
 
 <Flex gap={16}>
   <Box>Item 1</Box>
@@ -353,19 +353,27 @@ export default function FlexPage() {
                 </tr>
                 <tr>
                   <td>alignItems</td>
-                  <td>"flex-start" | "flex-end" | "center" | "stretch" | "baseline"</td>
+                  <td>
+                    "flex-start" | "flex-end" | "center" | "stretch" |
+                    "baseline"
+                  </td>
                   <td>-</td>
                   <td>CSS alignItems property</td>
                 </tr>
                 <tr>
                   <td>justify</td>
-                  <td>"start" | "end" | "center" | "between" | "around" | "evenly"</td>
+                  <td>
+                    "start" | "end" | "center" | "between" | "around" | "evenly"
+                  </td>
                   <td>"start"</td>
                   <td>Justification (shorthand for justifyContent)</td>
                 </tr>
                 <tr>
                   <td>justifyContent</td>
-                  <td>"flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly"</td>
+                  <td>
+                    "flex-start" | "flex-end" | "center" | "space-between" |
+                    "space-around" | "space-evenly"
+                  </td>
                   <td>-</td>
                   <td>CSS justifyContent property</td>
                 </tr>
@@ -383,7 +391,9 @@ export default function FlexPage() {
                 </tr>
                 <tr>
                   <td>position</td>
-                  <td>"static" | "relative" | "absolute" | "fixed" | "sticky"</td>
+                  <td>
+                    "static" | "relative" | "absolute" | "fixed" | "sticky"
+                  </td>
                   <td>-</td>
                   <td>CSS position property</td>
                 </tr>
