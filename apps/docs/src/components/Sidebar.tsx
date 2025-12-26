@@ -28,6 +28,7 @@ import {
   MousePointer,
   RefreshCw,
   Bell,
+  MessageSquare,
 } from "feather-icons-react";
 import styles from "./Sidebar.module.scss";
 
@@ -62,6 +63,7 @@ const Sidebar = () => {
     },
     { href: "/components/tooltip", label: "Tooltip", icon: HelpCircle },
     { href: "/components/toast", label: "Toast", icon: Bell },
+    { href: "/components/popover", label: "Popover", icon: MessageSquare },
     { href: "/components/card", label: "Card", icon: CreditCard },
     { href: "/components/avatar", label: "Avatar", icon: User },
     { href: "/components/badge", label: "Badge", icon: Tag },

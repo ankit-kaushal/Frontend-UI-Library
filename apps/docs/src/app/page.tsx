@@ -122,6 +122,12 @@ export default function Home() {
       status: "ready",
     },
     {
+      name: "Popover",
+      description: "Floating content container with positioning and triggers",
+      href: "/components/popover",
+      status: "ready",
+    },
+    {
       name: "Dropdown",
       description: "Collapsible menu components",
       href: "/components/dropdown",

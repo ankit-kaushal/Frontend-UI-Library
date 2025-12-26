@@ -15,6 +15,7 @@ import './IconButton/IconButton.css'
 import './CircularProgress/CircularProgress.css'
 import './Tooltip/Tooltip.css'
 import './Toast/Toast.css'
+import './Popover/Popover.css'
 import './Theme/theme.css'
 
 export { Button } from './Button'
@@ -69,6 +70,23 @@ export { CircularProgress, CircularProgressLabel } from './CircularProgress'
 export type { CircularProgressProps, CircularProgressLabelProps } from './CircularProgress'
 export { Tooltip } from './Tooltip'
 export type { TooltipProps } from './Tooltip'
+export {
+  Popover,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverCloseButton,
+} from './Popover'
+export type {
+  PopoverProps,
+  PopoverPlacement,
+  PopoverContentProps,
+  PopoverHeaderProps,
+  PopoverBodyProps,
+  PopoverFooterProps,
+  PopoverCloseButtonProps,
+} from './Popover'
 export { Toast, ToastComponent, ToastContainer, ToastContainerGlobal } from './Toast'
 export type { ToastProps, ToastVariant, ToastPosition, ToastContainerProps, ToastOptions } from './Toast'
 
