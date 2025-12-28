@@ -151,7 +151,6 @@ export const Popover: React.FC<PopoverProps> = ({
 
       // Check if refs are available
       if (!popoverRef.current || !triggerRef.current) {
-        handleOpenChange(false);
         return;
       }
 
@@ -165,13 +164,13 @@ export const Popover: React.FC<PopoverProps> = ({
       }
     };
 
-    // Use capture phase and add immediately
-    document.addEventListener("mousedown", handleClickOutside, true);
-    document.addEventListener("touchstart", handleClickOutside, true);
+    // Use click event in bubble phase (not capture) so button clicks fire first
+    document.addEventListener("click", handleClickOutside, false);
+    document.addEventListener("touchend", handleClickOutside, false);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside, true);
-      document.removeEventListener("touchstart", handleClickOutside, true);
+      document.removeEventListener("click", handleClickOutside, false);
+      document.removeEventListener("touchend", handleClickOutside, false);
     };
   }, [isOpen, closeOnBlur, handleOpenChange]);
 
@@ -226,6 +225,14 @@ export const Popover: React.FC<PopoverProps> = ({
           }`}
           role="dialog"
           aria-modal="false"
+          onClick={(e) => {
+            // Stop propagation to prevent outside click handler from firing
+            e.stopPropagation();
+          }}
+          onMouseDown={(e) => {
+            // Stop propagation to prevent outside click handler from firing
+            e.stopPropagation();
+          }}
         >
           {content}
         </div>
