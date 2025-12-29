@@ -6,9 +6,11 @@
   position: fixed;
   left: 0;
   top: 0;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
   z-index: 50;
   transition: width 0.3s ease-in-out;
+  overflow: hidden;
 
   &.collapsed {
     width: 4rem;
@@ -21,6 +23,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -80,6 +83,9 @@
 
 .nav {
   padding: 1rem 0;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
 }
 
 .section {

@@ -58,12 +58,21 @@ const TopBar = () => {
 
         <div className={styles.right}>
           <ThemeToggle />
-          <button className={styles.iconButton} title="GitHub">
+          <button
+            className={styles.iconButton}
+            title="GitHub"
+            onClick={() =>
+              window.open(
+                "https://github.com/ankit-kaushal/Frontend-UI-Library",
+                "_blank"
+              )
+            }
+          >
             <Github size={20} />
           </button>
-          <button className={styles.iconButton} title="Settings">
+          {/* <button className={styles.iconButton} title="Settings">
             <Settings size={20} />
-          </button>
+          </button> */}
         </div>
       </div>
     </header>
