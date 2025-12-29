@@ -8,7 +8,7 @@ import { SidebarProvider } from "@/contexts/SidebarContext";
 import { SearchProvider } from "@/contexts/SearchContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import MainContent from "@/components/MainContent";
-import { ToastContainerGlobal } from "@uilab/ui";
+import { ToastContainerGlobal, ThemeScript } from "@uilab/ui";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -26,8 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={workSans.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={workSans.className} suppressHydrationWarning>
+        <ThemeScript storageKey="theme" />
         <ThemeProvider>
           <SidebarProvider>
             <SearchProvider>

@@ -97,5 +97,5 @@ export { useOutsideClick } from './hooks'
 export type { UseOutsideClickOptions } from './hooks'
 
 // Theme exports
-export { ThemeProvider, useTheme, ThemeToggle } from './Theme'
+export { ThemeProvider, useTheme, ThemeToggle, ThemeScript } from './Theme'
 export type { Theme } from './Theme/ThemeProvider'

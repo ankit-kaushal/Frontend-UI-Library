@@ -18,7 +18,33 @@ Or if you're using a bundler that supports CSS imports:
 import '@uilab/ui/dist/theme.css';
 ```
 
-### 2. Wrap Your App with ThemeProvider
+### 2. Add ThemeScript (Next.js App Directory only)
+
+For Next.js App Directory, add `ThemeScript` to your `layout.tsx` to prevent flash of light content in dark mode:
+
+```tsx
+// app/layout.tsx
+import { ThemeScript, ThemeProvider } from '@uilab/ui';
+
+export default function RootLayout({ children }) {
+  return (
+    <html suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <ThemeScript />
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+**Important:** Add `suppressHydrationWarning` to both `<html>` and `<body>` tags to prevent hydration mismatches, as `ThemeScript` modifies the DOM before React hydrates.
+
+**Note:** For other React apps (Create React App, Vite, etc.), you can skip this step - `ThemeProvider` will handle it automatically.
+
+### 3. Wrap Your App with ThemeProvider
 
 ```tsx
 import { ThemeProvider } from '@uilab/ui';
@@ -32,7 +58,7 @@ function App() {
 }
 ```
 
-### 3. Add Theme Toggle
+### 4. Add Theme Toggle
 
 ```tsx
 import { ThemeToggle } from '@uilab/ui';

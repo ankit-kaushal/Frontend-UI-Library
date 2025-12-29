@@ -23,6 +23,8 @@ export const useTheme = () => {
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  // Initialize with safe defaults to prevent hydration mismatches
+  // ThemeScript already applied the theme, so we'll sync in useEffect
   const [theme, setTheme] = useState<Theme>("system");
   const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("light");
 
@@ -48,18 +50,54 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     setResolvedTheme(resolved);
   };
 
-  // Initialize theme from localStorage or default to system
+  // Track if we've completed initial sync
+  const isInitialMount = React.useRef(true);
+
+  // Sync with the theme that was already applied by ThemeScript
+  // This runs only on the client after hydration
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as Theme;
-    if (savedTheme && ["light", "dark", "system"].includes(savedTheme)) {
-      setTheme(savedTheme);
+    // Read theme from localStorage (ThemeScript already read and applied it)
+    const savedTheme = localStorage.getItem("theme");
+
+    // Validate and set the theme
+    if (
+      savedTheme &&
+      (savedTheme === "light" ||
+        savedTheme === "dark" ||
+        savedTheme === "system")
+    ) {
+      // Only update if different from current state
+      if (savedTheme !== theme) {
+        setTheme(savedTheme as Theme);
+      }
+    } else {
+      // No saved theme, ensure "system" is saved (ThemeScript already applied it)
+      localStorage.setItem("theme", "system");
     }
+
+    // Read resolved theme from document (ThemeScript already calculated and applied it)
+    const currentDataTheme =
+      document.documentElement.getAttribute("data-theme");
+    if (currentDataTheme === "dark" || currentDataTheme === "light") {
+      setResolvedTheme(currentDataTheme);
+    }
+
+    // Mark initial mount as complete
+    isInitialMount.current = false;
   }, []);
 
   // Apply theme when theme state changes
   useEffect(() => {
-    applyTheme(theme);
+    // Always save to localStorage when theme changes
     localStorage.setItem("theme", theme);
+
+    // Skip applying on initial mount - ThemeScript already handled it
+    if (isInitialMount.current) {
+      return;
+    }
+
+    // User changed the theme, apply it
+    applyTheme(theme);
   }, [theme]);
 
   // Listen for system theme changes
