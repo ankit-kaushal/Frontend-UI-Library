@@ -34,9 +34,7 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
   const radius = (parseFloat(normalizedSize) - thickness) / 2;
   const circumference = 2 * Math.PI * radius;
   const normalizedValue = Math.min(Math.max((value - min) / (max - min), 0), 1);
-  const strokeDasharray = isIndeterminate
-    ? undefined
-    : circumference;
+  const strokeDasharray = isIndeterminate ? undefined : circumference;
   const strokeDashoffset = isIndeterminate
     ? undefined
     : circumference * (1 - normalizedValue);
@@ -54,7 +52,9 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
         className="ui-circular-progress__svg"
         width={normalizedSize}
         height={normalizedSize}
-        viewBox={`0 0 ${parseFloat(normalizedSize)} ${parseFloat(normalizedSize)}`}
+        viewBox={`0 0 ${parseFloat(normalizedSize)} ${parseFloat(
+          normalizedSize
+        )}`}
       >
         <circle
           className="ui-circular-progress__track"
@@ -67,7 +67,9 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
         />
         <circle
           className={`ui-circular-progress__indicator ${
-            isIndeterminate ? "ui-circular-progress__indicator--indeterminate" : ""
+            isIndeterminate
+              ? "ui-circular-progress__indicator--indeterminate"
+              : ""
           }`}
           cx={parseFloat(normalizedSize) / 2}
           cy={parseFloat(normalizedSize) / 2}
@@ -78,7 +80,9 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
           strokeDasharray={strokeDasharray}
           strokeDashoffset={strokeDashoffset}
           strokeLinecap="round"
-          transform={`rotate(-90 ${parseFloat(normalizedSize) / 2} ${parseFloat(normalizedSize) / 2})`}
+          transform={`rotate(-90 ${parseFloat(normalizedSize) / 2} ${
+            parseFloat(normalizedSize) / 2
+          })`}
         />
       </svg>
       {children && (
@@ -105,4 +109,3 @@ export const CircularProgressLabel: React.FC<CircularProgressLabelProps> = ({
     </div>
   );
 };
-

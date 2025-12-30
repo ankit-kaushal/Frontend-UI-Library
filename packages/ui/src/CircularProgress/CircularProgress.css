@@ -19,9 +19,11 @@
 }
 
 .ui-circular-progress__indicator--indeterminate {
-  animation: circular-progress-spin 1.4s linear infinite;
-  stroke-dasharray: 80px, 200px;
+  animation: circular-progress-spin 1.4s ease-in-out infinite;
+  stroke-dasharray: var(--dash-array-1, 1px), var(--circumference, 200px);
   stroke-dashoffset: 0;
+  stroke-linecap: round;
+  transform-origin: center;
 }
 
 .ui-circular-progress__label {
@@ -42,10 +44,19 @@
 
 @keyframes circular-progress-spin {
   0% {
-    transform: rotate(0deg);
+    stroke-dasharray: var(--dash-array-1, 1px), var(--circumference, 200px);
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg);
+  }
+  50% {
+    stroke-dasharray: var(--dash-array-2, 89px), var(--circumference, 200px);
+    stroke-dashoffset: var(--dash-offset-1, -35px);
+    transform: rotate(-90deg);
   }
   100% {
-    transform: rotate(360deg);
+    stroke-dasharray: var(--dash-array-2, 89px), var(--circumference, 200px);
+    stroke-dashoffset: var(--dash-offset-2, -124px);
+    transform: rotate(270deg);
   }
 }
 
