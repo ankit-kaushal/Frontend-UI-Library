@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Button, Loader, Radio, RadioGroup } from "@uilab/ui";
+import { Button, Loader, Radio, RadioGroup } from "uilab";
 import styles from "./page.module.scss";
 
 export default function Home() {

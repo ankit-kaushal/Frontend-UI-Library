@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@uilab/ui";
+import { Button } from "uilab";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 import { Mail, Trash } from "feather-icons-react";
@@ -28,7 +28,7 @@ export default function ButtonPage() {
             </div>
           </div>
           <CodeBlock language="tsx">
-            {`import { Button } from '@uilab/ui'
+            {`import { Button } from 'uilab'
 
 <Button variant="primary">Primary Button</Button>
 <Button variant="secondary">Secondary Button</Button>

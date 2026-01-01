@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Flex, Box } from "@uilab/ui";
+import { Flex, Box } from "uilab";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -28,7 +28,7 @@ export default function FlexPage() {
             </Flex>
           </div>
           <CodeBlock language="tsx">
-            {`import { Flex, Box } from '@uilab/ui';
+            {`import { Flex, Box } from 'uilab';
 
 <Flex gap={16}>
   <Box>Item 1</Box>

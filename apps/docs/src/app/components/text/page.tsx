@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Text } from "@uilab/ui";
+import { Text } from "uilab";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -28,7 +28,7 @@ export default function TextPage() {
             </div>
           </div>
           <CodeBlock language="tsx">
-            {`import { Text } from '@uilab/ui';
+            {`import { Text } from 'uilab';
 
 <Text size="sm">Small text</Text>
 <Text size="md">Medium text</Text>

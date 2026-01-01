@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Tooltip, Button } from "@uilab/ui";
+import { Tooltip, Button } from "uilab";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -26,7 +26,7 @@ export default function TooltipPage() {
             </Tooltip>
           </div>
           <CodeBlock language="tsx">
-            {`import { Tooltip, Button } from '@uilab/ui';
+            {`import { Tooltip, Button } from 'uilab';
 
 <Tooltip label="This is a tooltip">
   <Button>Hover me</Button>

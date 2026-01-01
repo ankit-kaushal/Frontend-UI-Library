@@ -9,7 +9,7 @@ import {
   PopoverCloseButton,
   Button,
   useDisclosure,
-} from "@uilab/ui";
+} from "uilab";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -77,7 +77,7 @@ export default function PopoverPage() {
             </Popover>
           </div>
           <CodeBlock language="tsx">
-            {`import { Popover, Button } from '@uilab/ui';
+            {`import { Popover, Button } from 'uilab';
 
 <Popover
   content={
@@ -104,7 +104,7 @@ export default function PopoverPage() {
   PopoverFooter,
   PopoverCloseButton,
   Button,
-} from '@uilab/ui';
+} from 'uilab';
 
 <Popover
   content={
@@ -215,7 +215,7 @@ export default function PopoverPage() {
             </Popover>
           </div>
           <CodeBlock language="tsx">
-            {`import { useDisclosure } from '@uilab/ui';
+            {`import { useDisclosure } from 'uilab';
 
 const { isOpen, onOpen, onClose, onToggle } = useDisclosure();
 

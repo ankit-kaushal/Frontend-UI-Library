@@ -9,7 +9,7 @@ import React from "react";
  *
  * @example
  * ```tsx
- * import { ThemeScript, ThemeProvider } from '@uilab/ui';
+ * import { ThemeScript, ThemeProvider } from 'uilab';
  *
  * export default function RootLayout({ children }) {
  *   return (

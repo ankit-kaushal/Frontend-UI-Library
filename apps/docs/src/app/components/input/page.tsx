@@ -7,7 +7,7 @@ import {
   FormLabel,
   FormErrorMessage,
   Textarea,
-} from "@uilab/ui";
+} from "uilab";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -38,7 +38,7 @@ export default function InputPage() {
             </div>
           </div>
           <CodeBlock language="tsx">
-            {`import { Input } from '@uilab/ui';
+            {`import { Input } from 'uilab';
 
 <Input placeholder="Enter your name" />
 <Input type="email" placeholder="Enter your email" />
@@ -100,7 +100,7 @@ export default function InputPage() {
             </div>
           </div>
           <CodeBlock language="tsx">
-            {`import { Input, FormControl, FormLabel, FormErrorMessage } from '@uilab/ui';
+            {`import { Input, FormControl, FormLabel, FormErrorMessage } from 'uilab';
 
 <FormControl isInvalid={hasError} isRequired id="email-field">
   <FormLabel>Email Address</FormLabel>
@@ -151,7 +151,7 @@ export default function InputPage() {
             </div>
           </div>
           <CodeBlock language="tsx">
-            {`import { Textarea } from '@uilab/ui';
+            {`import { Textarea } from 'uilab';
 
 <Textarea placeholder="Enter your message" rows={4} />
 <Textarea size="sm" placeholder="Small textarea" rows={3} />
@@ -222,7 +222,7 @@ export default function InputPage() {
                 </tr>
               </tbody>
             </table>
-          </div>
+        </div>
         </section>
       </div>
     </div>

@@ -9,13 +9,13 @@ This guide explains how to implement theme switching in your application using t
 First, import the theme CSS variables in your main CSS file or component:
 
 ```css
-@import '@uilab/ui/dist/theme.css';
+@import 'uilab/dist/theme.css';
 ```
 
 Or if you're using a bundler that supports CSS imports:
 
 ```javascript
-import '@uilab/ui/dist/theme.css';
+import 'uilab/dist/theme.css';
 ```
 
 ### 2. Add ThemeScript (Next.js App Directory only)
@@ -24,7 +24,7 @@ For Next.js App Directory, add `ThemeScript` to your `layout.tsx` to prevent fla
 
 ```tsx
 // app/layout.tsx
-import { ThemeScript, ThemeProvider } from '@uilab/ui';
+import { ThemeScript, ThemeProvider } from 'uilab';
 
 export default function RootLayout({ children }) {
   return (
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
 ### 3. Wrap Your App with ThemeProvider
 
 ```tsx
-import { ThemeProvider } from '@uilab/ui';
+import { ThemeProvider } from 'uilab';
 
 function App() {
   return (
@@ -61,7 +61,7 @@ function App() {
 ### 4. Add Theme Toggle
 
 ```tsx
-import { ThemeToggle } from '@uilab/ui';
+import { ThemeToggle } from 'uilab';
 
 function Header() {
   return (
@@ -95,8 +95,8 @@ function Header() {
 ### Basic Implementation
 
 ```tsx
-import { ThemeProvider, ThemeToggle } from '@uilab/ui';
-import '@uilab/ui/dist/theme.css';
+import { ThemeProvider, ThemeToggle } from 'uilab';
+import 'uilab/dist/theme.css';
 
 function App() {
   return (
@@ -120,7 +120,7 @@ function App() {
 ### Custom Theme Toggle
 
 ```tsx
-import { useTheme, ThemeToggle } from '@uilab/ui';
+import { useTheme, ThemeToggle } from 'uilab';
 
 function CustomHeader() {
   const { theme, setTheme } = useTheme();
@@ -169,7 +169,7 @@ function CustomHeader() {
 ### Programmatic Theme Control
 
 ```tsx
-import { useTheme } from '@uilab/ui';
+import { useTheme } from 'uilab';
 
 function ThemeControls() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -312,7 +312,7 @@ For SSR applications, you might want to prevent hydration mismatches:
 
 ```tsx
 import { useEffect, useState } from 'react';
-import { ThemeProvider } from '@uilab/ui';
+import { ThemeProvider } from 'uilab';
 
 function App() {
   const [mounted, setMounted] = useState(false);

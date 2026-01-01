@@ -10,7 +10,7 @@
     "clean": "rm -rf .next"
   },
   "dependencies": {
-    "@uilab/ui": "file:../../packages/ui",
+    "uilab": "file:../../packages/ui",
     "@types/react-syntax-highlighter": "^15.5.13",
     "feather-icons-react": "^0.9.0",
     "next": "14.0.0",

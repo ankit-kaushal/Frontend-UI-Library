@@ -8,7 +8,7 @@ import { SidebarProvider } from "@/contexts/SidebarContext";
 import { SearchProvider } from "@/contexts/SearchContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import MainContent from "@/components/MainContent";
-import { ToastContainerGlobal, ThemeScript } from "@uilab/ui";
+import { ToastContainerGlobal, ThemeScript } from "uilab";
 
 const workSans = Work_Sans({
   subsets: ["latin"],

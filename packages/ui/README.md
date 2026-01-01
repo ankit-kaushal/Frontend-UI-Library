@@ -1,15 +1,15 @@
-# @uilab/ui
+# uilab
 
 A modern React component library built with TypeScript, featuring beautiful, accessible, and customizable UI components.
 
 ## Installation
 
 ```bash
-npm install @uilab/ui
+npm install uilab
 # or
-yarn add @uilab/ui
+yarn add uilab
 # or
-pnpm add @uilab/ui
+pnpm add uilab
 ```
 
 ## Peer Dependencies
@@ -27,7 +27,7 @@ npm install react react-dom
 CSS is automatically included when you import components! Just import and use:
 
 ```tsx
-import { Button, Loader, Radio, RadioGroup, ThemeProvider } from '@thesilverlabs/ui';
+import { Button, Loader, Radio, RadioGroup, ThemeProvider } from 'uilab';
 
 function App() {
   return (
@@ -43,8 +43,8 @@ function App() {
 **If CSS is not automatically loaded**, import it manually:
 
 ```tsx
-import { Button } from '@thesilverlabs/ui';
-import '@thesilverlabs/ui/styles.css'; // Only needed if bundler doesn't auto-include
+import { Button } from 'uilab';
+import 'uilab/styles.css'; // Only needed if bundler doesn't auto-include
 ```
 
 ## Components
@@ -54,7 +54,7 @@ import '@thesilverlabs/ui/styles.css'; // Only needed if bundler doesn't auto-in
 A versatile button component with multiple variants, sizes, and color schemes.
 
 ```tsx
-import { Button } from '@uilab/ui';
+import { Button } from 'uilab';
 
 <Button variant="primary" size="md" colorScheme="blue">
   Primary Button
@@ -79,7 +79,7 @@ import { Button } from '@uilab/ui';
 A flexible loading indicator with multiple variants.
 
 ```tsx
-import { Loader } from '@uilab/ui';
+import { Loader } from 'uilab';
 
 <Loader variant="spinner" size="md" />
 <Loader variant="dots" size="lg" />
@@ -98,7 +98,7 @@ import { Loader } from '@uilab/ui';
 Radio button components with support for groups and custom styling.
 
 ```tsx
-import { Radio, RadioGroup } from '@uilab/ui';
+import { Radio, RadioGroup } from 'uilab';
 
 <RadioGroup
   name="option"
@@ -136,8 +136,8 @@ The library includes a comprehensive theme system with light, dark, and system p
 Wrap your app with `ThemeProvider` to enable theme functionality:
 
 ```tsx
-import { ThemeProvider, useTheme } from '@uilab/ui';
-import '@uilab/ui/theme.css';
+import { ThemeProvider, useTheme } from 'uilab';
+import 'uilab/theme.css';
 
 function App() {
   return (
@@ -153,7 +153,7 @@ function App() {
 Access and control the theme in your components:
 
 ```tsx
-import { useTheme } from '@uilab/ui';
+import { useTheme } from 'uilab';
 
 function MyComponent() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -174,7 +174,7 @@ function MyComponent() {
 A ready-to-use theme toggle component:
 
 ```tsx
-import { ThemeToggle } from '@uilab/ui';
+import { ThemeToggle } from 'uilab';
 
 <ThemeToggle />
 ```
@@ -194,7 +194,7 @@ All components automatically adapt to the current theme (light/dark) based on CS
 **If you need to import CSS manually** (for older bundlers or specific setups):
 
 ```tsx
-import '@thesilverlabs/ui/styles.css';
+import 'uilab/styles.css';
 ```
 
 ## TypeScript Support

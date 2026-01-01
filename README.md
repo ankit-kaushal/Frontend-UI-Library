@@ -115,7 +115,7 @@ The docs app uses TypeScript path aliases for direct source imports:
 ```json
 {
   "paths": {
-    "@uilab/ui": ["../../packages/ui/src"]
+    "uilab": ["../../packages/ui/src"]
   }
 }
 ```
@@ -170,7 +170,7 @@ A Next.js 14 application that showcases the UI components.
 npm run build
 
 # Build specific package
-npm run build --workspace=@uilab/ui
+npm run build --workspace=uilab
 ```
 
 ## Theme System
@@ -204,8 +204,8 @@ The theme system is available for consumers of the library. See the [Theme Guide
 
 **Quick Start:**
 ```tsx
-import { ThemeProvider, ThemeToggle } from '@uilab/ui';
-import '@uilab/ui/dist/theme.css';
+import { ThemeProvider, ThemeToggle } from 'uilab';
+import 'uilab/dist/theme.css';
 
 function App() {
   return (

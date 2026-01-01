@@ -5,15 +5,15 @@ Here's a complete example of how to implement theme switching in your applicatio
 ## 1. Install the Library
 
 ```bash
-npm install @uilab/ui
+npm install uilab
 ```
 
 ## 2. Basic Implementation
 
 ```tsx
 // App.tsx
-import { ThemeProvider, ThemeToggle, Button, Radio } from '@uilab/ui';
-import '@uilab/ui/dist/theme.css';
+import { ThemeProvider, ThemeToggle, Button, Radio } from 'uilab';
+import 'uilab/dist/theme.css';
 
 function App() {
   return (
@@ -71,7 +71,7 @@ export default App;
 
 ```tsx
 // CustomThemeToggle.tsx
-import { useTheme } from '@uilab/ui';
+import { useTheme } from 'uilab';
 
 function CustomThemeToggle() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -188,8 +188,8 @@ function TailwindExample() {
 
 ```tsx
 // _app.tsx (Next.js)
-import { ThemeProvider } from '@uilab/ui';
-import '@uilab/ui/dist/theme.css';
+import { ThemeProvider } from 'uilab';
+import 'uilab/dist/theme.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -206,7 +206,7 @@ export default MyApp;
 
 ```tsx
 // ThemeController.tsx
-import { useTheme } from '@uilab/ui';
+import { useTheme } from 'uilab';
 
 function ThemeController() {
   const { theme, setTheme, resolvedTheme } = useTheme();

@@ -11,7 +11,7 @@ import {
   ModalCloseButton,
   Button,
   useDisclosure,
-} from "@uilab/ui";
+} from "uilab";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -66,7 +66,7 @@ export default function ModalPage() {
             </Modal>
           </div>
           <CodeBlock language="tsx">
-            {`import { Modal, ModalHeader, ModalBody, ModalFooter, ModalCloseButton, useDisclosure } from '@uilab/ui';
+            {`import { Modal, ModalHeader, ModalBody, ModalFooter, ModalCloseButton, useDisclosure } from 'uilab';
 
 const { isOpen, onOpen, onClose } = useDisclosure();
 
