@@ -1,6 +1,13 @@
 "use client";
 
-import React, { createContext, useContext, useState, useCallback } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useMemo,
+} from "react";
+import { componentsData } from "@/data/components";
 
 export interface SearchResult {
   id: string;
@@ -33,113 +40,17 @@ export const useSearch = () => {
   return context;
 };
 
-const searchData: SearchResult[] = [
-  {
-    id: "overview",
-    title: "Overview",
-    description: "Get started with Uiplex",
-    href: "/",
-    category: "Getting Started",
-    tags: ["overview", "getting started", "introduction"],
-  },
-  {
-    id: "button",
-    title: "Button",
-    description:
-      "A versatile button component with multiple variants, sizes, color schemes, and states",
-    href: "/components/button",
-    category: "Components",
-    tags: [
-      "button",
-      "click",
-      "action",
-      "primary",
-      "secondary",
-      "outline",
-      "link",
-    ],
-  },
-  {
-    id: "modal",
-    title: "Modal",
-    description: "A modal dialog component for overlaying content",
-    href: "/components/modal",
-    category: "Components",
-    tags: ["modal", "dialog", "overlay", "popup"],
-  },
-  {
-    id: "input",
-    title: "Input",
-    description: "Form input component with various types and states",
-    href: "/components/input",
-    category: "Components",
-    tags: ["input", "form", "text", "field"],
-  },
-  {
-    id: "card",
-    title: "Card",
-    description: "A container component for displaying content",
-    href: "/components/card",
-    category: "Components",
-    tags: ["card", "container", "content"],
-  },
-  {
-    id: "avatar",
-    title: "Avatar",
-    description: "User avatar component with image and fallback",
-    href: "/components/avatar",
-    category: "Components",
-    tags: ["avatar", "user", "profile", "image"],
-  },
-  {
-    id: "badge",
-    title: "Badge",
-    description: "Small status indicator component",
-    href: "/components/badge",
-    category: "Components",
-    tags: ["badge", "status", "indicator", "label"],
-  },
-  {
-    id: "alert",
-    title: "Alert",
-    description: "Alert component for displaying important messages",
-    href: "/components/alert",
-    category: "Components",
-    tags: ["alert", "message", "notification", "warning"],
-  },
-  {
-    id: "tooltip",
-    title: "Tooltip",
-    description: "Tooltip component for additional information",
-    href: "/components/tooltip",
-    category: "Components",
-    tags: ["tooltip", "help", "information", "hint"],
-  },
-  {
-    id: "dropdown",
-    title: "Dropdown",
-    description: "Dropdown menu component for navigation",
-    href: "/components/dropdown",
-    category: "Components",
-    tags: ["dropdown", "menu", "navigation", "select"],
-  },
-  {
-    id: "tabs",
-    title: "Tabs",
-    description: "Tab component for organizing content",
-    href: "/components/tabs",
-    category: "Components",
-    tags: ["tabs", "navigation", "content", "organize"],
-  },
-  {
-    id: "accordion",
-    title: "Accordion",
-    description: "Collapsible content component",
-    href: "/components/accordion",
-    category: "Components",
-    tags: ["accordion", "collapse", "expand", "content"],
-  },
-];
+// Automatically generate search data from components data
+const generateSearchData = (): SearchResult[] => {
+  return componentsData.map((component) => ({
+    id: component.href.replace(/\//g, "-").replace(/^-/, "") || "overview",
+    title: component.name,
+    description: component.description,
+    href: component.href,
+    category: component.category,
+    tags: component.tags,
+  }));
+};
 
 export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -148,6 +59,9 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  // Generate search data dynamically from components data
+  const searchData = useMemo(() => generateSearchData(), []);
 
   const openSearch = useCallback(() => {
     setIsSearchOpen(true);
@@ -159,30 +73,33 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
     setSearchResults([]);
   }, []);
 
-  const performSearch = useCallback((query: string) => {
-    if (!query.trim()) {
-      setSearchResults([]);
-      return;
-    }
+  const performSearch = useCallback(
+    (query: string) => {
+      if (!query.trim()) {
+        setSearchResults([]);
+        return;
+      }
 
-    setIsLoading(true);
+      setIsLoading(true);
 
-    // Simulate search delay
-    setTimeout(() => {
-      const results = searchData.filter((item) => {
-        const searchTerm = query.toLowerCase();
-        return (
-          item.title.toLowerCase().includes(searchTerm) ||
-          item.description.toLowerCase().includes(searchTerm) ||
-          item.tags.some((tag) => tag.toLowerCase().includes(searchTerm)) ||
-          item.category.toLowerCase().includes(searchTerm)
-        );
-      });
+      // Simulate search delay
+      setTimeout(() => {
+        const results = searchData.filter((item) => {
+          const searchTerm = query.toLowerCase();
+          return (
+            item.title.toLowerCase().includes(searchTerm) ||
+            item.description.toLowerCase().includes(searchTerm) ||
+            item.tags.some((tag) => tag.toLowerCase().includes(searchTerm)) ||
+            item.category.toLowerCase().includes(searchTerm)
+          );
+        });
 
-      setSearchResults(results);
-      setIsLoading(false);
-    }, 150);
-  }, []);
+        setSearchResults(results);
+        setIsLoading(false);
+      }, 150);
+    },
+    [searchData]
+  );
 
   const clearSearch = useCallback(() => {
     setSearchQuery("");

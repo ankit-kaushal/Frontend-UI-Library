@@ -161,12 +161,6 @@ export default function Home() {
       status: "ready",
     },
     {
-      name: "Dropdown",
-      description: "Collapsible menu components",
-      href: "/components/dropdown",
-      status: "planned",
-    },
-    {
       name: "Tabs",
       description: "Tabbed content organization",
       href: "/components/tabs",

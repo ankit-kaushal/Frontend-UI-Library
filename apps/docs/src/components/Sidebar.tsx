@@ -14,7 +14,6 @@ import {
   Tag,
   AlertTriangle,
   HelpCircle,
-  ChevronDown,
   FileText,
   BookOpen,
   List,
@@ -70,7 +69,6 @@ const Sidebar = () => {
     { href: "/components/avatar", label: "Avatar", icon: User },
     { href: "/components/badge", label: "Badge", icon: Tag },
     { href: "/components/alert", label: "Alert", icon: AlertTriangle },
-    { href: "/components/dropdown", label: "Dropdown", icon: ChevronDown },
     { href: "/components/tabs", label: "Tabs", icon: FileText },
     { href: "/components/accordion", label: "Accordion", icon: BookOpen },
   ];
