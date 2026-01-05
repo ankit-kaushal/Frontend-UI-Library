@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['uilab'],
+  transpilePackages: ['uiplex'],
   experimental: {
     esmExternals: 'loose'
   }

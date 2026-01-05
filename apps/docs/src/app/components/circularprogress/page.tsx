@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { CircularProgress, CircularProgressLabel, Button } from "uilab";
+import { CircularProgress, CircularProgressLabel, Button } from "uiplex";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -35,7 +35,7 @@ export default function CircularProgressPage() {
             <CircularProgress value={25} />
           </div>
           <CodeBlock language="tsx">
-            {`import { CircularProgress } from 'uilab';
+            {`import { CircularProgress } from 'uiplex';
 
 <CircularProgress value={75} />
 <CircularProgress value={50} />
@@ -57,7 +57,7 @@ export default function CircularProgressPage() {
             </CircularProgress>
           </div>
           <CodeBlock language="tsx">
-            {`import { CircularProgress, CircularProgressLabel } from 'uilab';
+            {`import { CircularProgress, CircularProgressLabel } from 'uiplex';
 
 <CircularProgress value={75}>
   <CircularProgressLabel>75%</CircularProgressLabel>

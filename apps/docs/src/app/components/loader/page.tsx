@@ -1,5 +1,5 @@
 import React from "react";
-import { Loader } from "uilab";
+import { Loader } from "uiplex";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -15,7 +15,7 @@ export default function LoaderPage() {
           <Loader />
         </div>
         <CodeBlock language="tsx">
-          {`import { Loader } from 'uilab';
+          {`import { Loader } from 'uiplex';
 
 <Loader />`}
         </CodeBlock>

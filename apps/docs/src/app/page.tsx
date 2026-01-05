@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Button, Loader, Radio, RadioGroup } from "uilab";
+import { Button, Loader, Radio, RadioGroup } from "uiplex";
 import styles from "./page.module.scss";
 
 export default function Home() {
@@ -151,7 +151,7 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.content}>
         <header className={styles.header}>
-          <h1 className={styles.title}>Uilab</h1>
+          <h1 className={styles.title}>Uiplex</h1>
           <p className={styles.subtitle}>
             A collection of reusable React components built with TypeScript
           </p>

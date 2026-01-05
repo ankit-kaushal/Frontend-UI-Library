@@ -1,4 +1,4 @@
-# Uilab - React Component Library Monorepo
+# Uiplex - React Component Library Monorepo
 
 A monorepo containing a React component library built with TypeScript and a Next.js documentation site with a scalable development workflow.
 
@@ -115,7 +115,7 @@ The docs app uses TypeScript path aliases for direct source imports:
 ```json
 {
   "paths": {
-    "uilab": ["../../packages/ui/src"]
+    "uiplex": ["../../packages/ui/src"]
   }
 }
 ```
@@ -170,7 +170,7 @@ A Next.js 14 application that showcases the UI components.
 npm run build
 
 # Build specific package
-npm run build --workspace=uilab
+npm run build --workspace=uiplex
 ```
 
 ## Theme System
@@ -204,8 +204,8 @@ The theme system is available for consumers of the library. See the [Theme Guide
 
 **Quick Start:**
 ```tsx
-import { ThemeProvider, ThemeToggle } from 'uilab';
-import 'uilab/dist/theme.css';
+import { ThemeProvider, ThemeToggle } from 'uiplex';
+import 'uiplex/dist/theme.css';
 
 function App() {
   return (

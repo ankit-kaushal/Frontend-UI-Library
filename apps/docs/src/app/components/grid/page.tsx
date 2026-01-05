@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Grid, Box } from "uilab";
+import { Grid, Box } from "uiplex";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -27,7 +27,7 @@ export default function GridPage() {
             </Grid>
           </div>
           <CodeBlock language="tsx">
-            {`import { Grid, Box } from 'uilab';
+            {`import { Grid, Box } from 'uiplex';
 
 <Grid templateColumns="repeat(3, 1fr)" gap={16}>
   <Box>Item 1</Box>

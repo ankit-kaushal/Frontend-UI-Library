@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { IconButton } from "uilab";
+import { IconButton } from "uiplex";
 import { Mail, Trash, Edit, Heart } from "feather-icons-react";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
@@ -26,7 +26,7 @@ export default function IconButtonPage() {
             <IconButton aria-label="Delete" icon={<Trash size={18} />} />
           </div>
           <CodeBlock language="tsx">
-            {`import { IconButton } from 'uilab';
+            {`import { IconButton } from 'uiplex';
 import { Mail } from 'feather-icons-react';
 
 <IconButton aria-label="Mail" icon={<Mail size={18} />} />`}

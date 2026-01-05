@@ -1,6 +1,6 @@
-# Uilab - Theme System Guide
+# Uiplex - Theme System Guide
 
-This guide explains how to implement theme switching in your application using the Uilab theme system.
+This guide explains how to implement theme switching in your application using the Uiplex theme system.
 
 ## Quick Start
 
@@ -9,13 +9,13 @@ This guide explains how to implement theme switching in your application using t
 First, import the theme CSS variables in your main CSS file or component:
 
 ```css
-@import 'uilab/dist/theme.css';
+@import 'uiplex/dist/theme.css';
 ```
 
 Or if you're using a bundler that supports CSS imports:
 
 ```javascript
-import 'uilab/dist/theme.css';
+import 'uiplex/dist/theme.css';
 ```
 
 ### 2. Add ThemeScript (Next.js App Directory only)
@@ -24,7 +24,7 @@ For Next.js App Directory, add `ThemeScript` to your `layout.tsx` to prevent fla
 
 ```tsx
 // app/layout.tsx
-import { ThemeScript, ThemeProvider } from 'uilab';
+import { ThemeScript, ThemeProvider } from 'uiplex';
 
 export default function RootLayout({ children }) {
   return (
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
 ### 3. Wrap Your App with ThemeProvider
 
 ```tsx
-import { ThemeProvider } from 'uilab';
+import { ThemeProvider } from 'uiplex';
 
 function App() {
   return (
@@ -61,7 +61,7 @@ function App() {
 ### 4. Add Theme Toggle
 
 ```tsx
-import { ThemeToggle } from 'uilab';
+import { ThemeToggle } from 'uiplex';
 
 function Header() {
   return (
@@ -78,7 +78,7 @@ function Header() {
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | `defaultTheme` | `"light" \| "dark" \| "system"` | `"system"` | Initial theme |
-| `storageKey` | `string` | `"uilab-theme"` | localStorage key for theme persistence |
+| `storageKey` | `string` | `"uiplex-theme"` | localStorage key for theme persistence |
 | `children` | `ReactNode` | - | Your app content |
 
 ## ThemeToggle Props
@@ -95,8 +95,8 @@ function Header() {
 ### Basic Implementation
 
 ```tsx
-import { ThemeProvider, ThemeToggle } from 'uilab';
-import 'uilab/dist/theme.css';
+import { ThemeProvider, ThemeToggle } from 'uiplex';
+import 'uiplex/dist/theme.css';
 
 function App() {
   return (
@@ -120,7 +120,7 @@ function App() {
 ### Custom Theme Toggle
 
 ```tsx
-import { useTheme, ThemeToggle } from 'uilab';
+import { useTheme, ThemeToggle } from 'uiplex';
 
 function CustomHeader() {
   const { theme, setTheme } = useTheme();
@@ -169,7 +169,7 @@ function CustomHeader() {
 ### Programmatic Theme Control
 
 ```tsx
-import { useTheme } from 'uilab';
+import { useTheme } from 'uiplex';
 
 function ThemeControls() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -312,7 +312,7 @@ For SSR applications, you might want to prevent hydration mismatches:
 
 ```tsx
 import { useEffect, useState } from 'react';
-import { ThemeProvider } from 'uilab';
+import { ThemeProvider } from 'uiplex';
 
 function App() {
   const [mounted, setMounted] = useState(false);
@@ -345,7 +345,7 @@ function App() {
 - Ensure the initial theme matches between server and client
 
 ### Components Not Theming
-- uilab UI components automatically use theme variables
+- uiplex UI components automatically use theme variables
 - For custom components, use the CSS variables listed above
 - Check that your CSS selectors are correct
 

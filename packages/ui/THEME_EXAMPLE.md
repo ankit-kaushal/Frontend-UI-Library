@@ -5,15 +5,15 @@ Here's a complete example of how to implement theme switching in your applicatio
 ## 1. Install the Library
 
 ```bash
-npm install uilab
+npm install uiplex
 ```
 
 ## 2. Basic Implementation
 
 ```tsx
 // App.tsx
-import { ThemeProvider, ThemeToggle, Button, Radio } from 'uilab';
-import 'uilab/dist/theme.css';
+import { ThemeProvider, ThemeToggle, Button, Radio } from 'uiplex';
+import 'uiplex/dist/theme.css';
 
 function App() {
   return (
@@ -71,7 +71,7 @@ export default App;
 
 ```tsx
 // CustomThemeToggle.tsx
-import { useTheme } from 'uilab';
+import { useTheme } from 'uiplex';
 
 function CustomThemeToggle() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -158,7 +158,7 @@ function TailwindExample() {
     <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       <div className="max-w-4xl mx-auto p-6">
         <h1 className="text-3xl font-bold mb-6">
-          Tailwind + uilab UI Theme
+          Tailwind + uiplex UI Theme
         </h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -167,13 +167,13 @@ function TailwindExample() {
             <p className="text-gray-600 dark:text-gray-300 mb-4">
               This card uses Tailwind classes for theming.
             </p>
-            <Button variant="primary">uilab Button</Button>
+            <Button variant="primary">uiplex Button</Button>
           </div>
           
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
             <h2 className="text-xl font-semibold mb-4">Another Card</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Both Tailwind and uilab UI components work together.
+              Both Tailwind and uiplex UI components work together.
             </p>
             <Radio name="demo" value="yes" label="Yes, it works!" />
           </div>
@@ -188,8 +188,8 @@ function TailwindExample() {
 
 ```tsx
 // _app.tsx (Next.js)
-import { ThemeProvider } from 'uilab';
-import 'uilab/dist/theme.css';
+import { ThemeProvider } from 'uiplex';
+import 'uiplex/dist/theme.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -206,7 +206,7 @@ export default MyApp;
 
 ```tsx
 // ThemeController.tsx
-import { useTheme } from 'uilab';
+import { useTheme } from 'uiplex';
 
 function ThemeController() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -256,4 +256,4 @@ function ThemeController() {
 }
 ```
 
-This example shows how easy it is to implement theme switching in your application using the Uilab theme system!
+This example shows how easy it is to implement theme switching in your application using the Uiplex theme system!

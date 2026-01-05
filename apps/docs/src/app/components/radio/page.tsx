@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Radio, RadioGroup } from "uilab";
+import { Radio, RadioGroup } from "uiplex";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -38,7 +38,7 @@ export default function RadioPage() {
           />
         </div>
         <CodeBlock language="tsx">
-          {`import { Radio } from 'uilab';
+          {`import { Radio } from 'uiplex';
 
 const [selectedValue, setSelectedValue] = useState("option1");
 
@@ -74,7 +74,7 @@ const [selectedValue, setSelectedValue] = useState("option1");
           />
         </div>
         <CodeBlock language="tsx">
-          {`import { RadioGroup } from 'uilab';
+          {`import { RadioGroup } from 'uiplex';
 
 const [groupValue, setGroupValue] = useState("option1");
 

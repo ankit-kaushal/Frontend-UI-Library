@@ -37,7 +37,7 @@ const searchData: SearchResult[] = [
   {
     id: "overview",
     title: "Overview",
-    description: "Get started with Uilab",
+    description: "Get started with Uiplex",
     href: "/",
     category: "Getting Started",
     tags: ["overview", "getting started", "introduction"],

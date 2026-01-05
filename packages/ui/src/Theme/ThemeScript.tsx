@@ -9,7 +9,7 @@ import React from "react";
  *
  * @example
  * ```tsx
- * import { ThemeScript, ThemeProvider } from 'uilab';
+ * import { ThemeScript, ThemeProvider } from 'uiplex';
  *
  * export default function RootLayout({ children }) {
  *   return (
@@ -28,7 +28,7 @@ import React from "react";
 export const ThemeScript: React.FC<{
   storageKey?: string;
   defaultTheme?: "light" | "dark" | "system";
-}> = ({ storageKey = "uilab-theme", defaultTheme = "system" }) => {
+}> = ({ storageKey = "uiplex-theme", defaultTheme = "system" }) => {
   return (
     <script
       dangerouslySetInnerHTML={{

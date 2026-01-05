@@ -1,6 +1,6 @@
 {
-  "name": "uilab",
-  "version": "0.0.1",
+  "name": "uiplex",
+  "version": "1.0.0",
   "description": "A modern React component library with TypeScript support, featuring Button, Loader, Radio components and a comprehensive theme system",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -44,13 +44,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/uilab/Frontend-UI-Library.git",
+    "url": "https://github.com/ankit-kaushal/Frontend-UI-Library",
     "directory": "packages/ui"
   },
   "bugs": {
-    "url": "https://github.com/uilab/Frontend-UI-Library/issues"
+    "url": "https://github.com/ankit-kaushal/Frontend-UI-Library/issues"
   },
-  "homepage": "https://github.com/uilab/Frontend-UI-Library#readme",
+  "homepage": "https://github.com/ankit-kaushal/Frontend-UI-Library#readme",
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"

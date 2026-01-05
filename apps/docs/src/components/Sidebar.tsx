@@ -87,14 +87,14 @@ const Sidebar = () => {
           {!shouldShowCollapsed && (
             <>
               <Image
-                src="/uilab-logo.png"
-                alt="Uilab"
-                width={40}
-                height={40}
+                src="/uiplex-logo.png"
+                alt="Uiplex"
+                width={52}
+                height={52}
                 style={{ objectFit: "contain" }}
                 priority
               />
-              <span className={styles.logoText}>Uilab</span>
+              <span className={styles.logoText}>Uiplex</span>
             </>
           )}
         </Link>

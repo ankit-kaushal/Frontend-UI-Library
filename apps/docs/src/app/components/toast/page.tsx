@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Toast } from "uilab";
+import { Button, Toast } from "uiplex";
 import CodeBlock from "@/components/CodeBlock";
 import styles from "./page.module.scss";
 
@@ -51,7 +51,7 @@ export default function ToastPage() {
             </div>
           </div>
           <CodeBlock language="tsx">
-            {`import { Toast, Button } from 'uilab'
+            {`import { Toast, Button } from 'uiplex'
 
 function App() {
   return (
