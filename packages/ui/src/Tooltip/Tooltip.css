@@ -17,6 +17,12 @@
   animation: tooltip-fade-in 0.15s ease-out;
 }
 
+.ui-tooltip--wrappable {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 .ui-tooltip--top {
   bottom: 100%;
   left: 50%;

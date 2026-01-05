@@ -11,6 +11,7 @@ export interface TooltipProps {
   isOpen?: boolean;
   defaultIsOpen?: boolean;
   closeOnClick?: boolean;
+  width?: string | number;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -22,6 +23,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
   isOpen: controlledIsOpen,
   defaultIsOpen = false,
   closeOnClick = false,
+  width,
   className = "",
   style,
 }) => {
@@ -72,8 +74,17 @@ export const Tooltip: React.FC<TooltipProps> = ({
       {isOpen && (
         <div
           ref={tooltipRef}
-          className={`ui-tooltip ui-tooltip--${placement}`}
+          className={`ui-tooltip ui-tooltip--${placement} ${
+            width ? "ui-tooltip--wrappable" : ""
+          }`}
           role="tooltip"
+          style={
+            width
+              ? {
+                  width: typeof width === "number" ? `${width}px` : width,
+                }
+              : undefined
+          }
         >
           {label}
         </div>
