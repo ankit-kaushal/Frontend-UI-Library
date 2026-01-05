@@ -16,8 +16,70 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "UI Library Documentation",
-  description: "Documentation for the React component library",
+  title: {
+    default: "Uiplex - Modern React Component Library",
+    template: "%s | Uiplex",
+  },
+  description:
+    "A modern, accessible React component library built with TypeScript. Features Button, Loader, Radio, Modal, Input, and more with comprehensive theme support.",
+  keywords: [
+    "react",
+    "react components",
+    "ui library",
+    "component library",
+    "typescript",
+    "uiplex",
+    "react ui",
+    "ui components",
+    "design system",
+    "react design system",
+  ],
+  authors: [{ name: "Uiplex" }],
+  creator: "Uiplex",
+  publisher: "Uiplex",
+  metadataBase: new URL("https://uniplex.ankitkaushal.in"), // Update with your actual domain
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://uniplex.ankitkaushal.in", // Update with your actual domain
+    siteName: "Uiplex",
+    title: "Uiplex - Modern React Component Library",
+    description:
+      "A modern, accessible React component library built with TypeScript. Features Button, Loader, Radio, Modal, Input, and more with comprehensive theme support.",
+    images: [
+      {
+        url: "/uiplex-logo.png", // Update with your actual OG image
+        width: 1200,
+        height: 630,
+        alt: "Uiplex - React Component Library",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Uiplex - Modern React Component Library",
+    description:
+      "A modern, accessible React component library built with TypeScript.",
+    images: ["/uiplex-logo.png"], // Update with your actual Twitter image
+    creator: "@uiplex", // Update with your Twitter handle if available
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "9RvH3NU-pxDwBitccJDCYleAFM29mqfFgGqQMhlkNdc",
+  },
 };
 
 export default function RootLayout({
