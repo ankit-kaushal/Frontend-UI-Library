@@ -25,6 +25,7 @@ export interface SelectProps {
   mode?: "single" | "multiple";
   searchable?: boolean;
   allowClear?: boolean;
+  width?: string | number;
   className?: string;
   style?: React.CSSProperties;
   id?: string;
@@ -44,6 +45,7 @@ export const Select: React.FC<SelectProps> = ({
   mode = "single",
   searchable = false,
   allowClear = false,
+  width,
   className = "",
   style,
   id,
@@ -272,8 +274,15 @@ export const Select: React.FC<SelectProps> = ({
     .filter(Boolean)
     .join(" ");
 
+  const wrapperStyle: React.CSSProperties = {
+    ...style,
+    ...(width && {
+      width: typeof width === "number" ? `${width}px` : width,
+    }),
+  };
+
   return (
-    <div ref={selectRef} className="ui-select-wrapper" style={style}>
+    <div ref={selectRef} className="ui-select-wrapper" style={wrapperStyle}>
       <div
         ref={triggerRef}
         id={selectId}

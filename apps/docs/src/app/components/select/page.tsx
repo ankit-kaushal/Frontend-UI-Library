@@ -372,6 +372,14 @@ export default function SelectPage() {
                   <td>Show clear button when value is selected</td>
                 </tr>
                 <tr>
+                  <td>width</td>
+                  <td>string | number</td>
+                  <td>-</td>
+                  <td>
+                    Width of the select component (e.g., "300px", 300, "100%")
+                  </td>
+                </tr>
+                <tr>
                   <td>isInvalid</td>
                   <td>boolean</td>
                   <td>false</td>
@@ -416,6 +424,7 @@ export default function SelectPage() {
                 marginBottom: "1rem",
                 fontSize: "1.25rem",
                 fontWeight: 600,
+                paddingLeft: "1rem",
               }}
             >
               SelectOption Type

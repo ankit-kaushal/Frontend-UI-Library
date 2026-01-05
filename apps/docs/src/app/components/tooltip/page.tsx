@@ -132,6 +132,15 @@ export default function TooltipPage() {
                   <td>Close tooltip on click</td>
                 </tr>
                 <tr>
+                  <td>width</td>
+                  <td>string | number</td>
+                  <td>-</td>
+                  <td>
+                    Width of the tooltip (e.g., "300px", 300, "100%"). Enables
+                    text wrapping when set.
+                  </td>
+                </tr>
+                <tr>
                   <td>className</td>
                   <td>string</td>
                   <td>""</td>
