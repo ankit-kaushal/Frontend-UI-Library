@@ -2,7 +2,7 @@
 
 A modern React component library built with TypeScript, featuring beautiful, accessible, and customizable UI components.
 
-🌐 **Documentation & Live Examples:** [https://uniplex.ankitkaushal.in/](https://uniplex.ankitkaushal.in/)
+🌐 **Documentation & Live Examples:** [https://uiplex.ankitkaushal.in/](https://uiplex.ankitkaushal.in/)
 
 ## Installation
 
@@ -29,7 +29,7 @@ npm install react react-dom
 CSS is automatically included when you import components! Just import and use:
 
 ```tsx
-import { Button, Loader, Radio, RadioGroup, ThemeProvider } from 'uiplex';
+import { Button, Loader, Radio, RadioGroup, Select, ThemeProvider } from 'uiplex';
 
 function App() {
   return (
@@ -300,6 +300,75 @@ import { Textarea } from 'uiplex';
 - `isInvalid`: `boolean`
 - `isDisabled`: `boolean`
 - All standard HTML textarea props
+
+### Select
+
+Custom dropdown select component with single and multi-select modes, search functionality, and validation support.
+
+```tsx
+import { Select, FormControl, FormLabel, FormErrorMessage } from 'uiplex';
+
+// Single select
+<Select
+  placeholder="Select an option"
+  options={[
+    { value: 'option1', label: 'Option 1' },
+    { value: 'option2', label: 'Option 2' },
+    { value: 'option3', label: 'Option 3' },
+  ]}
+  value={value}
+  onChange={(value) => setValue(value)}
+/>
+
+// Multi-select
+<Select
+  mode="multiple"
+  placeholder="Select multiple options"
+  options={options}
+  value={values}
+  onChange={(values) => setValues(values)}
+/>
+
+// With search
+<Select
+  searchable
+  placeholder="Search and select..."
+  options={options}
+/>
+
+// With FormControl
+<FormControl isInvalid={hasError}>
+  <FormLabel>Country</FormLabel>
+  <Select
+    placeholder="Select a country"
+    options={countries}
+    value={country}
+    onChange={(value) => setCountry(value)}
+  />
+  <FormErrorMessage>Country is required</FormErrorMessage>
+</FormControl>
+```
+
+**Select Props:**
+- `size`: `"sm" | "md" | "lg"`
+- `variant`: `"outline" | "filled" | "unstyled"`
+- `mode`: `"single" | "multiple"` (default: `"single"`)
+- `searchable`: `boolean` (default: `false`)
+- `allowClear`: `boolean` (default: `false`)
+- `options`: `SelectOption[]` - Array of option objects
+- `value`: `string | number | (string | number)[]` - Controlled value
+- `defaultValue`: `string | number | (string | number)[]` - Default value (uncontrolled)
+- `onChange`: `(value) => void` - Callback when value changes
+- `placeholder`: `string` (default: `"Select..."`)
+- `width`: `string | number` - Width of the select component
+- `isInvalid`: `boolean`
+- `isDisabled`: `boolean`
+- `isReadOnly`: `boolean`
+
+**SelectOption:**
+- `value`: `string | number` - Option value
+- `label`: `string` - Option display text
+- `disabled`: `boolean` - Whether the option is disabled
 
 ### Link
 
@@ -573,7 +642,7 @@ The bundled CSS includes:
 - Theme CSS variables (light/dark mode support)
 - Button, Loader, Radio styles
 - Text, Box, Flex, Grid layout styles
-- Modal, Input, Textarea, FormControl styles
+- Modal, Input, Textarea, Select, FormControl styles
 - Link, IconButton, CircularProgress styles
 - Tooltip, Toast, Popover styles
 

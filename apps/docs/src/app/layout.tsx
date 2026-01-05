@@ -37,14 +37,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Uiplex" }],
   creator: "Uiplex",
   publisher: "Uiplex",
-  metadataBase: new URL("https://uniplex.ankitkaushal.in"), // Update with your actual domain
+  metadataBase: new URL("https://uiplex.ankitkaushal.in"), // Update with your actual domain
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://uniplex.ankitkaushal.in", // Update with your actual domain
+    url: "https://uiplex.ankitkaushal.in", // Update with your actual domain
     siteName: "Uiplex",
     title: "Uiplex - Modern React Component Library",
     description:
