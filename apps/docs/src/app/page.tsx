@@ -88,6 +88,12 @@ export default function Home() {
       status: "ready",
     },
     {
+      name: "Select",
+      description: "Dropdown select component with multiple sizes and variants",
+      href: "/components/select",
+      status: "ready",
+    },
+    {
       name: "Grid",
       description: "CSS Grid layout component for two-dimensional layouts",
       href: "/components/grid",

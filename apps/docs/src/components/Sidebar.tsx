@@ -17,6 +17,7 @@ import {
   ChevronDown,
   FileText,
   BookOpen,
+  List,
   ChevronLeft,
   ChevronRight,
   Loader,
@@ -54,6 +55,7 @@ const Sidebar = () => {
     { href: "/components/grid", label: "Grid", icon: GridIcon },
     { href: "/components/modal", label: "Modal", icon: Maximize2 },
     { href: "/components/input", label: "Input", icon: Type },
+    { href: "/components/select", label: "Select", icon: List },
     { href: "/components/link", label: "Link", icon: LinkIcon },
     { href: "/components/iconbutton", label: "IconButton", icon: MousePointer },
     {
