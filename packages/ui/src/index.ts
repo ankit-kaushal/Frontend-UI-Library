@@ -1,3 +1,5 @@
+"use client";
+
 // Import all component CSS - this will be extracted by postcss
 import './Button/Button.css'
 import './Loader/Loader.css'
