@@ -163,9 +163,9 @@ export const componentsData: ComponentData[] = [
     tags: ["alert", "message", "notification", "warning"],
   },
   {
-    name: "Tab",
-    description: "Tab component for organizing content into multiple panels with keyboard navigation",
-    href: "/components/tab",
+    name: "Tabs",
+    description: "Tabs component for organizing content into multiple panels with keyboard navigation",
+    href: "/components/tabs",
     category: "Components",
     tags: ["tab", "tabs", "navigation", "content", "organization", "panels"],
   },

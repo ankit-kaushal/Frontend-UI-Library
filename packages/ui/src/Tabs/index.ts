@@ -4,7 +4,7 @@ export {
   Tab,
   TabPanels,
   TabPanel,
-} from "./Tab";
+} from "./Tabs";
 
 export type {
   TabsProps,
@@ -12,5 +12,5 @@ export type {
   TabProps,
   TabPanelsProps,
   TabPanelProps,
-} from "./Tab";
+} from "./Tabs";
 

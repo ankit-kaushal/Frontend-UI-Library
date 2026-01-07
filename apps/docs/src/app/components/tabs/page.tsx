@@ -13,9 +13,9 @@ export default function TabPage() {
     <div className={styles.container}>
       <div className={styles.content}>
         <header className={styles.header}>
-          <h1 className={styles.title}>Tab</h1>
+          <h1 className={styles.title}>Tabs</h1>
           <p className={styles.description}>
-            A flexible tab component for organizing content into multiple panels.
+            A flexible tabs component for organizing content into multiple panels.
             Supports multiple variants, sizes, color schemes, and keyboard
             navigation. Perfect for creating tabbed interfaces in your
             applications.

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useCallback, useRef, createContext, useContext } from "react";
-import "./Tab.css";
+import "./Tabs.css";
 
 // Tab Context
 interface TabContextValue {
