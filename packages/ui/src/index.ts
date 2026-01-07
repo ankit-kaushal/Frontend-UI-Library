@@ -19,6 +19,7 @@ import './CircularProgress/CircularProgress.css'
 import './Tooltip/Tooltip.css'
 import './Toast/Toast.css'
 import './Popover/Popover.css'
+import './Tab/Tab.css'
 import './Theme/theme.css'
 
 export { Button } from './Button'
@@ -94,6 +95,8 @@ export type {
 } from './Popover'
 export { Toast, ToastComponent, ToastContainer, ToastContainerGlobal } from './Toast'
 export type { ToastProps, ToastVariant, ToastPosition, ToastContainerProps, ToastOptions } from './Toast'
+export { Tabs, TabList, Tab, TabPanels, TabPanel } from './Tab'
+export type { TabsProps, TabListProps, TabProps, TabPanelsProps, TabPanelProps } from './Tab'
 
 // Hooks
 export { useDisclosure } from './hooks'

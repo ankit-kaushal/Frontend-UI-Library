@@ -163,11 +163,11 @@ export const componentsData: ComponentData[] = [
     tags: ["alert", "message", "notification", "warning"],
   },
   {
-    name: "Tabs",
-    description: "Tabs component for organizing content",
-    href: "/components/tabs",
+    name: "Tab",
+    description: "Tab component for organizing content into multiple panels with keyboard navigation",
+    href: "/components/tab",
     category: "Components",
-    tags: ["tabs", "navigation", "content", "organization"],
+    tags: ["tab", "tabs", "navigation", "content", "organization", "panels"],
   },
   {
     name: "Accordion",
