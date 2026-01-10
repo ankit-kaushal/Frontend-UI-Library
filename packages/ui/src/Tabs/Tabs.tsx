@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useState, useCallback, useRef, createContext, useContext } from "react";
+import React, {
+  useState,
+  useCallback,
+  useRef,
+  createContext,
+  useContext,
+} from "react";
 import "./Tabs.css";
 
 // Tab Context
@@ -137,7 +143,8 @@ export const Tab: React.FC<TabProps> = ({
   className = "",
   style,
 }) => {
-  const { activeIndex, setActiveIndex, variant, size, colorScheme } = useTabContext();
+  const { activeIndex, setActiveIndex, variant, size, colorScheme } =
+    useTabContext();
   const tabRef = useRef<HTMLButtonElement>(null);
   const isActive = activeIndex === index;
 
@@ -168,7 +175,8 @@ export const Tab: React.FC<TabProps> = ({
       case "ArrowLeft":
       case "ArrowUp":
         e.preventDefault();
-        nextIndex = currentTabIndex - 1 < 0 ? tabs.length - 1 : currentTabIndex - 1;
+        nextIndex =
+          currentTabIndex - 1 < 0 ? tabs.length - 1 : currentTabIndex - 1;
         break;
       case "Home":
         e.preventDefault();
@@ -184,7 +192,10 @@ export const Tab: React.FC<TabProps> = ({
 
     const nextTab = tabs[nextIndex];
     if (nextTab) {
-      const tabIndex = parseInt(nextTab.getAttribute("data-tab-index") || "0", 10);
+      const tabIndex = parseInt(
+        nextTab.getAttribute("data-tab-index") || "0",
+        10
+      );
       setActiveIndex(tabIndex);
       nextTab.focus();
     }
@@ -281,4 +292,3 @@ export const TabPanel: React.FC<TabPanelProps> = ({
     </div>
   );
 };
-

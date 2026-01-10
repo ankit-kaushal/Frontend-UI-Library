@@ -20,6 +20,7 @@ import './Tooltip/Tooltip.css'
 import './Toast/Toast.css'
 import './Popover/Popover.css'
 import './Tabs/Tabs.css'
+import './Accordion/Accordion.css'
 import './Theme/theme.css'
 
 export { Button } from './Button'
@@ -97,6 +98,8 @@ export { Toast, ToastComponent, ToastContainer, ToastContainerGlobal } from './T
 export type { ToastProps, ToastVariant, ToastPosition, ToastContainerProps, ToastOptions } from './Toast'
 export { Tabs, TabList, Tab, TabPanels, TabPanel } from './Tabs'
 export type { TabsProps, TabListProps, TabProps, TabPanelsProps, TabPanelProps } from './Tabs'
+export { Accordion, AccordionItem, AccordionButton, AccordionPanel } from './Accordion'
+export type { AccordionProps, AccordionItemProps, AccordionButtonProps, AccordionPanelProps } from './Accordion'
 
 // Hooks
 export { useDisclosure } from './hooks'

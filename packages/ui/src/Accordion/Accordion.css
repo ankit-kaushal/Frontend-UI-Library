@@ -1,0 +1,317 @@
+/* Accordion Container */
+.ui-accordion {
+  width: 100%;
+  font-family: inherit;
+}
+
+/* Accordion Item */
+.ui-accordion-item {
+  width: 100%;
+  border-bottom: 1px solid var(--border-primary, #d1d5db);
+}
+
+.ui-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.ui-accordion--bordered .ui-accordion-item {
+  border: 1px solid var(--border-primary, #d1d5db);
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.ui-accordion--bordered .ui-accordion-item:last-child {
+  margin-bottom: 0;
+}
+
+.ui-accordion--filled .ui-accordion-item {
+  background-color: var(--bg-secondary, #f3f4f6);
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  border: none;
+}
+
+.ui-accordion--filled .ui-accordion-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Accordion Button */
+.ui-accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--text-primary, #111827);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  text-align: left;
+  font-family: inherit;
+  gap: 0.75rem;
+}
+
+.ui-accordion-button:hover {
+  background-color: var(--bg-secondary, #f9fafb);
+}
+
+.ui-accordion-button:focus-visible {
+  outline: 2px solid var(--accent-primary, #bb00ed);
+  outline-offset: -2px;
+}
+
+.ui-accordion-button--open {
+  background-color: var(--bg-secondary, #f3f4f6);
+}
+
+.ui-accordion--bordered .ui-accordion-button {
+  border-bottom: 1px solid var(--border-primary, #d1d5db);
+}
+
+.ui-accordion--bordered .ui-accordion-button--open {
+  border-bottom-color: var(--border-primary, #d1d5db);
+}
+
+.ui-accordion--filled .ui-accordion-button {
+  background-color: var(--bg-secondary, #f3f4f6);
+}
+
+.ui-accordion--filled .ui-accordion-button:hover {
+  background-color: var(--bg-tertiary, #e5e7eb);
+}
+
+.ui-accordion--filled .ui-accordion-button--open {
+  background-color: var(--bg-primary, #ffffff);
+}
+
+/* Accordion Button Label */
+.ui-accordion-button__label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Accordion Button Icon */
+.ui-accordion-button__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.ui-accordion-button--open .ui-accordion-button__icon-wrapper {
+  transform: rotate(180deg);
+}
+
+.ui-accordion-button__icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-secondary, #6b7280);
+  transition: color 0.2s ease-in-out;
+}
+
+.ui-accordion-button:hover .ui-accordion-button__icon {
+  color: var(--text-primary, #111827);
+}
+
+/* Sizes */
+.ui-accordion-button--sm {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  min-height: 2.5rem;
+}
+
+.ui-accordion-button--md {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  min-height: 3rem;
+}
+
+.ui-accordion-button--lg {
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  min-height: 3.5rem;
+}
+
+/* Color Schemes */
+.ui-accordion-button--blue.ui-accordion-button--open {
+  color: #3b82f6;
+  background-color: #dbeafe;
+}
+
+.ui-accordion-button--green.ui-accordion-button--open {
+  color: #10b981;
+  background-color: #d1fae5;
+}
+
+.ui-accordion-button--red.ui-accordion-button--open {
+  color: #ef4444;
+  background-color: #fee2e2;
+}
+
+.ui-accordion-button--yellow.ui-accordion-button--open {
+  color: #f59e0b;
+  background-color: #fef3c7;
+}
+
+.ui-accordion-button--purple.ui-accordion-button--open {
+  color: #8b5cf6;
+  background-color: #ede9fe;
+}
+
+.ui-accordion-button--gray.ui-accordion-button--open {
+  color: #6b7280;
+  background-color: var(--bg-secondary, #f3f4f6);
+}
+
+.ui-accordion--bordered .ui-accordion-button--blue.ui-accordion-button--open {
+  border-bottom-color: #3b82f6;
+}
+
+.ui-accordion--bordered .ui-accordion-button--green.ui-accordion-button--open {
+  border-bottom-color: #10b981;
+}
+
+.ui-accordion--bordered .ui-accordion-button--red.ui-accordion-button--open {
+  border-bottom-color: #ef4444;
+}
+
+.ui-accordion--bordered .ui-accordion-button--yellow.ui-accordion-button--open {
+  border-bottom-color: #f59e0b;
+}
+
+.ui-accordion--bordered .ui-accordion-button--purple.ui-accordion-button--open {
+  border-bottom-color: #8b5cf6;
+}
+
+.ui-accordion--bordered .ui-accordion-button--gray.ui-accordion-button--open {
+  border-bottom-color: #6b7280;
+}
+
+/* Accordion Panel */
+.ui-accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  padding: 0 1rem;
+}
+
+.ui-accordion-panel--open {
+  max-height: 5000px;
+  padding: 1rem;
+}
+
+.ui-accordion-panel__content {
+  padding-top: 0.5rem;
+  color: var(--text-secondary, #6b7280);
+  line-height: 1.6;
+}
+
+/* Size adjustments for panel */
+.ui-accordion-button--sm + .ui-accordion-panel {
+  padding: 0 0.75rem;
+}
+
+.ui-accordion-button--sm + .ui-accordion-panel.ui-accordion-panel--open {
+  padding: 0.75rem;
+}
+
+.ui-accordion-button--lg + .ui-accordion-panel {
+  padding: 0 1.25rem;
+}
+
+.ui-accordion-button--lg + .ui-accordion-panel.ui-accordion-panel--open {
+  padding: 1.25rem;
+}
+
+/* Dark mode support */
+[data-theme="dark"] .ui-accordion-item {
+  border-color: var(--border-primary, #374151);
+}
+
+[data-theme="dark"] .ui-accordion--bordered .ui-accordion-item {
+  border-color: var(--border-primary, #374151);
+  background-color: var(--bg-secondary, #1f2937);
+}
+
+[data-theme="dark"] .ui-accordion--filled .ui-accordion-item {
+  background-color: var(--bg-secondary, #1f2937);
+}
+
+[data-theme="dark"] .ui-accordion-button {
+  color: var(--text-primary, #f9fafb);
+}
+
+[data-theme="dark"] .ui-accordion-button:hover {
+  background-color: var(--bg-secondary, #1f2937);
+}
+
+[data-theme="dark"] .ui-accordion-button--open {
+  background-color: var(--bg-primary, #111827);
+}
+
+[data-theme="dark"] .ui-accordion--bordered .ui-accordion-button {
+  border-bottom-color: var(--border-primary, #374151);
+}
+
+[data-theme="dark"] .ui-accordion--filled .ui-accordion-button {
+  background-color: var(--bg-secondary, #1f2937);
+}
+
+[data-theme="dark"] .ui-accordion--filled .ui-accordion-button:hover {
+  background-color: var(--bg-tertiary, #374151);
+}
+
+[data-theme="dark"] .ui-accordion--filled .ui-accordion-button--open {
+  background-color: var(--bg-primary, #111827);
+}
+
+[data-theme="dark"] .ui-accordion-button__icon {
+  color: var(--text-secondary, #9ca3af);
+}
+
+[data-theme="dark"] .ui-accordion-button:hover .ui-accordion-button__icon {
+  color: var(--text-primary, #f9fafb);
+}
+
+[data-theme="dark"] .ui-accordion-panel__content {
+  color: var(--text-secondary, #d1d5db);
+}
+
+[data-theme="dark"] .ui-accordion-button--blue.ui-accordion-button--open {
+  background-color: #1e3a8a;
+  color: #93c5fd;
+}
+
+[data-theme="dark"] .ui-accordion-button--green.ui-accordion-button--open {
+  background-color: #064e3b;
+  color: #6ee7b7;
+}
+
+[data-theme="dark"] .ui-accordion-button--red.ui-accordion-button--open {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .ui-accordion-button--yellow.ui-accordion-button--open {
+  background-color: #78350f;
+  color: #fde68a;
+}
+
+[data-theme="dark"] .ui-accordion-button--purple.ui-accordion-button--open {
+  background-color: #4c1d95;
+  color: #c4b5fd;
+}
+
+[data-theme="dark"] .ui-accordion-button--gray.ui-accordion-button--open {
+  background-color: var(--bg-secondary, #1f2937);
+  color: var(--text-primary, #f9fafb);
+}
+
