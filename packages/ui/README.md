@@ -24,12 +24,10 @@ npm install react react-dom
 
 ## Quick Start
 
-**With Modern Bundlers (Vite, Webpack 5, Next.js, etc.):**
-
 CSS is automatically included when you import components! Just import and use:
 
 ```tsx
-import { Button, Loader, Radio, RadioGroup, Select, ThemeProvider } from 'uiplex';
+import { Button, ThemeProvider } from 'uiplex';
 
 function App() {
   return (
@@ -45,7 +43,6 @@ function App() {
 **If CSS is not automatically loaded**, import it manually:
 
 ```tsx
-import { Button } from 'uiplex';
 import 'uiplex/styles.css'; // Only needed if bundler doesn't auto-include
 ```
 
@@ -53,7 +50,7 @@ import 'uiplex/styles.css'; // Only needed if bundler doesn't auto-include
 
 ### Button
 
-A versatile button component with multiple variants, sizes, and color schemes.
+Versatile button component with multiple variants, sizes, and color schemes.
 
 ```tsx
 import { Button } from 'uiplex';
@@ -61,43 +58,25 @@ import { Button } from 'uiplex';
 <Button variant="primary" size="md" colorScheme="blue">
   Primary Button
 </Button>
-
-<Button variant="outline" size="lg" loading>
-  Loading...
-</Button>
 ```
 
-**Props:**
-- `variant`: `"primary" | "secondary" | "outline" | "link"`
-- `size`: `"xs" | "sm" | "md" | "lg"`
-- `colorScheme`: `"blue" | "green" | "red" | "yellow" | "purple" | "gray"`
-- `disabled`: `boolean`
-- `loading`: `boolean`
-- `leftIcon`: `ReactNode`
-- `rightIcon`: `ReactNode`
+**Key Props:** `variant`, `size`, `colorScheme`, `disabled`, `loading`, `leftIcon`, `rightIcon`
 
 ### Loader
 
-A flexible loading indicator with multiple variants.
+Flexible loading indicator with multiple variants.
 
 ```tsx
 import { Loader } from 'uiplex';
 
 <Loader variant="spinner" size="md" />
-<Loader variant="dots" size="lg" />
-<Loader variant="pulse" isCentered />
 ```
 
-**Props:**
-- `variant`: `"spinner" | "dots" | "pulse"`
-- `size`: `"xs" | "sm" | "md" | "lg"`
-- `width`: `number` (optional)
-- `height`: `number` (optional)
-- `isCentered`: `boolean`
+**Key Props:** `variant` ("spinner" | "dots" | "pulse"), `size`, `isCentered`
 
 ### Radio & RadioGroup
 
-Radio button components with support for groups and custom styling.
+Radio button components with support for groups.
 
 ```tsx
 import { Radio, RadioGroup } from 'uiplex';
@@ -113,113 +92,108 @@ import { Radio, RadioGroup } from 'uiplex';
 />
 ```
 
-**Radio Props:**
-- `name`: `string` (required)
-- `value`: `string`
-- `checked`: `boolean`
-- `disabled`: `boolean`
-- `label`: `string`
-- `description`: `string`
-- `size`: `"sm" | "md" | "lg"`
-- `colorScheme`: `"blue" | "green" | "red" | "yellow" | "purple" | "gray"`
+### Input
 
-**RadioGroup Props:**
-- `name`: `string` (required)
-- `value`: `string`
-- `options`: `Array<{ value: string; label?: string; description?: string; disabled?: boolean }>`
-- `orientation`: `"horizontal" | "vertical"`
-
-### Text
-
-Typography component with sizes, weights, colors, and alignment options.
+Form input component with validation support.
 
 ```tsx
-import { Text } from 'uiplex';
+import { Input, FormControl, FormLabel, FormErrorMessage } from 'uiplex';
 
-<Text size="lg" weight="bold" color="primary">
-  Heading Text
-</Text>
-
-<Text size="md" align="center">
-  Centered text
-</Text>
+<FormControl isInvalid={hasError}>
+  <FormLabel>Email</FormLabel>
+  <Input type="email" placeholder="Enter your email" />
+  <FormErrorMessage>Email is required</FormErrorMessage>
+</FormControl>
 ```
 
-**Props:**
-- `size`: `"xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl"`
-- `weight`: `"normal" | "medium" | "semibold" | "bold"`
-- `color`: `"primary" | "secondary" | "success" | "error" | "warning" | "info"`
-- `align`: `"left" | "center" | "right" | "justify"`
-- `as`: `"p" | "span" | "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6"`
+**Key Props:** `size`, `variant`, `isInvalid`, `isDisabled`
 
-### Box
+### Textarea
 
-A versatile container component that serves as a building block for layouts.
+Multi-line text input component.
 
 ```tsx
-import { Box } from 'uiplex';
+import { Textarea } from 'uiplex';
 
-<Box padding="md" margin="lg" borderRadius="md" bg="primary">
-  Content here
-</Box>
+<Textarea placeholder="Enter your message" rows={4} />
 ```
 
-**Props:**
-- `padding`: `string | number`
-- `margin`: `string | number`
-- `width`: `string | number`
-- `height`: `string | number`
-- `bg`: `string`
-- `borderRadius`: `string | number`
-- All standard HTML div props
+### Select
 
-### Flex
-
-A flexible layout component built on CSS Flexbox.
+Custom dropdown with single/multi-select, search, and validation.
 
 ```tsx
-import { Flex } from 'uiplex';
+import { Select } from 'uiplex';
 
-<Flex direction="row" align="center" justify="space-between" gap="md">
-  <Box>Item 1</Box>
-  <Box>Item 2</Box>
-</Flex>
+// Single select
+<Select
+  placeholder="Select an option"
+  options={options}
+  value={value}
+  onChange={(value) => setValue(value)}
+/>
+
+// Multi-select
+<Select
+  mode="multiple"
+  placeholder="Select multiple"
+  options={options}
+/>
+
+// Searchable
+<Select searchable placeholder="Search..." options={options} />
 ```
 
-**Props:**
-- `direction`: `"row" | "column" | "row-reverse" | "column-reverse"`
-- `align`: `"flex-start" | "flex-end" | "center" | "stretch" | "baseline"`
-- `justify`: `"flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly"`
-- `wrap`: `"nowrap" | "wrap" | "wrap-reverse"`
-- `gap`: `string | number`
-- All standard HTML div props
+**Key Props:** `mode` ("single" | "multiple"), `searchable`, `options`, `value`, `onChange`, `width`
 
-### Grid
+### Tabs
 
-CSS Grid layout component for two-dimensional layouts.
+Tab component for organizing content into multiple panels.
 
 ```tsx
-import { Grid } from 'uiplex';
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'uiplex';
 
-<Grid columns={3} gap="md" rows="auto">
-  <Box>Item 1</Box>
-  <Box>Item 2</Box>
-  <Box>Item 3</Box>
-</Grid>
+<Tabs defaultIndex={0}>
+  <TabList>
+    <Tab index={0}>Tab 1</Tab>
+    <Tab index={1}>Tab 2</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel index={0}>Content 1</TabPanel>
+    <TabPanel index={1}>Content 2</TabPanel>
+  </TabPanels>
+</Tabs>
 ```
 
-**Props:**
-- `columns`: `number | string`
-- `rows`: `number | string`
-- `gap`: `string | number`
-- All standard HTML div props
+**Key Props:** `defaultIndex`, `variant` ("line" | "enclosed" | "soft-rounded"), `size`, `colorScheme`, `orientation`
+
+### Accordion
+
+Collapsible accordion component for organizing content.
+
+```tsx
+import { Accordion, AccordionItem, AccordionButton, AccordionPanel } from 'uiplex';
+
+<Accordion defaultIndex={0} allowMultiple>
+  <AccordionItem index={0}>
+    <AccordionButton index={0}>Item 1</AccordionButton>
+    <AccordionPanel index={0}>Content 1</AccordionPanel>
+  </AccordionItem>
+  <AccordionItem index={1}>
+    <AccordionButton index={1}>Item 2</AccordionButton>
+    <AccordionPanel index={1}>Content 2</AccordionPanel>
+  </AccordionItem>
+</Accordion>
+```
+
+**Key Props:** `defaultIndex`, `allowMultiple`, `allowToggle`, `variant` ("default" | "bordered" | "filled"), `size`, `colorScheme`
 
 ### Modal
 
 Modal dialog component for overlays and popups.
 
 ```tsx
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, ModalCloseButton, useDisclosure } from 'uiplex';
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from 'uiplex';
 
 function MyComponent() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -230,14 +204,9 @@ function MyComponent() {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            Modal content goes here
-          </ModalBody>
-          <ModalFooter>
-            <Button onClick={onClose}>Close</Button>
-          </ModalFooter>
+          <ModalHeader>Title</ModalHeader>
+          <ModalBody>Content</ModalBody>
+          <ModalFooter>Footer</ModalFooter>
         </ModalContent>
       </Modal>
     </>
@@ -245,152 +214,70 @@ function MyComponent() {
 }
 ```
 
-**Modal Props:**
-- `isOpen`: `boolean`
-- `onClose`: `() => void`
-- `size`: `"xs" | "sm" | "md" | "lg" | "xl" | "full"`
-- `closeOnOverlayClick`: `boolean`
-- `closeOnEsc`: `boolean`
+### Tooltip
 
-### Input
-
-Form input component with validation support.
+Contextual information displayed on hover.
 
 ```tsx
-import { Input, FormControl, FormLabel, FormErrorMessage } from 'uiplex';
+import { Tooltip } from 'uiplex';
 
-<FormControl isInvalid={hasError}>
-  <FormLabel>Email</FormLabel>
-  <Input
-    type="email"
-    placeholder="Enter your email"
-    value={email}
-    onChange={(e) => setEmail(e.target.value)}
-  />
-  <FormErrorMessage>Email is required</FormErrorMessage>
-</FormControl>
+<Tooltip label="Helpful tooltip" placement="top" width={200}>
+  <Button>Hover me</Button>
+</Tooltip>
 ```
 
-**Input Props:**
-- `size`: `"sm" | "md" | "lg"`
-- `variant`: `"outline" | "filled" | "flushed" | "unstyled"`
-- `isInvalid`: `boolean`
-- `isDisabled`: `boolean`
-- `isReadOnly`: `boolean`
-- All standard HTML input props
+### Popover
 
-### Textarea
-
-Multi-line text input component.
+Floating content container with positioning.
 
 ```tsx
-import { Textarea } from 'uiplex';
+import { Popover, PopoverContent, PopoverHeader, PopoverBody } from 'uiplex';
 
-<Textarea
-  placeholder="Enter your message"
-  rows={4}
-  value={message}
-  onChange={(e) => setMessage(e.target.value)}
-/>
+<Popover
+  content={
+    <PopoverContent>
+      <PopoverHeader>Title</PopoverHeader>
+      <PopoverBody>Content</PopoverBody>
+    </PopoverContent>
+  }
+  placement="bottom"
+>
+  <Button>Open Popover</Button>
+</Popover>
 ```
 
-**Props:**
-- `size`: `"sm" | "md" | "lg"`
-- `variant`: `"outline" | "filled" | "flushed" | "unstyled"`
-- `isInvalid`: `boolean`
-- `isDisabled`: `boolean`
-- All standard HTML textarea props
+### Toast
 
-### Select
-
-Custom dropdown select component with single and multi-select modes, search functionality, and validation support.
+Toast notifications for displaying temporary messages.
 
 ```tsx
-import { Select, FormControl, FormLabel, FormErrorMessage } from 'uiplex';
+import { Toast, ToastContainerGlobal } from 'uiplex';
 
-// Single select
-<Select
-  placeholder="Select an option"
-  options={[
-    { value: 'option1', label: 'Option 1' },
-    { value: 'option2', label: 'Option 2' },
-    { value: 'option3', label: 'Option 3' },
-  ]}
-  value={value}
-  onChange={(value) => setValue(value)}
-/>
+// Add to root layout
+<ToastContainerGlobal />
 
-// Multi-select
-<Select
-  mode="multiple"
-  placeholder="Select multiple options"
-  options={options}
-  value={values}
-  onChange={(values) => setValues(values)}
-/>
-
-// With search
-<Select
-  searchable
-  placeholder="Search and select..."
-  options={options}
-/>
-
-// With FormControl
-<FormControl isInvalid={hasError}>
-  <FormLabel>Country</FormLabel>
-  <Select
-    placeholder="Select a country"
-    options={countries}
-    value={country}
-    onChange={(value) => setCountry(value)}
-  />
-  <FormErrorMessage>Country is required</FormErrorMessage>
-</FormControl>
+// Use static methods
+Toast.success("Operation completed!");
+Toast.error("Something went wrong");
+Toast.warning("Please check");
+Toast.info("New update available");
 ```
 
-**Select Props:**
-- `size`: `"sm" | "md" | "lg"`
-- `variant`: `"outline" | "filled" | "unstyled"`
-- `mode`: `"single" | "multiple"` (default: `"single"`)
-- `searchable`: `boolean` (default: `false`)
-- `allowClear`: `boolean` (default: `false`)
-- `options`: `SelectOption[]` - Array of option objects
-- `value`: `string | number | (string | number)[]` - Controlled value
-- `defaultValue`: `string | number | (string | number)[]` - Default value (uncontrolled)
-- `onChange`: `(value) => void` - Callback when value changes
-- `placeholder`: `string` (default: `"Select..."`)
-- `width`: `string | number` - Width of the select component
-- `isInvalid`: `boolean`
-- `isDisabled`: `boolean`
-- `isReadOnly`: `boolean`
+### CircularProgress
 
-**SelectOption:**
-- `value`: `string | number` - Option value
-- `label`: `string` - Option display text
-- `disabled`: `boolean` - Whether the option is disabled
-
-### Link
-
-Link component with multiple variants and color schemes.
+Circular progress indicator.
 
 ```tsx
-import { Link } from 'uiplex';
+import { CircularProgress, CircularProgressLabel } from 'uiplex';
 
-<Link href="/about" variant="primary" size="md">
-  Learn More
-</Link>
+<CircularProgress value={75} size={64}>
+  <CircularProgressLabel>75%</CircularProgressLabel>
+</CircularProgress>
 ```
-
-**Props:**
-- `variant`: `"primary" | "secondary" | "underline"`
-- `size`: `"sm" | "md" | "lg"`
-- `colorScheme`: `"blue" | "green" | "red" | "yellow" | "purple" | "gray"`
-- All standard HTML anchor props
 
 ### IconButton
 
-Button component specifically designed for icons.
+Button component for icons.
 
 ```tsx
 import { IconButton } from 'uiplex';
@@ -404,161 +291,57 @@ import { Mail } from 'feather-icons-react';
 />
 ```
 
-**Props:**
-- `icon`: `ReactNode` (required)
-- `variant`: `"primary" | "secondary" | "outline" | "ghost"`
-- `size`: `"sm" | "md" | "lg"`
-- `colorScheme`: `"blue" | "green" | "red" | "yellow" | "purple" | "gray"`
-- `disabled`: `boolean`
-- `aria-label`: `string` (required for accessibility)
+### Link
 
-### CircularProgress
-
-Circular progress indicator for loading states and progress values.
+Link component with multiple variants.
 
 ```tsx
-import { CircularProgress, CircularProgressLabel } from 'uiplex';
+import { Link } from 'uiplex';
 
-<CircularProgress value={75} size={64}>
-  <CircularProgressLabel>75%</CircularProgressLabel>
-</CircularProgress>
-
-<CircularProgress isIndeterminate size={48} />
+<Link href="/about" variant="primary" size="md">
+  Learn More
+</Link>
 ```
 
-**Props:**
-- `value`: `number` (0-100)
-- `min`: `number`
-- `max`: `number`
-- `size`: `number | string`
-- `thickness`: `number`
-- `color`: `string`
-- `trackColor`: `string`
-- `isIndeterminate`: `boolean`
+### Layout Components
 
-### Tooltip
-
-Contextual information displayed on hover.
-
+**Box** - Versatile container component
 ```tsx
-import { Tooltip } from 'uiplex';
-
-<Tooltip label="This is a helpful tooltip" placement="top" width={200}>
-  <Button>Hover me</Button>
-</Tooltip>
+<Box padding="md" margin="lg" borderRadius="md">Content</Box>
 ```
 
-**Props:**
-- `label`: `string` (required)
-- `placement`: `"top" | "bottom" | "left" | "right"`
-- `width`: `string | number` (for wrapping long text)
-- `isOpen`: `boolean` (controlled)
-- `defaultIsOpen`: `boolean`
-- `closeOnClick`: `boolean`
-
-### Popover
-
-Floating content container with positioning and triggers.
-
+**Flex** - Flexbox layout component
 ```tsx
-import { Popover, PopoverContent, PopoverHeader, PopoverBody, PopoverFooter, PopoverCloseButton } from 'uiplex';
-
-<Popover
-  content={
-    <PopoverContent>
-      <PopoverHeader>Popover Title</PopoverHeader>
-      <PopoverBody>Popover content</PopoverBody>
-      <PopoverFooter>
-        <PopoverCloseButton onClose={handleClose} />
-      </PopoverFooter>
-    </PopoverContent>
-  }
-  placement="bottom"
-  trigger="click"
->
-  <Button>Open Popover</Button>
-</Popover>
+<Flex direction="row" align="center" justify="space-between" gap="md">
+  <Box>Item 1</Box>
+  <Box>Item 2</Box>
+</Flex>
 ```
 
-**Props:**
-- `content`: `ReactNode` (required)
-- `placement`: `"top" | "bottom" | "left" | "right" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end" | "right-start" | "right-end"`
-- `trigger`: `"click" | "hover"`
-- `isOpen`: `boolean` (controlled)
-- `defaultIsOpen`: `boolean`
-- `closeOnBlur`: `boolean`
-- `showArrow`: `boolean`
-
-### Toast
-
-Toast notifications for displaying temporary messages.
-
+**Grid** - CSS Grid layout component
 ```tsx
-import { Toast, ToastContainerGlobal } from 'uiplex';
-
-// Add ToastContainerGlobal to your root layout
-<ToastContainerGlobal />
-
-// Use Toast static methods
-Toast.success("Operation completed!");
-Toast.error("Something went wrong");
-Toast.warning("Please check your input");
-Toast.info("New update available");
-
-// With options
-Toast.success({
-  title: "Success!",
-  description: "Your changes have been saved.",
-  duration: 3000
-});
+<Grid columns={3} gap="md">
+  <Box>Item 1</Box>
+  <Box>Item 2</Box>
+  <Box>Item 3</Box>
+</Grid>
 ```
 
-**Toast Methods:**
-- `Toast.success(messageOrOptions, options?)`
-- `Toast.error(messageOrOptions, options?)`
-- `Toast.warning(messageOrOptions, options?)`
-- `Toast.info(messageOrOptions, options?)`
-- `Toast.close(id)`
-- `Toast.closeAll()`
-
-### FormControl, FormLabel, FormErrorMessage
-
-Form control components for building accessible forms.
-
+**Text** - Typography component
 ```tsx
-import { FormControl, FormLabel, FormErrorMessage } from 'uiplex';
-
-<FormControl isInvalid={hasError} isRequired>
-  <FormLabel>Username</FormLabel>
-  <Input value={username} onChange={handleChange} />
-  <FormErrorMessage>Username is required</FormErrorMessage>
-</FormControl>
+<Text size="lg" weight="bold" color="primary">Heading</Text>
 ```
-
-**FormControl Props:**
-- `isInvalid`: `boolean`
-- `isDisabled`: `boolean`
-- `isRequired`: `boolean`
 
 ## Hooks
 
 ### useDisclosure
 
-Hook for managing open/close state (useful for modals, popovers, etc.).
+Hook for managing open/close state.
 
 ```tsx
 import { useDisclosure } from 'uiplex';
 
-function MyComponent() {
-  const { isOpen, onOpen, onClose, onToggle } = useDisclosure();
-  
-  return (
-    <>
-      <Button onClick={onOpen}>Open</Button>
-      {isOpen && <Modal onClose={onClose}>Content</Modal>}
-    </>
-  );
-}
+const { isOpen, onOpen, onClose, onToggle } = useDisclosure();
 ```
 
 ### useOutsideClick
@@ -568,31 +351,21 @@ Hook for detecting clicks outside an element.
 ```tsx
 import { useOutsideClick } from 'uiplex';
 
-function MyComponent() {
-  const ref = useRef(null);
-  
-  useOutsideClick({
-    refs: [ref],
-    handler: () => {
-      // Handle outside click
-    }
-  });
-  
-  return <div ref={ref}>Content</div>;
-}
+const ref = useRef(null);
+useOutsideClick({
+  refs: [ref],
+  handler: () => console.log('Clicked outside')
+});
 ```
 
 ## Theme System
 
-The library includes a comprehensive theme system with light, dark, and system preference support.
-
 ### ThemeProvider
 
-Wrap your app with `ThemeProvider` to enable theme functionality:
+Wrap your app with `ThemeProvider`:
 
 ```tsx
-import { ThemeProvider, useTheme } from 'uiplex';
-import 'uiplex/theme.css';
+import { ThemeProvider, useTheme, ThemeToggle } from 'uiplex';
 
 function App() {
   return (
@@ -605,51 +378,23 @@ function App() {
 
 ### useTheme Hook
 
-Access and control the theme in your components:
-
 ```tsx
-import { useTheme } from 'uiplex';
-
-function MyComponent() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
-  
-  return (
-    <div>
-      <p>Current theme: {resolvedTheme}</p>
-      <button onClick={() => setTheme('dark')}>Dark</button>
-      <button onClick={() => setTheme('light')}>Light</button>
-      <button onClick={() => setTheme('system')}>System</button>
-    </div>
-  );
-}
+const { theme, setTheme, resolvedTheme } = useTheme();
 ```
 
 ### ThemeToggle Component
 
-A ready-to-use theme toggle component:
-
 ```tsx
-import { ThemeToggle } from 'uiplex';
-
 <ThemeToggle />
 ```
 
 ## Styling
 
-**CSS is automatically included** when you import components (with modern bundlers like Vite, Webpack 5, Next.js, etc.). The library uses CSS variables for theming.
+CSS is automatically included when you import components. The library uses CSS variables for theming and supports light/dark modes.
 
-The bundled CSS includes:
-- Theme CSS variables (light/dark mode support)
-- Button, Loader, Radio styles
-- Text, Box, Flex, Grid layout styles
-- Modal, Input, Textarea, Select, FormControl styles
-- Link, IconButton, CircularProgress styles
-- Tooltip, Toast, Popover styles
+All components automatically adapt to the current theme based on CSS variables.
 
-All components automatically adapt to the current theme (light/dark) based on CSS variables.
-
-**If you need to import CSS manually** (for older bundlers or specific setups):
-
+**Manual CSS import** (if needed):
 ```tsx
 import 'uiplex/styles.css';
 ```
@@ -658,7 +403,10 @@ import 'uiplex/styles.css';
 
 This library is built with TypeScript and includes full type definitions. All components and their props are fully typed.
 
+## Documentation
+
+For complete documentation, examples, and API references, visit: [https://uiplex.ankitkaushal.in/](https://uiplex.ankitkaushal.in/)
+
 ## License
 
 MIT
-
