@@ -3,216 +3,179 @@
 import React from "react";
 import { IconButton } from "uiplex";
 import { Mail, Trash, Edit, Heart } from "feather-icons-react";
-import CodeBlock from "@/components/CodeBlock";
-import styles from "./page.module.scss";
+import {
+  ComponentPageLayout,
+  DemoSection,
+  APISection,
+} from "@/components/ComponentPageLayout";
 
 export default function IconButtonPage() {
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <header className={styles.header}>
-          <h1 className={styles.title}>IconButton</h1>
-          <p className={styles.description}>
-            A button component specifically designed for icons. Supports
-            multiple sizes, variants, and color schemes.
-          </p>
-        </header>
-
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Basic Usage</h2>
-          <div className={styles.demo}>
-            <IconButton aria-label="Mail" icon={<Mail size={18} />} />
-            <IconButton aria-label="Edit" icon={<Edit size={18} />} />
-            <IconButton aria-label="Delete" icon={<Trash size={18} />} />
-          </div>
-          <CodeBlock language="tsx">
-            {`import { IconButton } from 'uiplex';
+    <ComponentPageLayout
+      title="IconButton"
+      description="A button component specifically designed for icons. Supports multiple sizes, variants, and color schemes."
+    >
+      <DemoSection
+        title="Basic Usage"
+        code={`import { IconButton } from 'uiplex';
 import { Mail } from 'feather-icons-react';
 
 <IconButton aria-label="Mail" icon={<Mail size={18} />} />`}
-          </CodeBlock>
-        </section>
+      >
+        <IconButton aria-label="Mail" icon={<Mail size={18} />} />
+        <IconButton aria-label="Edit" icon={<Edit size={18} />} />
+        <IconButton aria-label="Delete" icon={<Trash size={18} />} />
+      </DemoSection>
 
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Sizes</h2>
-          <div className={styles.demo}>
-            <IconButton
-              aria-label="Extra small"
-              icon={<Mail size={12} />}
-              size="xs"
-            />
-            <IconButton
-              aria-label="Small"
-              icon={<Mail size={14} />}
-              size="sm"
-            />
-            <IconButton
-              aria-label="Medium"
-              icon={<Mail size={18} />}
-              size="md"
-            />
-            <IconButton
-              aria-label="Large"
-              icon={<Mail size={22} />}
-              size="lg"
-            />
-          </div>
-          <CodeBlock language="tsx">
-            {`<IconButton aria-label="Icon" icon={<Mail />} size="xs" />
+      <DemoSection
+        title="Sizes"
+        code={`<IconButton aria-label="Icon" icon={<Mail />} size="xs" />
 <IconButton aria-label="Icon" icon={<Mail />} size="sm" />
 <IconButton aria-label="Icon" icon={<Mail />} size="md" />
 <IconButton aria-label="Icon" icon={<Mail />} size="lg" />`}
-          </CodeBlock>
-        </section>
+      >
+        <IconButton
+          aria-label="Extra small"
+          icon={<Mail size={12} />}
+          size="xs"
+        />
+        <IconButton aria-label="Small" icon={<Mail size={14} />} size="sm" />
+        <IconButton
+          aria-label="Medium"
+          icon={<Mail size={18} />}
+          size="md"
+        />
+        <IconButton aria-label="Large" icon={<Mail size={22} />} size="lg" />
+      </DemoSection>
 
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Variants</h2>
-          <div className={styles.demo}>
-            <IconButton
-              aria-label="Ghost"
-              icon={<Mail size={18} />}
-              variant="ghost"
-            />
-            <IconButton
-              aria-label="Outline"
-              icon={<Edit size={18} />}
-              variant="outline"
-            />
-            <IconButton
-              aria-label="Solid"
-              icon={<Heart size={18} />}
-              variant="solid"
-            />
-          </div>
-          <CodeBlock language="tsx">
-            {`<IconButton aria-label="Ghost" icon={<Mail />} variant="ghost" />
+      <DemoSection
+        title="Variants"
+        code={`<IconButton aria-label="Ghost" icon={<Mail />} variant="ghost" />
 <IconButton aria-label="Outline" icon={<Edit />} variant="outline" />
 <IconButton aria-label="Solid" icon={<Heart />} variant="solid" />`}
-          </CodeBlock>
-        </section>
+      >
+        <IconButton
+          aria-label="Ghost"
+          icon={<Mail size={18} />}
+          variant="ghost"
+        />
+        <IconButton
+          aria-label="Outline"
+          icon={<Edit size={18} />}
+          variant="outline"
+        />
+        <IconButton
+          aria-label="Solid"
+          icon={<Heart size={18} />}
+          variant="solid"
+        />
+      </DemoSection>
 
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Round</h2>
-          <div className={styles.demo}>
-            <IconButton
-              aria-label="Round ghost"
-              icon={<Mail size={18} />}
-              variant="ghost"
-              isRound
-            />
-            <IconButton
-              aria-label="Round outline"
-              icon={<Edit size={18} />}
-              variant="outline"
-              isRound
-            />
-            <IconButton
-              aria-label="Round solid"
-              icon={<Heart size={18} />}
-              variant="solid"
-              isRound
-            />
-          </div>
-          <CodeBlock language="tsx">
-            {`<IconButton
+      <DemoSection
+        title="Round"
+        code={`<IconButton
   aria-label="Round"
   icon={<Mail />}
   variant="ghost"
   isRound
 />`}
-          </CodeBlock>
-        </section>
+      >
+        <IconButton
+          aria-label="Round ghost"
+          icon={<Mail size={18} />}
+          variant="ghost"
+          isRound
+        />
+        <IconButton
+          aria-label="Round outline"
+          icon={<Edit size={18} />}
+          variant="outline"
+          isRound
+        />
+        <IconButton
+          aria-label="Round solid"
+          icon={<Heart size={18} />}
+          variant="solid"
+          isRound
+        />
+      </DemoSection>
 
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>States</h2>
-          <div className={styles.demo}>
-            <IconButton aria-label="Normal" icon={<Mail size={18} />} />
-            <IconButton
-              aria-label="Disabled"
-              icon={<Mail size={18} />}
-              isDisabled
-            />
-          </div>
-          <CodeBlock language="tsx">
-            {`<IconButton aria-label="Normal" icon={<Mail />} />
+      <DemoSection
+        title="States"
+        code={`<IconButton aria-label="Normal" icon={<Mail />} />
 <IconButton aria-label="Disabled" icon={<Mail />} isDisabled />`}
-          </CodeBlock>
-        </section>
+      >
+        <IconButton aria-label="Normal" icon={<Mail size={18} />} />
+        <IconButton
+          aria-label="Disabled"
+          icon={<Mail size={18} />}
+          isDisabled
+        />
+      </DemoSection>
 
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>API Reference</h2>
-          <div className={styles.apiTable}>
-            <table>
-              <thead>
-                <tr>
-                  <th>Prop</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>icon</td>
-                  <td>React.ReactNode</td>
-                  <td>-</td>
-                  <td>Icon element to display (required)</td>
-                </tr>
-                <tr>
-                  <td>aria-label</td>
-                  <td>string</td>
-                  <td>-</td>
-                  <td>Accessibility label (required)</td>
-                </tr>
-                <tr>
-                  <td>size</td>
-                  <td>"xs" | "sm" | "md" | "lg"</td>
-                  <td>"md"</td>
-                  <td>Size of the icon button</td>
-                </tr>
-                <tr>
-                  <td>variant</td>
-                  <td>"ghost" | "outline" | "solid"</td>
-                  <td>"ghost"</td>
-                  <td>Visual style variant</td>
-                </tr>
-                <tr>
-                  <td>colorScheme</td>
-                  <td>
-                    "blue" | "green" | "red" | "yellow" | "purple" | "gray"
-                  </td>
-                  <td>-</td>
-                  <td>Color scheme (for solid variant)</td>
-                </tr>
-                <tr>
-                  <td>isRound</td>
-                  <td>boolean</td>
-                  <td>false</td>
-                  <td>Whether button is circular</td>
-                </tr>
-                <tr>
-                  <td>isDisabled</td>
-                  <td>boolean</td>
-                  <td>false</td>
-                  <td>Whether button is disabled</td>
-                </tr>
-                <tr>
-                  <td>className</td>
-                  <td>string</td>
-                  <td>""</td>
-                  <td>Additional CSS classes</td>
-                </tr>
-                <tr>
-                  <td>style</td>
-                  <td>React.CSSProperties</td>
-                  <td>-</td>
-                  <td>Inline styles</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </div>
-    </div>
+      <APISection
+        tables={[
+          {
+            data: [
+              {
+                prop: "icon",
+                type: "React.ReactNode",
+                default: "-",
+                description: "Icon element to display (required)",
+              },
+              {
+                prop: "aria-label",
+                type: "string",
+                default: "-",
+                description: "Accessibility label (required)",
+              },
+              {
+                prop: "size",
+                type: '"xs" | "sm" | "md" | "lg"',
+                default: '"md"',
+                description: "Size of the icon button",
+              },
+              {
+                prop: "variant",
+                type: '"ghost" | "outline" | "solid"',
+                default: '"ghost"',
+                description: "Visual style variant",
+              },
+              {
+                prop: "colorScheme",
+                type:
+                  '"blue" | "green" | "red" | "yellow" | "purple" | "gray"',
+                default: "-",
+                description: "Color scheme (for solid variant)",
+              },
+              {
+                prop: "isRound",
+                type: "boolean",
+                default: "false",
+                description: "Whether button is circular",
+              },
+              {
+                prop: "isDisabled",
+                type: "boolean",
+                default: "false",
+                description: "Whether button is disabled",
+              },
+              {
+                prop: "className",
+                type: "string",
+                default: '""',
+                description: "Additional CSS classes",
+              },
+              {
+                prop: "style",
+                type: "React.CSSProperties",
+                default: "-",
+                description: "Inline styles",
+              },
+            ],
+          },
+        ]}
+      />
+    </ComponentPageLayout>
   );
 }

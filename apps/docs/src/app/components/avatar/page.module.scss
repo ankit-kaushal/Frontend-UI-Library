@@ -1,32 +1,3 @@
-.container {
-  min-height: 100vh;
-  background-color: var(--bg-secondary, #f9fafb);
-  padding: 2rem;
-  width: 100%;
-}
-
-.content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.header {
-  margin-bottom: 3rem;
-}
-
-.title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--text-primary, #111827);
-  margin-bottom: 1rem;
-}
-
-.description {
-  font-size: 1.125rem;
-  color: var(--text-secondary, #6b7280);
-  max-width: 600px;
-}
-
 .comingSoon {
   background-color: var(--bg-primary, white);
   border-radius: 0.5rem;
