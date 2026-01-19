@@ -40,6 +40,14 @@ export const componentsData: ComponentData[] = [
     tags: ["radio", "form", "input", "selection"],
   },
   {
+    name: "Checkbox",
+    description:
+      "A flexible checkbox component with support for individual checkboxes and checkbox groups with multiple selections",
+    href: "/components/checkbox",
+    category: "Forms",
+    tags: ["checkbox", "form", "input", "selection", "multiple"],
+  },
+  {
     name: "Text",
     description:
       "Typography component with sizes, weights, colors, alignment, and semantic elements",

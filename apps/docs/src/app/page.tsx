@@ -8,6 +8,8 @@ import {
   Loader,
   Radio,
   RadioGroup,
+  Checkbox,
+  CheckboxGroup,
   Input,
   CircularProgress,
   CircularProgressLabel,
@@ -20,6 +22,7 @@ import styles from "./page.module.scss";
 export default function Home() {
   const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
   const [radioValue, setRadioValue] = useState("option1");
+  const [checkboxValues, setCheckboxValues] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [progressValue, setProgressValue] = useState(45);
 
@@ -52,6 +55,13 @@ export default function Home() {
       description:
         "A flexible radio button component with support for individual radios and radio groups",
       href: "/components/radio",
+      status: "ready",
+    },
+    {
+      name: "Checkbox",
+      description:
+        "A flexible checkbox component with support for individual checkboxes and checkbox groups",
+      href: "/components/checkbox",
       status: "ready",
     },
     {
@@ -326,6 +336,23 @@ function App() {
                   name="overview-example"
                   value={radioValue}
                   onChange={(value) => setRadioValue(value)}
+                  options={[
+                    { value: "option1", label: "Option 1" },
+                    { value: "option2", label: "Option 2" },
+                    { value: "option3", label: "Option 3" },
+                  ]}
+                  size="sm"
+                />
+              </div>
+            </div>
+
+            <div className={styles.exampleCard}>
+              <h3>Checkbox Options</h3>
+              <div className={styles.exampleContent}>
+                <CheckboxGroup
+                  name="overview-checkbox-example"
+                  value={checkboxValues}
+                  onChange={setCheckboxValues}
                   options={[
                     { value: "option1", label: "Option 1" },
                     { value: "option2", label: "Option 2" },

@@ -92,6 +92,26 @@ import { Radio, RadioGroup } from 'uiplex';
 />
 ```
 
+### Checkbox & CheckboxGroup
+
+Checkbox components with support for multiple selections.
+
+```tsx
+import { Checkbox, CheckboxGroup } from 'uiplex';
+
+<CheckboxGroup
+  name="options"
+  value={selected}
+  onChange={(values) => setSelected(values)}
+  options={[
+    { value: '1', label: 'Option 1' },
+    { value: '2', label: 'Option 2' },
+  ]}
+/>
+```
+
+**Key Props:** `value` (string[]), `onChange`, `options`, `size`, `colorScheme`, `orientation`
+
 ### Input
 
 Form input component with validation support.
