@@ -67,6 +67,23 @@ export default function TextPage() {
       </DemoSection>
 
       <DemoSection
+        title="Custom Colors"
+        code={`<Text color="red">Red text</Text>
+<Text color="blue">Blue text</Text>
+<Text color="#8b5cf6">Purple text</Text>
+<Text color="rgb(34, 197, 94)">Green text</Text>
+<Text color="hsl(280, 100%, 50%)">Magenta text</Text>`}
+      >
+        <div className={styles.textStack}>
+          <Text color="red">Red text</Text>
+          <Text color="blue">Blue text</Text>
+          <Text color="#8b5cf6">Purple text</Text>
+          <Text color="rgb(34, 197, 94)">Green text</Text>
+          <Text color="hsl(280, 100%, 50%)">Magenta text</Text>
+        </div>
+      </DemoSection>
+
+      <DemoSection
         title="Alignment"
         code={`<Text align="left">Left aligned</Text>
 <Text align="center">Center aligned</Text>
@@ -147,6 +164,12 @@ export default function TextPage() {
                   '"primary" | "secondary" | "muted" | "danger" | "success" | "warning"',
                 default: '"primary"',
                 description: "Color variant preset",
+              },
+              {
+                prop: "color",
+                type: "string",
+                default: "-",
+                description: "Custom color value (e.g., 'red', '#dedede', 'rgb(255, 0, 0)')",
               },
               {
                 prop: "align",

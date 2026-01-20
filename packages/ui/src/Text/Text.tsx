@@ -19,6 +19,7 @@ export interface TextProps
   weight?: TextWeight;
   variant?: TextVariant;
   align?: TextAlign;
+  color?: string;
   children: React.ReactNode;
   style?: React.CSSProperties;
 }
@@ -29,6 +30,7 @@ export const Text: React.FC<TextProps> = ({
   weight = "regular",
   variant = "primary",
   align = "left",
+  color,
   className = "",
   children,
   style,
@@ -47,8 +49,13 @@ export const Text: React.FC<TextProps> = ({
     .filter(Boolean)
     .join(" ");
 
+  const mergedStyle: React.CSSProperties = {
+    ...(color && { color }),
+    ...style,
+  };
+
   return (
-    <Component className={classes} style={style} {...props}>
+    <Component className={classes} style={mergedStyle} {...props}>
       {children}
     </Component>
   );
