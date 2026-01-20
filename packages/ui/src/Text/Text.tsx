@@ -3,7 +3,7 @@ import "./Text.css";
 
 export type TextSize = "sm" | "md" | "lg" | "xl";
 export type TextWeight = "regular" | "medium" | "semibold" | "bold";
-export type TextColor =
+export type TextVariant =
   | "primary"
   | "secondary"
   | "muted"
@@ -17,7 +17,7 @@ export interface TextProps
   as?: keyof JSX.IntrinsicElements;
   size?: TextSize;
   weight?: TextWeight;
-  color?: TextColor;
+  variant?: TextVariant;
   align?: TextAlign;
   children: React.ReactNode;
   style?: React.CSSProperties;
@@ -27,7 +27,7 @@ export const Text: React.FC<TextProps> = ({
   as = "p",
   size = "md",
   weight = "regular",
-  color = "primary",
+  variant = "primary",
   align = "left",
   className = "",
   children,
@@ -40,7 +40,7 @@ export const Text: React.FC<TextProps> = ({
     "ui-text",
     `ui-text--${size}`,
     `ui-text--${weight}`,
-    `ui-text--${color}`,
+    `ui-text--${variant}`,
     `ui-text--align-${align}`,
     className,
   ]

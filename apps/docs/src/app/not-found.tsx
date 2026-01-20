@@ -11,7 +11,7 @@ export default function NotFound() {
       <div className={styles.content}>
         <div className={styles.illustration}>
           <div className={styles.errorCode}>
-            <Text size="xl" weight="bold" color="primary" as="div">
+            <Text size="xl" weight="bold" variant="primary" as="div">
               404
             </Text>
           </div>
@@ -29,7 +29,7 @@ export default function NotFound() {
             </Text>
           </h1>
           <p className={styles.description}>
-            <Text size="lg" color="secondary">
+            <Text size="lg" variant="secondary">
               Oops! The page you're looking for doesn't exist or has been moved.
               Let's get you back on track.
             </Text>

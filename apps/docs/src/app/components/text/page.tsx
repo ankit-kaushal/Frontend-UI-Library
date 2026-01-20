@@ -49,20 +49,20 @@ export default function TextPage() {
 
       <DemoSection
         title="Colors"
-        code={`<Text color="primary">Primary</Text>
-<Text color="secondary">Secondary</Text>
-<Text color="muted">Muted</Text>
-<Text color="success">Success</Text>
-<Text color="warning">Warning</Text>
-<Text color="danger">Danger</Text>`}
+        code={`<Text variant="primary">Primary</Text>
+<Text variant="secondary">Secondary</Text>
+<Text variant="muted">Muted</Text>
+<Text variant="success">Success</Text>
+<Text variant="warning">Warning</Text>
+<Text variant="danger">Danger</Text>`}
       >
         <div className={styles.textStack}>
-          <Text color="primary">Primary color</Text>
-          <Text color="secondary">Secondary color</Text>
-          <Text color="muted">Muted color</Text>
-          <Text color="success">Success color</Text>
-          <Text color="warning">Warning color</Text>
-          <Text color="danger">Danger color</Text>
+          <Text variant="primary">Primary color</Text>
+          <Text variant="secondary">Secondary color</Text>
+          <Text variant="muted">Muted color</Text>
+          <Text variant="success">Success color</Text>
+          <Text variant="warning">Warning color</Text>
+          <Text variant="danger">Danger color</Text>
         </div>
       </DemoSection>
 
@@ -99,21 +99,21 @@ export default function TextPage() {
       <DemoSection
         title="Combined Example"
         code={`<Text size="xl" weight="bold">Dashboard</Text>
-<Text color="muted">Welcome back! Here is a quick summary...</Text>
-<Text size="sm" color="secondary">Last updated 5 minutes ago</Text>
-<Text as="strong" color="success">+12% growth this week</Text>`}
+<Text variant="muted">Welcome back! Here is a quick summary...</Text>
+<Text size="sm" variant="secondary">Last updated 5 minutes ago</Text>
+<Text as="strong" variant="success">+12% growth this week</Text>`}
       >
         <div className={styles.textStack}>
           <Text size="xl" weight="bold">
             Dashboard
           </Text>
-          <Text color="muted">
+          <Text variant="muted">
             Welcome back! Here is a quick summary of your recent activity.
           </Text>
-          <Text size="sm" color="secondary">
+          <Text size="sm" variant="secondary">
             Last updated 5 minutes ago
           </Text>
-          <Text as="strong" color="success">
+          <Text as="strong" variant="success">
             +12% growth this week
           </Text>
         </div>
@@ -142,11 +142,11 @@ export default function TextPage() {
                 description: "Font weight preset",
               },
               {
-                prop: "color",
+                prop: "variant",
                 type:
                   '"primary" | "secondary" | "muted" | "danger" | "success" | "warning"',
                 default: '"primary"',
-                description: "Color preset",
+                description: "Color variant preset",
               },
               {
                 prop: "align",

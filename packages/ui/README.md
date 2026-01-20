@@ -349,7 +349,7 @@ import { Link } from 'uiplex';
 
 **Text** - Typography component
 ```tsx
-<Text size="lg" weight="bold" color="primary">Heading</Text>
+<Text size="lg" weight="bold" variant="primary">Heading</Text>
 ```
 
 ## Hooks
