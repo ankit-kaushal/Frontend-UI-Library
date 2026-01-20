@@ -33,7 +33,7 @@ export type { RadioProps, RadioGroupProps } from './Radio'
 export { Checkbox, CheckboxGroup } from './Checkbox'
 export type { CheckboxProps, CheckboxGroupProps } from './Checkbox'
 export { Text } from './Text'
-export type { TextProps, TextSize, TextWeight, TextColor, TextAlign } from './Text'
+export type { TextProps, TextSize, TextWeight, TextVariant, TextAlign } from './Text'
 export {
   Modal,
   ModalOverlay,
