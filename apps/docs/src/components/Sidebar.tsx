@@ -30,6 +30,7 @@ import {
   Bell,
   MessageSquare,
   CheckSquare,
+  Navigation,
 } from "feather-icons-react";
 import styles from "./Sidebar.module.scss";
 
@@ -73,6 +74,7 @@ const Sidebar = () => {
     { href: "/components/alert", label: "Alert", icon: AlertTriangle },
     { href: "/components/tabs", label: "Tabs", icon: FileText },
     { href: "/components/accordion", label: "Accordion", icon: BookOpen },
+    { href: "/components/breadcrumb", label: "Breadcrumb", icon: Navigation },
   ];
 
   return (

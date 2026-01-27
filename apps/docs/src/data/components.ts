@@ -184,5 +184,12 @@ export const componentsData: ComponentData[] = [
     category: "Components",
     tags: ["accordion", "collapse", "expand", "content"],
   },
+  {
+    name: "Breadcrumb",
+    description: "Breadcrumb navigation component for showing the current page location",
+    href: "/components/breadcrumb",
+    category: "Components",
+    tags: ["breadcrumb", "navigation", "path", "location"],
+  },
 ];
 

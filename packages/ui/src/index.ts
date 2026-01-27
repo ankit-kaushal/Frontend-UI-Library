@@ -22,6 +22,7 @@ import './Toast/Toast.css'
 import './Popover/Popover.css'
 import './Tabs/Tabs.css'
 import './Accordion/Accordion.css'
+import './Breadcrumb/Breadcrumb.css'
 import './Theme/theme.css'
 
 export { Button } from './Button'
@@ -103,6 +104,8 @@ export { Tabs, TabList, Tab, TabPanels, TabPanel } from './Tabs'
 export type { TabsProps, TabListProps, TabProps, TabPanelsProps, TabPanelProps } from './Tabs'
 export { Accordion, AccordionItem, AccordionButton, AccordionPanel } from './Accordion'
 export type { AccordionProps, AccordionItemProps, AccordionButtonProps, AccordionPanelProps } from './Accordion'
+export { Breadcrumb } from './Breadcrumb'
+export type { BreadcrumbProps, BreadcrumbItem } from './Breadcrumb'
 
 // Hooks
 export { useDisclosure } from './hooks'
