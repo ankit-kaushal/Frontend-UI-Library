@@ -323,6 +323,26 @@ import { Link } from 'uiplex';
 </Link>
 ```
 
+### Breadcrumb
+
+Breadcrumb navigation component for showing the current page location.
+
+```tsx
+import { Breadcrumb } from 'uiplex';
+
+<Breadcrumb
+  items={[
+    { label: "Home", href: "/" },
+    { label: "Products", href: "/products" },
+    { label: "Electronics", href: "/products/electronics" },
+    { label: "Laptops" }
+  ]}
+  separator="/"
+/>
+```
+
+**Key Props:** `items` (BreadcrumbItem[]), `separator` (string | React.ReactNode)
+
 ### Layout Components
 
 **Box** - Versatile container component
