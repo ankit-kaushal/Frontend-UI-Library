@@ -377,6 +377,79 @@ import {
 
 **Key Props (Table):** `variant` ("default" | "bordered" | "striped"), `size` ("sm" | "md" | "lg")
 
+### Alert
+
+Alert component for important messages with variants and optional close.
+
+```tsx
+import { Alert } from 'uiplex';
+
+<Alert variant="info" title="Info">Your session will expire soon.</Alert>
+<Alert variant="success">Changes saved successfully.</Alert>
+<Alert variant="warning" onClose={() => {}}>Please review before submitting.</Alert>
+<Alert variant="error" title="Error">Something went wrong.</Alert>
+```
+
+**Key Props:** `variant` ("info" | "success" | "warning" | "error"), `title`, `onClose`
+
+### Badge
+
+Small status or count indicator.
+
+```tsx
+import { Badge } from 'uiplex';
+
+<Badge variant="primary">New</Badge>
+<Badge variant="success" size="sm">Active</Badge>
+<Badge variant="danger">3</Badge>
+```
+
+**Key Props:** `variant` ("default" | "primary" | "success" | "warning" | "danger"), `size` ("sm" | "md" | "lg")
+
+### Avatar
+
+User avatar with image and fallback (initials or first letter).
+
+```tsx
+import { Avatar } from 'uiplex';
+
+<Avatar src="/user.jpg" alt="Jane" size="md" />
+<Avatar name="Jane Doe" size="lg" />
+<Avatar size="sm" />
+```
+
+**Key Props:** `src`, `alt`, `name`, `size` ("sm" | "md" | "lg"), `backgroundColor`, `color` (any CSS color for fallback)
+
+### Card
+
+Card container with optional header, body, footer, image, title, and subtitle. **Default variant is theme-adjusted** (follows light/dark theme). Use `variant="dark"` or `variant="light"` to force a look.
+
+```tsx
+import { Card, CardHeader, CardBody, CardFooter, CardImage, CardTitle, CardSubtitle } from 'uiplex';
+
+// Image card (theme-adjusted – default)
+<Card style={{ maxWidth: 320 }}>
+  <CardImage src="/photo.jpg" alt="Card" />
+  <CardBody>
+    <CardTitle>Europe Street beat</CardTitle>
+    <CardSubtitle>www.instagram.com</CardSubtitle>
+  </CardBody>
+</Card>
+
+// Always dark or always light
+<Card variant="dark">...</Card>
+<Card variant="light">...</Card>
+
+// Standard card
+<Card>
+  <CardHeader>Title</CardHeader>
+  <CardBody>Card content goes here.</CardBody>
+  <CardFooter>Footer actions</CardFooter>
+</Card>
+```
+
+**Key Props (Card):** `variant` ("default" | "dark" | "light"). **CardImage:** `src`, `alt`. **CardTitle / CardSubtitle:** typography for image cards.
+
 ### Layout Components
 
 **Box** - Versatile container component

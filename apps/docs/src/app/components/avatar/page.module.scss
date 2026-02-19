@@ -1,19 +1,5 @@
-.comingSoon {
-  background-color: var(--bg-primary, white);
-  border-radius: 0.5rem;
-  border: 1px solid var(--border-primary, #e5e7eb);
-  padding: 4rem 2rem;
-  text-align: center;
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-primary, #111827);
-    margin-bottom: 1rem;
-  }
-
-  p {
-    color: var(--text-secondary, #6b7280);
-    font-size: 1.125rem;
-  }
+.avatarRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }

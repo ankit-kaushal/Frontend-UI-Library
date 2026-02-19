@@ -1,0 +1,143 @@
+.ui-card {
+  background-color: var(--bg-primary, #fff);
+  border: 1px solid var(--border-primary, #e5e7eb);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+[data-theme="dark"] .ui-card,
+.dark .ui-card {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-primary);
+}
+
+.ui-card__header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-primary, #e5e7eb);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary, #111827);
+}
+
+.ui-card__body {
+  padding: 1.25rem;
+  color: var(--text-secondary, #374151);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.ui-card__footer {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--border-primary, #e5e7eb);
+  background-color: var(--bg-tertiary, #f9fafb);
+}
+
+[data-theme="dark"] .ui-card__footer,
+.dark .ui-card__footer {
+  background-color: var(--bg-tertiary);
+  border-top-color: var(--border-primary);
+}
+
+/* Image card */
+.ui-card__image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.ui-card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.ui-card:has(.ui-card__image-wrapper) .ui-card__image-wrapper {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.ui-card__title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary, #111827);
+  margin: 0;
+}
+
+.ui-card__subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #6b7280);
+  margin: 0.25rem 0 0 0;
+}
+
+/* Dark variant – always dark (ignores theme) */
+.ui-card--dark {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .ui-card--dark,
+.dark .ui-card--dark {
+  background-color: #111827;
+  border-color: #374151;
+}
+
+.ui-card--dark .ui-card__body {
+  background-color: inherit;
+  color: #f9fafb;
+}
+
+.ui-card--dark .ui-card__title {
+  color: #fff;
+}
+
+.ui-card--dark .ui-card__subtitle {
+  color: #9ca3af;
+}
+
+/* Light variant – always light (ignores theme) */
+.ui-card--light {
+  background-color: #fff;
+  border-color: #e5e7eb;
+}
+
+.ui-card--light .ui-card__body {
+  color: #374151;
+}
+
+.ui-card--light .ui-card__title {
+  color: #111827;
+}
+
+.ui-card--light .ui-card__subtitle {
+  color: #6b7280;
+}
+
+/* Keep light variant light in dark mode (override theme) */
+[data-theme="dark"] .ui-card--light,
+.dark .ui-card--light {
+  background-color: #fff;
+  border-color: #e5e7eb;
+}
+
+[data-theme="dark"] .ui-card--light .ui-card__body,
+.dark .ui-card--light .ui-card__body {
+  color: #374151;
+}
+
+[data-theme="dark"] .ui-card--light .ui-card__title,
+.dark .ui-card--light .ui-card__title {
+  color: #111827;
+}
+
+[data-theme="dark"] .ui-card--light .ui-card__subtitle,
+.dark .ui-card--light .ui-card__subtitle {
+  color: #6b7280;
+}
+
+[data-theme="dark"] .ui-card--light .ui-card__footer,
+.dark .ui-card--light .ui-card__footer {
+  background-color: #f9fafb;
+  border-top-color: #e5e7eb;
+}

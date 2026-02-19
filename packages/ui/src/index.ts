@@ -24,6 +24,10 @@ import './Tabs/Tabs.css'
 import './Accordion/Accordion.css'
 import './Breadcrumb/Breadcrumb.css'
 import './Table/Table.css'
+import './Alert/Alert.css'
+import './Badge/Badge.css'
+import './Avatar/Avatar.css'
+import './Card/Card.css'
 import './Theme/theme.css'
 
 export { Button } from './Button'
@@ -127,6 +131,31 @@ export type {
   TableSize,
   TableVariant,
 } from './Table'
+export { Alert } from './Alert'
+export type { AlertProps, AlertVariant } from './Alert'
+export { Badge } from './Badge'
+export type { BadgeProps, BadgeVariant, BadgeSize } from './Badge'
+export { Avatar } from './Avatar'
+export type { AvatarProps, AvatarSize } from './Avatar'
+export {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  CardImage,
+  CardTitle,
+  CardSubtitle,
+} from './Card'
+export type {
+  CardProps,
+  CardHeaderProps,
+  CardBodyProps,
+  CardFooterProps,
+  CardImageProps,
+  CardTitleProps,
+  CardSubtitleProps,
+  CardVariant,
+} from './Card'
 
 // Hooks
 export { useDisclosure } from './hooks'
