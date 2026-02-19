@@ -191,5 +191,12 @@ export const componentsData: ComponentData[] = [
     category: "Components",
     tags: ["breadcrumb", "navigation", "path", "location"],
   },
+  {
+    name: "Table",
+    description: "Table component for displaying tabular data with head, body, footer, and variants",
+    href: "/components/table",
+    category: "Components",
+    tags: ["table", "data", "grid", "tabular"],
+  },
 ];
 

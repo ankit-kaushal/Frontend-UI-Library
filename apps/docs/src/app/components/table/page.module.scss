@@ -1,0 +1,12 @@
+.tableStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.variantLabel {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}

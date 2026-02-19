@@ -75,6 +75,7 @@ const Sidebar = () => {
     { href: "/components/tabs", label: "Tabs", icon: FileText },
     { href: "/components/accordion", label: "Accordion", icon: BookOpen },
     { href: "/components/breadcrumb", label: "Breadcrumb", icon: Navigation },
+    { href: "/components/table", label: "Table", icon: GridIcon },
   ];
 
   return (

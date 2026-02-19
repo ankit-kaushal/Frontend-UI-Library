@@ -23,6 +23,7 @@ import './Popover/Popover.css'
 import './Tabs/Tabs.css'
 import './Accordion/Accordion.css'
 import './Breadcrumb/Breadcrumb.css'
+import './Table/Table.css'
 import './Theme/theme.css'
 
 export { Button } from './Button'
@@ -106,6 +107,26 @@ export { Accordion, AccordionItem, AccordionButton, AccordionPanel } from './Acc
 export type { AccordionProps, AccordionItemProps, AccordionButtonProps, AccordionPanelProps } from './Accordion'
 export { Breadcrumb } from './Breadcrumb'
 export type { BreadcrumbProps, BreadcrumbItem } from './Breadcrumb'
+export {
+  Table,
+  TableHead,
+  TableBody,
+  TableFooter,
+  TableRow,
+  TableHeader,
+  TableCell,
+} from './Table'
+export type {
+  TableProps,
+  TableHeadProps,
+  TableBodyProps,
+  TableFooterProps,
+  TableRowProps,
+  TableHeaderProps,
+  TableCellProps,
+  TableSize,
+  TableVariant,
+} from './Table'
 
 // Hooks
 export { useDisclosure } from './hooks'

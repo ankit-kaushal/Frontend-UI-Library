@@ -343,6 +343,40 @@ import { Breadcrumb } from 'uiplex';
 
 **Key Props:** `items` (BreadcrumbItem[]), `separator` (string | React.ReactNode)
 
+### Table
+
+Table component for displaying tabular data with head, body, footer, and configurable variants.
+
+```tsx
+import {
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableHeader,
+  TableCell,
+} from 'uiplex';
+
+<Table variant="bordered" size="md">
+  <TableHead>
+    <TableRow>
+      <TableHeader>Name</TableHeader>
+      <TableHeader>Email</TableHeader>
+      <TableHeader>Role</TableHeader>
+    </TableRow>
+  </TableHead>
+  <TableBody>
+    <TableRow>
+      <TableCell>Jane</TableCell>
+      <TableCell>jane@example.com</TableCell>
+      <TableCell>Admin</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+```
+
+**Key Props (Table):** `variant` ("default" | "bordered" | "striped"), `size` ("sm" | "md" | "lg")
+
 ### Layout Components
 
 **Box** - Versatile container component
