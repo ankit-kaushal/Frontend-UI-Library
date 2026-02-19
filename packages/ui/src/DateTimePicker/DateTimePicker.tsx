@@ -7,7 +7,7 @@ export type DateTimePickerMode = "date" | "time" | "datetime";
 export type DateTimePickerSize = "sm" | "md" | "lg";
 
 export interface DateTimePickerProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "value" | "onChange"> {
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "value" | "onChange" | "size"> {
   mode?: DateTimePickerMode;
   size?: DateTimePickerSize;
   value?: string;
