@@ -377,6 +377,81 @@ import {
 
 **Key Props (Table):** `variant` ("default" | "bordered" | "striped"), `size` ("sm" | "md" | "lg")
 
+### Switch
+
+Toggle switch for boolean settings.
+
+```tsx
+import { Switch } from 'uiplex';
+
+<Switch checked={on} onChange={setOn} />
+<Switch label="Enable" defaultChecked size="md" />
+```
+
+**Key Props:** `checked`, `defaultChecked`, `onChange`, `disabled`, `size`, `leftLabel`, `rightLabel` (or `label` + `labelPosition`)
+
+### DateTimePicker
+
+Date, time, or datetime picker (date-only, time-only, or both).
+
+```tsx
+import { DateTimePicker } from 'uiplex';
+
+<DateTimePicker mode="date" value={date} onChange={setDate} />
+<DateTimePicker mode="time" value={time} onChange={setTime} />
+<DateTimePicker mode="datetime" value={dt} onChange={setDt} />
+```
+
+**Key Props:** `mode` ("date" | "time" | "datetime"), `size` ("sm" | "md" | "lg"), `value`, `onChange`, `min`, `max`, `disabled`. Native picker icon follows theme (color-scheme).
+
+### Upload
+
+File upload with drag and drop.
+
+```tsx
+import { Upload } from 'uiplex';
+
+<Upload onFileSelect={(files) => console.log(files)} />
+<Upload multiple accept="image/*" maxSize={1024 * 1024} />
+```
+
+**Key Props:** `onFileSelect`, `onFilesChange`, `accept`, `multiple`, `disabled`, `maxSize`, `children`
+
+### Skeleton
+
+Loading skeleton placeholder.
+
+```tsx
+import { Skeleton } from 'uiplex';
+
+<Skeleton variant="text" width={200} />
+<Skeleton variant="circular" width={40} height={40} />
+<Skeleton variant="rectangular" width={200} height={100} />
+```
+
+**Key Props:** `variant` ("text" | "circular" | "rectangular"), `width`, `height`
+
+### Drawer
+
+Slide-out panel from left, right, top, or bottom. Supports nested drawers via `level`.
+
+```tsx
+import { Drawer, DrawerHeader, DrawerBody, DrawerFooter, DrawerCloseButton, useDisclosure } from 'uiplex';
+
+const { isOpen, onOpen, onClose } = useDisclosure();
+
+<Drawer isOpen={isOpen} onClose={onClose} placement="right" size="md">
+  <DrawerHeader>Title <DrawerCloseButton onClose={onClose} /></DrawerHeader>
+  <DrawerBody>Content</DrawerBody>
+  <DrawerFooter>Footer</DrawerFooter>
+</Drawer>
+
+// Nested: second drawer with level={1}
+<Drawer isOpen={innerOpen} onClose={...} placement="right" level={1}>...</Drawer>
+```
+
+**Key Props:** `isOpen`, `onClose`, `placement` ("left" | "right" | "top" | "bottom"), `size`, `closeOnOverlayClick`, `closeOnEsc`, `level` (for nested)
+
 ### Alert
 
 Alert component for important messages with variants and optional close.

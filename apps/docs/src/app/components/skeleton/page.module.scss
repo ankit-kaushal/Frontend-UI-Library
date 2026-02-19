@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  max-width: 280px;
+  padding: 1rem;
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardImage {
+  border-radius: 0.375rem;
+}

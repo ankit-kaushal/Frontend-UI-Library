@@ -1,0 +1,100 @@
+.ui-datetime-picker {
+  display: inline-block;
+}
+
+.ui-datetime-picker__input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--text-primary, #111827);
+  background-color: var(--bg-primary, #fff);
+  border: 1px solid var(--border-primary, #e5e7eb);
+  border-radius: 0.375rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  color-scheme: light;
+}
+
+.ui-datetime-picker__input:hover:not(:disabled) {
+  border-color: var(--border-secondary, #d1d5db);
+}
+
+.ui-datetime-picker__input:focus {
+  outline: none;
+  border-color: var(--accent-primary, #3b82f6);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.ui-datetime-picker__input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ui-datetime-picker--disabled .ui-datetime-picker__input {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Theme: native picker icon and popup follow dark/light */
+[data-theme="dark"] .ui-datetime-picker__input,
+.dark .ui-datetime-picker__input {
+  color-scheme: dark;
+}
+
+/* Sizes – width fits content per mode; datetime needs more width for date + time */
+.ui-datetime-picker--sm .ui-datetime-picker__input {
+  padding: 0.375rem 0.5rem;
+  font-size: 0.8125rem;
+}
+
+.ui-datetime-picker--sm.ui-datetime-picker--date .ui-datetime-picker__input {
+  width: 8.5rem;
+  min-width: 8.5rem;
+}
+
+.ui-datetime-picker--sm.ui-datetime-picker--datetime .ui-datetime-picker__input {
+  width: 13rem;
+  min-width: 13rem;
+}
+
+.ui-datetime-picker--sm.ui-datetime-picker--time .ui-datetime-picker__input {
+  width: 6.5rem;
+  min-width: 6.5rem;
+}
+
+.ui-datetime-picker--md.ui-datetime-picker--date .ui-datetime-picker__input {
+  width: 10rem;
+  min-width: 10rem;
+}
+
+.ui-datetime-picker--md.ui-datetime-picker--datetime .ui-datetime-picker__input {
+  width: 16rem;
+  min-width: 16rem;
+}
+
+.ui-datetime-picker--md.ui-datetime-picker--time .ui-datetime-picker__input {
+  width: 7.5rem;
+  min-width: 7.5rem;
+}
+
+.ui-datetime-picker--lg .ui-datetime-picker__input {
+  padding: 0.625rem 0.875rem;
+  font-size: 1rem;
+}
+
+.ui-datetime-picker--lg.ui-datetime-picker--date .ui-datetime-picker__input {
+  width: 11.5rem;
+  min-width: 11.5rem;
+}
+
+.ui-datetime-picker--lg.ui-datetime-picker--datetime .ui-datetime-picker__input {
+  width: 19rem;
+  min-width: 19rem;
+}
+
+.ui-datetime-picker--lg.ui-datetime-picker--time .ui-datetime-picker__input {
+  width: 8.5rem;
+  min-width: 8.5rem;
+}

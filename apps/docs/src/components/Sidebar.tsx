@@ -31,6 +31,11 @@ import {
   MessageSquare,
   CheckSquare,
   Navigation,
+  ToggleRight,
+  Calendar,
+  Upload as UploadIcon,
+  Box as BoxIcon,
+  Menu,
 } from "feather-icons-react";
 import styles from "./Sidebar.module.scss";
 
@@ -76,6 +81,11 @@ const Sidebar = () => {
     { href: "/components/accordion", label: "Accordion", icon: BookOpen },
     { href: "/components/breadcrumb", label: "Breadcrumb", icon: Navigation },
     { href: "/components/table", label: "Table", icon: GridIcon },
+    { href: "/components/switch", label: "Switch", icon: ToggleRight },
+    { href: "/components/datetimepicker", label: "DateTimePicker", icon: Calendar },
+    { href: "/components/upload", label: "Upload", icon: UploadIcon },
+    { href: "/components/skeleton", label: "Skeleton", icon: BoxIcon },
+    { href: "/components/drawer", label: "Drawer", icon: Menu },
   ];
 
   return (

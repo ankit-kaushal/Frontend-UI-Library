@@ -1,0 +1,65 @@
+.ui-upload {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 8rem;
+  padding: 1.5rem;
+  border: 2px dashed var(--border-primary, #d1d5db);
+  border-radius: 0.5rem;
+  background-color: var(--bg-tertiary, #f9fafb);
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.ui-upload:hover:not(.ui-upload--disabled) {
+  border-color: var(--accent-primary, #3b82f6);
+  background-color: var(--bg-secondary, #f3f4f6);
+}
+
+.ui-upload--dragover {
+  border-color: var(--accent-primary, #3b82f6);
+  background-color: rgba(59, 130, 246, 0.08);
+}
+
+.ui-upload--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ui-upload--error {
+  border-color: #dc2626;
+}
+
+.ui-upload__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ui-upload__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.ui-upload__icon {
+  font-size: 1.5rem;
+  color: var(--text-secondary, #6b7280);
+}
+
+.ui-upload__text {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #6b7280);
+}
+
+.ui-upload__error {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: #dc2626;
+}

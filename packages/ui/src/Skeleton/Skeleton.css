@@ -1,0 +1,32 @@
+.ui-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary, #f3f4f6) 25%,
+    var(--border-primary, #e5e7eb) 50%,
+    var(--bg-tertiary, #f3f4f6) 75%
+  );
+  background-size: 200% 100%;
+  animation: ui-skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes ui-skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.ui-skeleton--text {
+  border-radius: 0.25rem;
+  height: 1em;
+}
+
+.ui-skeleton--circular {
+  border-radius: 9999px;
+}
+
+.ui-skeleton--rectangular {
+  border-radius: 0.375rem;
+}

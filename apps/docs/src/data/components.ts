@@ -198,5 +198,40 @@ export const componentsData: ComponentData[] = [
     category: "Components",
     tags: ["table", "data", "grid", "tabular"],
   },
+  {
+    name: "Switch",
+    description: "Toggle switch component for boolean settings",
+    href: "/components/switch",
+    category: "Components",
+    tags: ["switch", "toggle", "boolean"],
+  },
+  {
+    name: "DateTimePicker",
+    description: "Date, time, or datetime picker with date-only, time-only, and combined modes",
+    href: "/components/datetimepicker",
+    category: "Forms",
+    tags: ["date", "time", "datetime", "picker", "form"],
+  },
+  {
+    name: "Upload",
+    description: "File upload component with drag and drop",
+    href: "/components/upload",
+    category: "Components",
+    tags: ["upload", "file", "drag", "drop"],
+  },
+  {
+    name: "Skeleton",
+    description: "Loading skeleton placeholder component",
+    href: "/components/skeleton",
+    category: "Components",
+    tags: ["skeleton", "loading", "placeholder"],
+  },
+  {
+    name: "Drawer",
+    description: "Drawer panel that opens from left, right, top, or bottom with nested drawer support",
+    href: "/components/drawer",
+    category: "Components",
+    tags: ["drawer", "panel", "slide", "nested"],
+  },
 ];
 
